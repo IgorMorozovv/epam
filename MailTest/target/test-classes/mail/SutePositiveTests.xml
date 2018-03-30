@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Mail">
+	<test name="TestMail" >
+	
+			
+		<classes>
+
+			<class name="mail.tests.LoginTest"></class>
+			<class name="mail.tests.CreateDraftTest" >	</class>
+			<class name="mail.tests.VerifyDraftsTests"></class>
+			<class name="mail.tests.LogOutTest"></class>
+			
+		</classes>
+	</test>
+</suite>

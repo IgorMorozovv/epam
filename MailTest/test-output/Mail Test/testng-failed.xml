@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Mail Test]">
+  <test name="TestNgMail(failed)">
+    <classes>
+      <class name="mail.tests.CreateDraftTest">
+        <methods>
+          <include name="saveDraft"/>
+          <include name="afterSute"/>
+          <include name="createDraft"/>
+          <include name="beforeSute"/>
+        </methods>
+      </class> <!-- mail.tests.CreateDraftTest -->
+      <class name="mail.tests.VerifyDraftsTests">
+        <methods>
+          <include name="verifyDraft"/>
+          <include name="afterSute"/>
+          <include name="beforeSute"/>
+          <include name="setUp"/>
+          <include name="deleteDrafts"/>
+        </methods>
+      </class> <!-- mail.tests.VerifyDraftsTests -->
+      <class name="mail.tests.LoginTest">
+        <methods>
+          <include name="afterSute"/>
+          <include name="beforeSute"/>
+          <include name="logInTest"/>
+        </methods>
+      </class> <!-- mail.tests.LoginTest -->
+      <class name="mail.tests.LogOutTest">
+        <methods>
+          <include name="afterSute"/>
+          <include name="logOut"/>
+          <include name="beforeSute"/>
+        </methods>
+      </class> <!-- mail.tests.LogOutTest -->
+    </classes>
+  </test> <!-- TestNgMail(failed) -->
+</suite> <!-- Failed suite [Mail Test] -->
