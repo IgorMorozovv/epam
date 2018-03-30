@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" ignored="6" total="12" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Mail Test" duration-ms="20160" started-at="2018-03-30T08:54:35Z" finished-at="2018-03-30T08:54:55Z">
+  <suite name="Mail" duration-ms="65805" started-at="2018-03-30T09:01:13Z" finished-at="2018-03-30T09:02:18Z">
     <groups>
       <group name="createDraft">
         <method signature="CreateDraftTest.createDraft(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="createDraft" class="mail.tests.CreateDraftTest"/>
@@ -11,15 +11,15 @@
         <method signature="LoginTest.logInTest()[pri:0, instance:mail.tests.LoginTest@485966cc]" name="logInTest" class="mail.tests.LoginTest"/>
       </group> <!-- login -->
     </groups>
-    <test name="TestNgMail" duration-ms="20160" started-at="2018-03-30T08:54:35Z" finished-at="2018-03-30T08:54:55Z">
+    <test name="TestMail" duration-ms="65805" started-at="2018-03-30T09:01:13Z" finished-at="2018-03-30T09:02:18Z">
       <class name="mail.tests.LogOutTest">
-        <test-method status="PASS" signature="logOut()[pri:2, instance:mail.tests.LogOutTest@7c711375]" name="logOut" duration-ms="1535" depends-on-groups="login" started-at="2018-03-30T11:54:54Z" finished-at="2018-03-30T11:54:55Z">
+        <test-method status="PASS" signature="logOut()[pri:2, instance:mail.tests.LogOutTest@7c711375]" name="logOut" duration-ms="1801" depends-on-groups="login" started-at="2018-03-30T12:02:17Z" finished-at="2018-03-30T12:02:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
       </class> <!-- mail.tests.LogOutTest -->
       <class name="mail.tests.CreateDraftTest">
-        <test-method status="PASS" signature="createDraft(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="createDraft" duration-ms="1288" depends-on-groups="login" started-at="2018-03-30T11:54:42Z" data-provider="dataToFillLetter" finished-at="2018-03-30T11:54:44Z">
+        <test-method status="PASS" signature="createDraft(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="createDraft" duration-ms="21990" depends-on-groups="login" started-at="2018-03-30T12:01:41Z" data-provider="dataToFillLetter" finished-at="2018-03-30T12:02:03Z">
           <params>
             <param index="0">
               <value>
@@ -40,11 +40,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDraft -->
-        <test-method status="PASS" signature="saveDraft()[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="saveDraft" is-config="true" duration-ms="1164" started-at="2018-03-30T11:54:44Z" finished-at="2018-03-30T11:54:45Z">
+        <test-method status="PASS" signature="saveDraft()[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="saveDraft" is-config="true" duration-ms="1712" started-at="2018-03-30T12:02:03Z" finished-at="2018-03-30T12:02:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- saveDraft -->
-        <test-method status="PASS" signature="createDraft(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="createDraft" duration-ms="553" depends-on-groups="login" started-at="2018-03-30T11:54:45Z" data-provider="dataToFillLetter" finished-at="2018-03-30T11:54:45Z">
+        <test-method status="PASS" signature="createDraft(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="createDraft" duration-ms="1019" depends-on-groups="login" started-at="2018-03-30T12:02:05Z" data-provider="dataToFillLetter" finished-at="2018-03-30T12:02:06Z">
           <params>
             <param index="0">
               <value>
@@ -65,17 +65,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDraft -->
-        <test-method status="PASS" signature="saveDraft()[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="saveDraft" is-config="true" duration-ms="1278" started-at="2018-03-30T11:54:45Z" finished-at="2018-03-30T11:54:47Z">
+        <test-method status="PASS" signature="saveDraft()[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="saveDraft" is-config="true" duration-ms="1279" started-at="2018-03-30T12:02:06Z" finished-at="2018-03-30T12:02:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- saveDraft -->
       </class> <!-- mail.tests.CreateDraftTest -->
       <class name="mail.tests.VerifyDraftsTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="setUp" is-config="true" duration-ms="1" started-at="2018-03-30T11:54:47Z" finished-at="2018-03-30T11:54:47Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="setUp" is-config="true" duration-ms="1" started-at="2018-03-30T12:02:07Z" finished-at="2018-03-30T12:02:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="verifyDraft" duration-ms="1377" depends-on-groups="createDraft" started-at="2018-03-30T11:54:47Z" data-provider="dataToFillLetter" finished-at="2018-03-30T11:54:48Z">
+        <test-method status="PASS" signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="verifyDraft" duration-ms="1558" depends-on-groups="createDraft" started-at="2018-03-30T12:02:07Z" data-provider="dataToFillLetter" finished-at="2018-03-30T12:02:09Z">
           <params>
             <param index="0">
               <value>
@@ -96,15 +96,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDraft -->
-        <test-method status="PASS" signature="deleteDrafts()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="deleteDrafts" is-config="true" duration-ms="2184" started-at="2018-03-30T11:54:48Z" finished-at="2018-03-30T11:54:50Z">
+        <test-method status="PASS" signature="deleteDrafts()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="deleteDrafts" is-config="true" duration-ms="2971" started-at="2018-03-30T12:02:09Z" finished-at="2018-03-30T12:02:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteDrafts -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="setUp" is-config="true" duration-ms="3" started-at="2018-03-30T11:54:50Z" finished-at="2018-03-30T11:54:50Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="setUp" is-config="true" duration-ms="3" started-at="2018-03-30T12:02:12Z" finished-at="2018-03-30T12:02:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="verifyDraft" duration-ms="1536" depends-on-groups="createDraft" started-at="2018-03-30T11:54:50Z" data-provider="dataToFillLetter" finished-at="2018-03-30T11:54:52Z">
+        <test-method status="PASS" signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="verifyDraft" duration-ms="2550" depends-on-groups="createDraft" started-at="2018-03-30T12:02:12Z" data-provider="dataToFillLetter" finished-at="2018-03-30T12:02:14Z">
           <params>
             <param index="0">
               <value>
@@ -125,25 +125,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDraft -->
-        <test-method status="PASS" signature="deleteDrafts()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="deleteDrafts" is-config="true" duration-ms="1954" started-at="2018-03-30T11:54:52Z" finished-at="2018-03-30T11:54:54Z">
+        <test-method status="PASS" signature="deleteDrafts()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="deleteDrafts" is-config="true" duration-ms="2161" started-at="2018-03-30T12:02:14Z" finished-at="2018-03-30T12:02:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteDrafts -->
       </class> <!-- mail.tests.VerifyDraftsTests -->
       <class name="mail.tests.LoginTest">
-        <test-method status="PASS" signature="beforeSute()[pri:0, instance:mail.tests.LoginTest@485966cc]" name="beforeSute" is-config="true" duration-ms="11" started-at="2018-03-30T11:54:35Z" finished-at="2018-03-30T11:54:35Z">
+        <test-method status="PASS" signature="beforeSute()[pri:0, instance:mail.tests.LoginTest@485966cc]" name="beforeSute" is-config="true" duration-ms="16" started-at="2018-03-30T12:01:13Z" finished-at="2018-03-30T12:01:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSute -->
-        <test-method status="PASS" signature="logInTest()[pri:0, instance:mail.tests.LoginTest@485966cc]" name="logInTest" duration-ms="7247" started-at="2018-03-30T11:54:35Z" finished-at="2018-03-30T11:54:42Z">
+        <test-method status="PASS" signature="logInTest()[pri:0, instance:mail.tests.LoginTest@485966cc]" name="logInTest" duration-ms="28721" started-at="2018-03-30T12:01:13Z" finished-at="2018-03-30T12:01:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInTest -->
-        <test-method status="PASS" signature="afterSute()[pri:0, instance:mail.tests.LoginTest@485966cc]" name="afterSute" is-config="true" duration-ms="1662" started-at="2018-03-30T11:54:55Z" finished-at="2018-03-30T11:54:57Z">
+        <test-method status="PASS" signature="afterSute()[pri:0, instance:mail.tests.LoginTest@485966cc]" name="afterSute" is-config="true" duration-ms="1311" started-at="2018-03-30T12:02:18Z" finished-at="2018-03-30T12:02:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSute -->
       </class> <!-- mail.tests.LoginTest -->
-    </test> <!-- TestNgMail -->
-  </suite> <!-- Mail Test -->
+    </test> <!-- TestMail -->
+  </suite> <!-- Mail -->
 </testng-results>

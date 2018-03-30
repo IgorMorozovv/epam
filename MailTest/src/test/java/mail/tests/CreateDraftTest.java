@@ -23,7 +23,7 @@ public class CreateDraftTest extends Basic {
 
 	assertTrue(composeLetterPage.draftFormIsDisplayed());
 	
-	// assertTrue(mailPage.draftSaved());
+	
     }
 
     @AfterMethod
