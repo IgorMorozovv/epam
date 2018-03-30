@@ -2,7 +2,7 @@ package mail.tests;
 
 import static org.testng.Assert.assertTrue;
 
-import org.testng.annotations.AfterMethod;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import mail.data.ReadFromXML;
@@ -23,14 +23,11 @@ public class CreateDraftTest extends Basic {
 
 	assertTrue(composeLetterPage.draftFormIsDisplayed());
 	
-	
-    }
-
-    @AfterMethod
-    public void saveDraft() {
 	composeLetterPage.clickSaveButton();
 	 assertTrue(mailPage.draftSaved());
     }
+
+
 
     @DataProvider
     private Object[][] dataToFillLetter() {

@@ -16,7 +16,6 @@ public class LoginTest extends Basic {
 	loginPage.inputLogin(LoginPageData.LOGIN);
 	loginPage.inputPassword(LoginPageData.PASSWORD);
 	loginPage.clickEnter();
-	//wDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
 	assertTrue(mailPage.isLoaded());
 	mailPage.clickLightVersionLink();
     }

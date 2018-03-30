@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Mail">
-                    <span>D:\For tests\MailTest\src\test\java\mail\SutePositiveTests.xml</span>
+                    <span>D:\For tests\MailTest_light\src\test\java\mail\SutePositiveTests.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -122,12 +122,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Mail" title="mail.tests.VerifyDraftsTests" hash-for-method="verifyDraft(g, t, S)">verifyDraft(g, t, S)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Mail" title="mail.tests.VerifyDraftsTests" hash-for-method="verifyDraft(gadwil@yandex.ru, test message, Some message)">verifyDraft(gadwil@yandex.ru, test message, Some message)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Mail" title="mail.tests.VerifyDraftsTests" hash-for-method="verifyDraft(gadwil@yandex.ru, test message, Some message)">verifyDraft(gadwil@yandex.ru, test message, Some message)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Mail" title="mail.tests.VerifyDraftsTests" hash-for-method="verifyDraft(g, t, S)">verifyDraft(g, t, S)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Mail -->
@@ -174,18 +174,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyDraft(g, t, S)">
-                  </a> <!-- verifyDraft(g, t, S) -->
-                  <span class="method-name">verifyDraft</span>
-                  <span class="parameters">(g, t, S)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="verifyDraft(gadwil@yandex.ru, test message, Some message)">
                   </a> <!-- verifyDraft(gadwil@yandex.ru, test message, Some message) -->
                   <span class="method-name">verifyDraft</span>
                   <span class="parameters">(gadwil@yandex.ru, test message, Some message)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDraft(g, t, S)">
+                  </a> <!-- verifyDraft(g, t, S) -->
+                  <span class="method-name">verifyDraft</span>
+                  <span class="parameters">(g, t, S)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -223,7 +223,7 @@
         </div> <!-- panel Mail -->
         <div panel-name="test-xml-Mail" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\For tests\MailTest\src\test\java\mail\SutePositiveTests.xml</span>
+            <span class="header-content">D:\For tests\MailTest_light\src\test\java\mail\SutePositiveTests.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -295,32 +295,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'logInTest')
 data.setCell(0, 2, 'mail.tests.LoginTest')
-data.setCell(0, 3, 28721);
+data.setCell(0, 3, 8835);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'createDraft')
 data.setCell(1, 2, 'mail.tests.CreateDraftTest')
-data.setCell(1, 3, 21990);
+data.setCell(1, 3, 2161);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyDraft')
-data.setCell(2, 2, 'mail.tests.VerifyDraftsTests')
-data.setCell(2, 3, 2550);
+data.setCell(2, 1, 'createDraft')
+data.setCell(2, 2, 'mail.tests.CreateDraftTest')
+data.setCell(2, 3, 2118);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'logOut')
-data.setCell(3, 2, 'mail.tests.LogOutTest')
-data.setCell(3, 3, 1801);
+data.setCell(3, 1, 'verifyDraft')
+data.setCell(3, 2, 'mail.tests.VerifyDraftsTests')
+data.setCell(3, 3, 1703);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyDraft')
 data.setCell(4, 2, 'mail.tests.VerifyDraftsTests')
-data.setCell(4, 3, 1558);
+data.setCell(4, 3, 1703);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'createDraft')
-data.setCell(5, 2, 'mail.tests.CreateDraftTest')
-data.setCell(5, 3, 1019);
+data.setCell(5, 1, 'logOut')
+data.setCell(5, 2, 'mail.tests.LogOutTest')
+data.setCell(5, 3, 1621);
 window.suiteTableData['Mail']= { tableData: data, tableDiv: 'times-div-Mail'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 57 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-Mail">
               </div> <!-- times-div-Mail -->
             </div> <!-- times-div -->
@@ -380,67 +380,59 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">logInTest</span>
-                <span class="method-start">32 ms</span>
+                <span class="method-start">127 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mail.tests.CreateDraftTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">createDraft(gadwil@yandex.ru, test message, Some message)</span>
-                <span class="method-start">28768 ms</span>
+                <span class="method-start">8977 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">saveDraft</span>
-                <span class="method-start">50759 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">createDraft(g, t, S)</span>
-                <span class="method-start">52471 ms</span>
+                <span class="method-start">11096 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">saveDraft</span>
-                <span class="method-start">53491 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mail.tests.VerifyDraftsTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">54773 ms</span>
+                <span class="method-start">13260 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyDraft(gadwil@yandex.ru, test message, Some message)</span>
-                <span class="method-start">54774 ms</span>
+                <span class="method-start">13262 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">deleteDrafts</span>
-                <span class="method-start">56333 ms</span>
+                <span class="method-start">14966 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">59304 ms</span>
+                <span class="method-start">16906 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyDraft(g, t, S)</span>
-                <span class="method-start">59307 ms</span>
+                <span class="method-start">16908 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">deleteDrafts</span>
-                <span class="method-start">61858 ms</span>
+                <span class="method-start">18612 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mail.tests.LogOutTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">logOut</span>
-                <span class="method-start">64019 ms</span>
+                <span class="method-start">20788 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mail.tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSute</span>
-                <span class="method-start">65845 ms</span>
+                <span class="method-start">22432 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
