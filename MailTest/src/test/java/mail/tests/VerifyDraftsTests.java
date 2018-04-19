@@ -3,44 +3,48 @@ package mail.tests;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import mail.data.ReadFromXML;
+public class VerifyDraftsTests extends BasicTestClass {
 
-public class VerifyDraftsTests extends Basic {
+    private static final String FILE_NAME = "forDraft.xml";
 
-    private Object[][] dataToLetters;
-
-    @BeforeMethod()
+    @BeforeClass()
     public void setUp() {
+	login.log();
 
-	dataToLetters = ReadFromXML.getData(FILE_NAME);
     }
 
     @AfterMethod
-    public void deleteDrafts() {
-	mailPage.clickDraftLink();
-	draftPage.selectLastDraft();
-	mailPage.clickDeleteButton();
+    public void deleteDrafts() throws InterruptedException {
+
+	drafts.deleteDrafts();
 
     }
 
-    @Test(dependsOnGroups = "createDraft", dataProvider = "dataToFillLetter", priority = 1)
+    @Test(dependsOnGroups = "login", dataProvider = "FillLetter", priority = 1)
     private void verifyDraft(String receiver, String subject, String message) {
-	mailPage.clickDraftLink();
+
+	createDraft.fillFields(receiver, subject, message);
+	writeLetterPage.save();
+
+	linksToMainPages.toDraftLinkClick();
+	draftPage.waitTitle();
+	commonButtons.refreshButton();
+	waitpageload();
 	draftPage.loadLastDraft();
-	assertTrue(composeLetterPage.assertReceiver(receiver));
-	assertTrue(composeLetterPage.assertSubject(subject));
-	assertTrue(composeLetterPage.assertMessage(message));
+	assertTrue(letterFieldsAssert.assertReceiver(receiver));
+	assertTrue(letterFieldsAssert.assertSubject(subject));
+	assertTrue(letterFieldsAssert.assertMessage(message));
+
     }
 
-    @DataProvider
+    @DataProvider(name = "FillLetter")
     private Object[][] dataToFillLetter() {
 
-	dataToLetters = ReadFromXML.getData(FILE_NAME);
-	return dataToLetters;
+	return mail.using.ReadFromXML.getData(FILE_NAME);
     }
 
 }

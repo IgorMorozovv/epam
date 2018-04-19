@@ -1,18 +1,25 @@
 package mail.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
+    String script = "var elements = document.getElementsByClassName('passport-Button-Text');" + "elements[0].click();";
+
     public LoginPage(WebDriver driver) {
 
 	PageFactory.initElements(driver, this);
 	this.driver = driver;
+	js = ((JavascriptExecutor) driver);
     }
 
+    JavascriptExecutor js;
     public WebDriver driver;
 
     @FindBy(name = "login")
@@ -25,15 +32,19 @@ public class LoginPage {
     private WebElement enterButton;
 
     public void inputLogin(String login) {
-	loginField.sendKeys(login);
+
+	new Actions(driver).sendKeys(loginField, login).build().perform();
     }
 
     public void inputPassword(String password) {
-	passwordField.sendKeys(password);
+
+	new Actions(driver).sendKeys(passwordField, password).build().perform();
     }
 
     public void clickEnter() {
-	enterButton.click();
+
+	((JavascriptExecutor) driver).executeScript(script);
+
     }
 
     public void clickLastDraft() {

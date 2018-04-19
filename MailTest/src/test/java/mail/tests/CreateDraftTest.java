@@ -2,37 +2,40 @@ package mail.tests;
 
 import static org.testng.Assert.assertTrue;
 
-
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import mail.data.ReadFromXML;
+import mail.using.ReadFromXML;
 
-public class CreateDraftTest extends Basic {
+public class CreateDraftTest extends BasicTestClass {
 
-    Object[][] dataToLetters;
+    private static String FILE_NAME = "forDraft.xml";
 
-    final static String FILE_NAME = "forDraft.xml";
-
-    @Test(groups = "createDraft", dependsOnGroups = "login", dataProvider = "dataToFillLetter", priority = 0)
-    public void createDraft(String to, String subject, String message) {
-
-	mailPage.clickWriteMessageButton();
-	composeLetterPage.fillToField(to);
-	composeLetterPage.fillSubjectField(subject);
-	composeLetterPage.fillMessageField(message);
-
-	assertTrue(composeLetterPage.draftFormIsDisplayed());
-	
-	composeLetterPage.clickSaveButton();
-	 assertTrue(mailPage.draftSaved());
+    @BeforeClass
+    public void setLogin() {
+	login.log();
+	inboxPage.waitTitle();
     }
 
+    @Test(dependsOnGroups = "login", dataProvider = "letterData", priority = 0)
+    public void createMessage(String receiver, String subject, String message) {
 
+	
+	createDraft.fillFields(receiver, subject, message);
+	createDraft.save();
+	assertTrue(writeLetterPage.SavedTextVisible());
+
+    }
+
+    @AfterClass
+    private void deleteDrafts() {
+
+	drafts.deleteDrafts();
+    }
 
     @DataProvider
-    private Object[][] dataToFillLetter() {
-
-	dataToLetters = ReadFromXML.getData(FILE_NAME);
-	return dataToLetters;
+    private Object[][] letterData() {
+	return ReadFromXML.getData(FILE_NAME);
     }
 }

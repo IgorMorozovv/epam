@@ -1,23 +1,16 @@
 package mail.tests;
 
 import static org.testng.Assert.assertTrue;
-import java.util.concurrent.TimeUnit;
+
 import org.testng.annotations.Test;
 
-import mail.data.LoginPageData;
+public class LoginTest extends BasicTestClass {
 
-public class LoginTest extends Basic {
+    @Test(groups = "login", priority = 5)
+    public void login() {
 
-    @Test(groups = "login")
-    public void logInTest() {
+	login.log();
 
-	wDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	wDriver.get(LoginPageData.LOGIN_URL);
-	loginPage.inputLogin(LoginPageData.LOGIN);
-	loginPage.inputPassword(LoginPageData.PASSWORD);
-	loginPage.clickEnter();
-	assertTrue(mailPage.isLoaded());
-	mailPage.clickLightVersionLink();
+	assertTrue(inboxPage.isLoad());
     }
-
 }

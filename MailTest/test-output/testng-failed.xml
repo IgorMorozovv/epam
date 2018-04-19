@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Mail]">
+<suite thread-count="-1" name="Failed suite [Mail]" guice-stage="DEVELOPMENT">
   <test name="TestMail(failed)">
+    <parameter name="start" value="1"/>
     <classes>
-      <class name="mail.tests.CreateDraftTest">
-        <methods>
-          <include name="afterSute"/>
-          <include name="createDraft"/>
-          <include name="beforeSute"/>
-        </methods>
-      </class> <!-- mail.tests.CreateDraftTest -->
-      <class name="mail.tests.VerifyDraftsTests">
-        <methods>
-          <include name="verifyDraft" invocation-numbers="1"/>
-          <include name="afterSute"/>
-          <include name="beforeSute"/>
-          <include name="setUp"/>
-          <include name="deleteDrafts"/>
-        </methods>
-      </class> <!-- mail.tests.VerifyDraftsTests -->
       <class name="mail.tests.LoginTest">
         <methods>
-          <include name="afterSute"/>
-          <include name="beforeSute"/>
-          <include name="logInTest"/>
+          <include name="login"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
         </methods>
       </class> <!-- mail.tests.LoginTest -->
+      <class name="mail.tests.TransferDraft">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="setLogin"/>
+          <include name="trancferDrafts" invocation-numbers="1"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- mail.tests.TransferDraft -->
+      <class name="mail.tests.CreateDraftTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="setLogin"/>
+          <include name="afterClass"/>
+          <include name="deleteDrafts"/>
+          <include name="createMessage" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- mail.tests.CreateDraftTest -->
     </classes>
   </test> <!-- TestMail(failed) -->
 </suite> <!-- Failed suite [Mail] -->

@@ -2,12 +2,12 @@
 <mail>
 	<draft>
 		<to>gadwil@yandex.ru</to>
-		<subject>test message</subject>
-		<message>Some message</message>
+		<subject>test message №1</subject>
+		<message>Some message №1</message>
 	</draft>
 	<draft>
-		<to>g</to>
-		<subject>t</subject>
-		<message>S</message>
+		<to>gadwil@yandex.ru</to>
+		<subject>test message №2</subject>
+		<message>Some message №2</message>
 	</draft>
 </mail>

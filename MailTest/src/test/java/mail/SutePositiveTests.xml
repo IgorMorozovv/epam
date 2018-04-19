@@ -1,13 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Mail">
-	<test name="TestMail" >
-	
-			
-		<classes>
 
+	<test name="TestMail" >
+<!-- 	1 - запуск через сервер, 2 - запуск через драйвер селениума -->
+	<parameter name="start" value="1"></parameter>
+		<classes>
 			<class name="mail.tests.LoginTest"></class>
-			<class name="mail.tests.CreateDraftTest" >	</class>
+			<class name="mail.tests.CreateDraftTest"></class>
 			<class name="mail.tests.VerifyDraftsTests"></class>
+			<class name="mail.tests.SendLetterTest"></class>
+			<class name="mail.tests.TransferDraft"></class>
 			<class name="mail.tests.LogOutTest"></class>
 			
 		</classes>

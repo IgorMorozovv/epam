@@ -1,25 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="6" total="12" passed="6">
+<testng-results ignored="0" total="10" passed="8" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Mail" duration-ms="22397" started-at="2018-03-30T13:48:35Z" finished-at="2018-03-30T13:48:57Z">
+  <suite started-at="2018-04-19T08:51:23Z" name="Mail" finished-at="2018-04-19T08:53:41Z" duration-ms="138027">
     <groups>
-      <group name="createDraft">
-        <method signature="CreateDraftTest.createDraft(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="createDraft" class="mail.tests.CreateDraftTest"/>
-      </group> <!-- createDraft -->
       <group name="login">
-        <method signature="LoginTest.logInTest()[pri:0, instance:mail.tests.LoginTest@485966cc]" name="logInTest" class="mail.tests.LoginTest"/>
+        <method signature="LoginTest.login()[pri:5, instance:mail.tests.LoginTest@28f3b248]" name="login" class="mail.tests.LoginTest"/>
       </group> <!-- login -->
     </groups>
-    <test name="TestMail" duration-ms="22397" started-at="2018-03-30T13:48:35Z" finished-at="2018-03-30T13:48:57Z">
+    <test started-at="2018-04-19T08:51:23Z" name="TestMail" finished-at="2018-04-19T08:53:41Z" duration-ms="138027">
+      <class name="mail.tests.TransferDraft">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.TransferDraft@57d7f8ca]" started-at="2018-04-19T11:52:03Z" name="beforeClass" finished-at="2018-04-19T11:52:09Z" duration-ms="5121" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="setLogin()[pri:0, instance:mail.tests.TransferDraft@57d7f8ca]" started-at="2018-04-19T11:52:09Z" name="setLogin" finished-at="2018-04-19T11:52:15Z" duration-ms="6454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setLogin -->
+        <test-method signature="trancferDrafts(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mail.tests.TransferDraft@57d7f8ca]" started-at="2018-04-19T11:52:15Z" name="trancferDrafts" data-provider="letterData" depends-on-groups="login" finished-at="2018-04-19T11:52:23Z" duration-ms="8230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trancferDrafts -->
+        <test-method signature="trancferDrafts(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mail.tests.TransferDraft@57d7f8ca]" started-at="2018-04-19T11:52:23Z" name="trancferDrafts" data-provider="letterData" depends-on-groups="login" finished-at="2018-04-19T11:52:38Z" duration-ms="14504" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №2]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: //*[contains(text(), 'нет писем')]For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'EPRURYAW0060', ip: '10.19.10.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'Driver info: org.openqa.selenium.remote.RemoteWebDriverCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 6460, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, webdriver.remote.sessionid: ad2031fa-9f0f-4bc6-baf3-213...}Session ID: ad2031fa-9f0f-4bc6-baf3-213be2d2c539*** Element info: {Using=xpath, value=//*[contains(text(), 'нет писем')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[contains(text(), 'нет писем')]For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'EPRURYAW0060', ip: '10.19.10.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'Driver info: org.openqa.selenium.remote.RemoteWebDriverCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 6460, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, webdriver.remote.sessionid: ad2031fa-9f0f-4bc6-baf3-213...}Session ID: ad2031fa-9f0f-4bc6-baf3-213be2d2c539*** Element info: {Using=xpath, value=//*[contains(text(), 'нет писем')]}at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)at org.openqa.selenium.By$ByXPath.findElement(By.java:361)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)at mail.pages.main.DraftPage.noLetters(DraftPage.java:70)at mail.tests.TransferDraft.trancferDrafts(TransferDraft.java:31)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:564)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trancferDrafts -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.TransferDraft@57d7f8ca]" started-at="2018-04-19T11:52:38Z" name="afterClass" finished-at="2018-04-19T11:52:39Z" duration-ms="1666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- mail.tests.TransferDraft -->
       <class name="mail.tests.LogOutTest">
-        <test-method status="PASS" signature="logOut()[pri:2, instance:mail.tests.LogOutTest@7c711375]" name="logOut" duration-ms="1621" depends-on-groups="login" started-at="2018-03-30T16:48:56Z" finished-at="2018-03-30T16:48:57Z">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.LogOutTest@76c3e77a]" started-at="2018-04-19T11:53:25Z" name="beforeClass" finished-at="2018-04-19T11:53:31Z" duration-ms="6061" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="logOut()[pri:10, instance:mail.tests.LogOutTest@76c3e77a]" started-at="2018-04-19T11:53:31Z" name="logOut" depends-on-groups="login" finished-at="2018-04-19T11:53:38Z" duration-ms="6511" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.LogOutTest@76c3e77a]" started-at="2018-04-19T11:53:38Z" name="afterClass" finished-at="2018-04-19T11:53:41Z" duration-ms="2840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
       </class> <!-- mail.tests.LogOutTest -->
       <class name="mail.tests.CreateDraftTest">
-        <test-method status="PASS" signature="createDraft(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="createDraft" duration-ms="2118" depends-on-groups="login" started-at="2018-03-30T16:48:44Z" data-provider="dataToFillLetter" finished-at="2018-03-30T16:48:46Z">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1b1426f4]" started-at="2018-04-19T11:52:39Z" name="beforeClass" finished-at="2018-04-19T11:52:45Z" duration-ms="5278" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="setLogin()[pri:0, instance:mail.tests.CreateDraftTest@1b1426f4]" started-at="2018-04-19T11:52:45Z" name="setLogin" finished-at="2018-04-19T11:52:52Z" duration-ms="6801" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setLogin -->
+        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1b1426f4]" started-at="2018-04-19T11:52:52Z" name="createMessage" data-provider="letterData" depends-on-groups="login" finished-at="2018-04-19T11:52:55Z" duration-ms="3756" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,46 +126,73 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[test message]]>
+                <![CDATA[test message №1]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Some message]]>
+                <![CDATA[Some message №1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createDraft -->
-        <test-method status="PASS" signature="createDraft(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1de76cc7]" name="createDraft" duration-ms="2161" depends-on-groups="login" started-at="2018-03-30T16:48:46Z" data-provider="dataToFillLetter" finished-at="2018-03-30T16:48:48Z">
+        </test-method> <!-- createMessage -->
+        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1b1426f4]" started-at="2018-04-19T11:52:55Z" name="createMessage" data-provider="letterData" depends-on-groups="login" finished-at="2018-04-19T11:52:55Z" duration-ms="103" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[g]]>
+                <![CDATA[gadwil@yandex.ru]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[t]]>
+                <![CDATA[test message №2]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[S]]>
+                <![CDATA[Some message №2]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.interactions.MoveTargetOutOfBoundsException">
+            <message>
+              <![CDATA[(644, -24.5) is out of bounds of viewport width (1268) and height (855)Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'EPRURYAW0060', ip: '10.19.10.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'Driver info: org.openqa.selenium.remote.RemoteWebDriverCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14016, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, webdriver.remote.sessionid: 11639857-bab5-4aad-a3e2-e47...}Session ID: 11639857-bab5-4aad-a3e2-e47a65c4d628]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: (644, -24.5) is out of bounds of viewport width (1268) and height (855)Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'EPRURYAW0060', ip: '10.19.10.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'Driver info: org.openqa.selenium.remote.RemoteWebDriverCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14016, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, webdriver.remote.sessionid: 11639857-bab5-4aad-a3e2-e47...}Session ID: 11639857-bab5-4aad-a3e2-e47a65c4d628at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:638)at mail.pages.overall.OverallButtonsOnPages.clickWriteMessageButton(OverallButtonsOnPages.java:50)at mail.using.CreateDraft.fillFields(CreateDraft.java:13)at mail.tests.CreateDraftTest.createMessage(CreateDraftTest.java:25)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:564)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.interactions.MoveTargetOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createDraft -->
+        </test-method> <!-- createMessage -->
+        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.CreateDraftTest@1b1426f4]" started-at="2018-04-19T11:52:55Z" name="deleteDrafts" finished-at="2018-04-19T11:52:57Z" duration-ms="1232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteDrafts -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.CreateDraftTest@1b1426f4]" started-at="2018-04-19T11:52:57Z" name="afterClass" finished-at="2018-04-19T11:52:59Z" duration-ms="2063" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
       </class> <!-- mail.tests.CreateDraftTest -->
-      <class name="mail.tests.VerifyDraftsTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="setUp" is-config="true" duration-ms="2" started-at="2018-03-30T16:48:48Z" finished-at="2018-03-30T16:48:48Z">
+      <class name="mail.tests.SendLetterTest">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.SendLetterTest@6d4e5011]" started-at="2018-04-19T11:51:37Z" name="beforeClass" finished-at="2018-04-19T11:51:43Z" duration-ms="6107" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="verifyDraft" duration-ms="1703" depends-on-groups="createDraft" started-at="2018-03-30T16:48:48Z" data-provider="dataToFillLetter" finished-at="2018-03-30T16:48:50Z">
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="setLogin()[pri:0, instance:mail.tests.SendLetterTest@6d4e5011]" started-at="2018-04-19T11:51:43Z" name="setLogin" finished-at="2018-04-19T11:51:46Z" duration-ms="2857" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setLogin -->
+        <test-method signature="sendLetter(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mail.tests.SendLetterTest@6d4e5011]" started-at="2018-04-19T11:51:46Z" name="sendLetter" data-provider="FillLetter" depends-on-groups="login" finished-at="2018-04-19T11:51:56Z" duration-ms="9927" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -76,65 +201,143 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[test message]]>
+                <![CDATA[test message №1]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Some message]]>
+                <![CDATA[Some message №1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDraft -->
-        <test-method status="PASS" signature="deleteDrafts()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="deleteDrafts" is-config="true" duration-ms="1940" started-at="2018-03-30T16:48:50Z" finished-at="2018-03-30T16:48:52Z">
+        </test-method> <!-- sendLetter -->
+        <test-method is-config="true" signature="deleteSendedMessage()[pri:0, instance:mail.tests.SendLetterTest@6d4e5011]" started-at="2018-04-19T11:51:56Z" name="deleteSendedMessage" finished-at="2018-04-19T11:51:56Z" duration-ms="786" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteDrafts -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="setUp" is-config="true" duration-ms="2" started-at="2018-03-30T16:48:52Z" finished-at="2018-03-30T16:48:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="verifyDraft" duration-ms="1703" depends-on-groups="createDraft" started-at="2018-03-30T16:48:52Z" data-provider="dataToFillLetter" finished-at="2018-03-30T16:48:53Z">
+        </test-method> <!-- deleteSendedMessage -->
+        <test-method signature="sendLetter(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mail.tests.SendLetterTest@6d4e5011]" started-at="2018-04-19T11:51:56Z" name="sendLetter" data-provider="FillLetter" depends-on-groups="login" finished-at="2018-04-19T11:52:01Z" duration-ms="4608" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[g]]>
+                <![CDATA[gadwil@yandex.ru]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[t]]>
+                <![CDATA[test message №2]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[S]]>
+                <![CDATA[Some message №2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendLetter -->
+        <test-method is-config="true" signature="deleteSendedMessage()[pri:0, instance:mail.tests.SendLetterTest@6d4e5011]" started-at="2018-04-19T11:52:01Z" name="deleteSendedMessage" finished-at="2018-04-19T11:52:02Z" duration-ms="591" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSendedMessage -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.SendLetterTest@6d4e5011]" started-at="2018-04-19T11:52:02Z" name="afterClass" finished-at="2018-04-19T11:52:03Z" duration-ms="1773" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- mail.tests.SendLetterTest -->
+      <class name="mail.tests.VerifyDraftsTests">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.VerifyDraftsTests@581ac8a8]" started-at="2018-04-19T11:52:59Z" name="beforeClass" finished-at="2018-04-19T11:53:04Z" duration-ms="5165" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.tests.VerifyDraftsTests@581ac8a8]" started-at="2018-04-19T11:53:04Z" name="setUp" finished-at="2018-04-19T11:53:08Z" duration-ms="3820" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.VerifyDraftsTests@581ac8a8]" started-at="2018-04-19T11:53:08Z" name="verifyDraft" data-provider="FillLetter" depends-on-groups="login" finished-at="2018-04-19T11:53:16Z" duration-ms="8278" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDraft -->
-        <test-method status="PASS" signature="deleteDrafts()[pri:0, instance:mail.tests.VerifyDraftsTests@593aaf41]" name="deleteDrafts" is-config="true" duration-ms="2176" started-at="2018-03-30T16:48:53Z" finished-at="2018-03-30T16:48:56Z">
+        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.VerifyDraftsTests@581ac8a8]" started-at="2018-04-19T11:53:16Z" name="deleteDrafts" finished-at="2018-04-19T11:53:17Z" duration-ms="1461" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteDrafts -->
+        <test-method signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.VerifyDraftsTests@581ac8a8]" started-at="2018-04-19T11:53:17Z" name="verifyDraft" data-provider="FillLetter" depends-on-groups="login" finished-at="2018-04-19T11:53:22Z" duration-ms="4980" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDraft -->
+        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.VerifyDraftsTests@581ac8a8]" started-at="2018-04-19T11:53:22Z" name="deleteDrafts" finished-at="2018-04-19T11:53:24Z" duration-ms="1134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteDrafts -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.VerifyDraftsTests@581ac8a8]" started-at="2018-04-19T11:53:24Z" name="afterClass" finished-at="2018-04-19T11:53:25Z" duration-ms="1818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
       </class> <!-- mail.tests.VerifyDraftsTests -->
       <class name="mail.tests.LoginTest">
-        <test-method status="PASS" signature="beforeSute()[pri:0, instance:mail.tests.LoginTest@485966cc]" name="beforeSute" is-config="true" duration-ms="13" started-at="2018-03-30T16:48:35Z" finished-at="2018-03-30T16:48:35Z">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.LoginTest@28f3b248]" started-at="2018-04-19T11:51:23Z" name="beforeClass" finished-at="2018-04-19T11:51:28Z" duration-ms="5739" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSute -->
-        <test-method status="PASS" signature="logInTest()[pri:0, instance:mail.tests.LoginTest@485966cc]" name="logInTest" duration-ms="8835" started-at="2018-03-30T16:48:35Z" finished-at="2018-03-30T16:48:44Z">
+        </test-method> <!-- beforeClass -->
+        <test-method signature="login()[pri:5, instance:mail.tests.LoginTest@28f3b248]" started-at="2018-04-19T11:51:28Z" name="login" finished-at="2018-04-19T11:51:35Z" duration-ms="6703" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logInTest -->
-        <test-method status="PASS" signature="afterSute()[pri:0, instance:mail.tests.LoginTest@485966cc]" name="afterSute" is-config="true" duration-ms="1614" started-at="2018-03-30T16:48:57Z" finished-at="2018-03-30T16:48:59Z">
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.LoginTest@28f3b248]" started-at="2018-04-19T11:51:35Z" name="afterClass" finished-at="2018-04-19T11:51:37Z" duration-ms="1599" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterSute -->
+        </test-method> <!-- afterClass -->
       </class> <!-- mail.tests.LoginTest -->
     </test> <!-- TestMail -->
   </suite> <!-- Mail -->

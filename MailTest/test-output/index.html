@@ -24,21 +24,21 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Mail">
-              <span class="suite-name border-passed">Mail</span>
+            <a href="#" panel-name="suite-Mail" class="navigator-link">
+              <span class="suite-name border-failed">Mail</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Mail">
-                    <span>D:\For tests\MailTest_light\src\test\java\mail\SutePositiveTests.xml</span>
+                  <a href="#" panel-name="test-xml-Mail" class="navigator-link ">
+                    <span>C:\Users\Igor_Morozov\OneDrive - EPAM 1\Epam\13\4.20\newMailTest\src\test\java\mail\SutePositiveTests.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Mail">
+                  <a href="#" panel-name="testlist-Mail" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Mail">
-                    <span>2 groups</span>
+                  <a href="#" panel-name="group-Mail" class="navigator-link ">
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Mail">
+                  <a href="#" panel-name="times-Mail" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Mail">
+                  <a href="#" panel-name="reporter-Mail" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Mail">
+                  <a href="#" panel-name="ignored-methods-Mail" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Mail">
+                  <a href="#" panel-name="chronological-Mail" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">10 methods, 2 failed,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Mail" class="hide-methods failed suite-Mail"> (hide)</a> <!-- hide-methods failed suite-Mail -->
+                      <a href="#" panel-name="suite-Mail" class="show-methods failed suite-Mail"> (show)</a> <!-- show-methods failed suite-Mail -->
+                    </span>
+                    <div class="method-list-content failed suite-Mail">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mail" title="mail.tests.CreateDraftTest" class="method navigator-link" hash-for-method="createMessage(gadwil@yandex.ru, test message №2, Some message №2)">createMessage(gadwil@yandex.ru, test message №2, Some message №2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mail" title="mail.tests.TransferDraft" class="method navigator-link" hash-for-method="trancferDrafts(gadwil@yandex.ru, test message №2, Some message №2)">trancferDrafts(gadwil@yandex.ru, test message №2, Some message №2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Mail -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,33 +120,43 @@
                     </span>
                     <div class="method-list-content passed suite-Mail">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Mail" title="mail.tests.CreateDraftTest" hash-for-method="createDraft(g, t, S)">createDraft(g, t, S)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mail" title="mail.tests.CreateDraftTest" class="method navigator-link" hash-for-method="createMessage(gadwil@yandex.ru, test message №1, Some message №1)">createMessage(gadwil@yandex.ru, test message №1, Some message №1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Mail" title="mail.tests.CreateDraftTest" hash-for-method="createDraft(gadwil@yandex.ru, test message, Some message)">createDraft(gadwil@yandex.ru, test message, Some message)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mail" title="mail.tests.LogOutTest" class="method navigator-link" hash-for-method="logOut">logOut</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Mail" title="mail.tests.LoginTest" hash-for-method="logInTest">logInTest</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mail" title="mail.tests.LoginTest" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Mail" title="mail.tests.LogOutTest" hash-for-method="logOut">logOut</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mail" title="mail.tests.SendLetterTest" class="method navigator-link" hash-for-method="sendLetter(gadwil@yandex.ru, test message №2, Some message №2)">sendLetter(gadwil@yandex.ru, test message №2, Some message №2)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Mail" title="mail.tests.VerifyDraftsTests" hash-for-method="verifyDraft(gadwil@yandex.ru, test message, Some message)">verifyDraft(gadwil@yandex.ru, test message, Some message)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mail" title="mail.tests.SendLetterTest" class="method navigator-link" hash-for-method="sendLetter(gadwil@yandex.ru, test message №1, Some message №1)">sendLetter(gadwil@yandex.ru, test message №1, Some message №1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Mail" title="mail.tests.VerifyDraftsTests" hash-for-method="verifyDraft(g, t, S)">verifyDraft(g, t, S)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mail" title="mail.tests.TransferDraft" class="method navigator-link" hash-for-method="trancferDrafts(gadwil@yandex.ru, test message №1, Some message №1)">trancferDrafts(gadwil@yandex.ru, test message №1, Some message №1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mail" title="mail.tests.VerifyDraftsTests" class="method navigator-link" hash-for-method="verifyDraft(gadwil@yandex.ru, test message №2, Some message №2)">verifyDraft(gadwil@yandex.ru, test message №2, Some message №2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mail" title="mail.tests.VerifyDraftsTests" class="method navigator-link" hash-for-method="verifyDraft(gadwil@yandex.ru, test message №1, Some message №1)">verifyDraft(gadwil@yandex.ru, test message №1, Some message №1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Mail -->
@@ -142,54 +171,80 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Mail" class="panel Mail">
-          <div class="suite-Mail-class-passed">
+          <div class="suite-Mail-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">mail.tests.TransferDraft</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="trancferDrafts(gadwil@yandex.ru, test message №2, Some message №2)">
+                  </a> <!-- trancferDrafts(gadwil@yandex.ru, test message №2, Some message №2) -->
+                  <span class="method-name">trancferDrafts</span>
+                  <span class="parameters">(gadwil@yandex.ru, test message №2, Some message №2)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[contains(text(), &apos;нет писем&apos;)]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;EPRURYAW0060&apos;, ip: &apos;10.19.10.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 6460, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, webdriver.remote.sessionid: ad2031fa-9f0f-4bc6-baf3-213...}
+Session ID: ad2031fa-9f0f-4bc6-baf3-213be2d2c539
+*** Element info: {Using=xpath, value=//*[contains(text(), &apos;нет писем&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
+	at mail.pages.main.DraftPage.noLetters(DraftPage.java:70)
+	at mail.tests.TransferDraft.trancferDrafts(TransferDraft.java:31)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Mail-class-failed -->
+          <div class="suite-Mail-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">mail.tests.CreateDraftTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createDraft(g, t, S)">
-                  </a> <!-- createDraft(g, t, S) -->
-                  <span class="method-name">createDraft</span>
-                  <span class="parameters">(g, t, S)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createDraft(gadwil@yandex.ru, test message, Some message)">
-                  </a> <!-- createDraft(gadwil@yandex.ru, test message, Some message) -->
-                  <span class="method-name">createDraft</span>
-                  <span class="parameters">(gadwil@yandex.ru, test message, Some message)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Mail-class-passed -->
-          <div class="suite-Mail-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">mail.tests.VerifyDraftsTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyDraft(gadwil@yandex.ru, test message, Some message)">
-                  </a> <!-- verifyDraft(gadwil@yandex.ru, test message, Some message) -->
-                  <span class="method-name">verifyDraft</span>
-                  <span class="parameters">(gadwil@yandex.ru, test message, Some message)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyDraft(g, t, S)">
-                  </a> <!-- verifyDraft(g, t, S) -->
-                  <span class="method-name">verifyDraft</span>
-                  <span class="parameters">(g, t, S)</span>
+                  <a name="createMessage(gadwil@yandex.ru, test message №2, Some message №2)">
+                  </a> <!-- createMessage(gadwil@yandex.ru, test message №2, Some message №2) -->
+                  <span class="method-name">createMessage</span>
+                  <span class="parameters">(gadwil@yandex.ru, test message №2, Some message №2)</span>
+                  <div class="stack-trace">org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: (644, -24.5) is out of bounds of viewport width (1268) and height (855)
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;EPRURYAW0060&apos;, ip: &apos;10.19.10.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14016, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, webdriver.remote.sessionid: 11639857-bab5-4aad-a3e2-e47...}
+Session ID: 11639857-bab5-4aad-a3e2-e47a65c4d628
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:638)
+	at mail.pages.overall.OverallButtonsOnPages.clickWriteMessageButton(OverallButtonsOnPages.java:50)
+	at mail.using.CreateDraft.fillFields(CreateDraft.java:13)
+	at mail.tests.CreateDraftTest.createMessage(CreateDraftTest.java:25)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Mail-class-passed -->
+          </div> <!-- suite-Mail-class-failed -->
           <div class="suite-Mail-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -198,9 +253,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="logInTest">
-                  </a> <!-- logInTest -->
-                  <span class="method-name">logInTest</span>
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -220,21 +275,104 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Mail-class-passed -->
+          <div class="suite-Mail-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">mail.tests.TransferDraft</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="trancferDrafts(gadwil@yandex.ru, test message №1, Some message №1)">
+                  </a> <!-- trancferDrafts(gadwil@yandex.ru, test message №1, Some message №1) -->
+                  <span class="method-name">trancferDrafts</span>
+                  <span class="parameters">(gadwil@yandex.ru, test message №1, Some message №1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Mail-class-passed -->
+          <div class="suite-Mail-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">mail.tests.SendLetterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="sendLetter(gadwil@yandex.ru, test message №2, Some message №2)">
+                  </a> <!-- sendLetter(gadwil@yandex.ru, test message №2, Some message №2) -->
+                  <span class="method-name">sendLetter</span>
+                  <span class="parameters">(gadwil@yandex.ru, test message №2, Some message №2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sendLetter(gadwil@yandex.ru, test message №1, Some message №1)">
+                  </a> <!-- sendLetter(gadwil@yandex.ru, test message №1, Some message №1) -->
+                  <span class="method-name">sendLetter</span>
+                  <span class="parameters">(gadwil@yandex.ru, test message №1, Some message №1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Mail-class-passed -->
+          <div class="suite-Mail-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">mail.tests.CreateDraftTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createMessage(gadwil@yandex.ru, test message №1, Some message №1)">
+                  </a> <!-- createMessage(gadwil@yandex.ru, test message №1, Some message №1) -->
+                  <span class="method-name">createMessage</span>
+                  <span class="parameters">(gadwil@yandex.ru, test message №1, Some message №1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Mail-class-passed -->
+          <div class="suite-Mail-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">mail.tests.VerifyDraftsTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDraft(gadwil@yandex.ru, test message №2, Some message №2)">
+                  </a> <!-- verifyDraft(gadwil@yandex.ru, test message №2, Some message №2) -->
+                  <span class="method-name">verifyDraft</span>
+                  <span class="parameters">(gadwil@yandex.ru, test message №2, Some message №2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDraft(gadwil@yandex.ru, test message №1, Some message №1)">
+                  </a> <!-- verifyDraft(gadwil@yandex.ru, test message №1, Some message №1) -->
+                  <span class="method-name">verifyDraft</span>
+                  <span class="parameters">(gadwil@yandex.ru, test message №1, Some message №1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Mail-class-passed -->
         </div> <!-- panel Mail -->
         <div panel-name="test-xml-Mail" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\For tests\MailTest_light\src\test\java\mail\SutePositiveTests.xml</span>
+            <span class="header-content">C:\Users\Igor_Morozov\OneDrive - EPAM 1\Epam\13\4.20\newMailTest\src\test\java\mail\SutePositiveTests.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Mail&quot;&gt;
+&lt;suite thread-count=&quot;-1&quot; name=&quot;Mail&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test name=&quot;TestMail&quot;&gt;
+    &lt;parameter name=&quot;start&quot; value=&quot;1&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;mail.tests.LoginTest&quot;/&gt;
       &lt;class name=&quot;mail.tests.CreateDraftTest&quot;/&gt;
       &lt;class name=&quot;mail.tests.VerifyDraftsTests&quot;/&gt;
+      &lt;class name=&quot;mail.tests.SendLetterTest&quot;/&gt;
+      &lt;class name=&quot;mail.tests.TransferDraft&quot;/&gt;
       &lt;class name=&quot;mail.tests.LogOutTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TestMail --&gt;
@@ -249,7 +387,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">TestMail (4 classes)</span>
+                <span class="test-name">TestMail (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -260,18 +398,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">createDraft</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">createDraft</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
               <span class="test-group-name">login</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">logInTest</span>
+                <span class="method-in-group-name">login</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -291,36 +421,52 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'logInTest')
-data.setCell(0, 2, 'mail.tests.LoginTest')
-data.setCell(0, 3, 8835);
+data.setCell(0, 1, 'trancferDrafts')
+data.setCell(0, 2, 'mail.tests.TransferDraft')
+data.setCell(0, 3, 14504);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createDraft')
-data.setCell(1, 2, 'mail.tests.CreateDraftTest')
-data.setCell(1, 3, 2161);
+data.setCell(1, 1, 'sendLetter')
+data.setCell(1, 2, 'mail.tests.SendLetterTest')
+data.setCell(1, 3, 9927);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createDraft')
-data.setCell(2, 2, 'mail.tests.CreateDraftTest')
-data.setCell(2, 3, 2118);
+data.setCell(2, 1, 'verifyDraft')
+data.setCell(2, 2, 'mail.tests.VerifyDraftsTests')
+data.setCell(2, 3, 8278);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyDraft')
-data.setCell(3, 2, 'mail.tests.VerifyDraftsTests')
-data.setCell(3, 3, 1703);
+data.setCell(3, 1, 'trancferDrafts')
+data.setCell(3, 2, 'mail.tests.TransferDraft')
+data.setCell(3, 3, 8230);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyDraft')
-data.setCell(4, 2, 'mail.tests.VerifyDraftsTests')
-data.setCell(4, 3, 1703);
+data.setCell(4, 1, 'login')
+data.setCell(4, 2, 'mail.tests.LoginTest')
+data.setCell(4, 3, 6703);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'logOut')
 data.setCell(5, 2, 'mail.tests.LogOutTest')
-data.setCell(5, 3, 1621);
+data.setCell(5, 3, 6511);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyDraft')
+data.setCell(6, 2, 'mail.tests.VerifyDraftsTests')
+data.setCell(6, 3, 4980);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'sendLetter')
+data.setCell(7, 2, 'mail.tests.SendLetterTest')
+data.setCell(7, 3, 4608);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'createMessage')
+data.setCell(8, 2, 'mail.tests.CreateDraftTest')
+data.setCell(8, 3, 3756);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'createMessage')
+data.setCell(9, 2, 'mail.tests.CreateDraftTest')
+data.setCell(9, 3, 103);
 window.suiteTableData['Mail']= { tableData: data, tableDiv: 'times-div-Mail'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Mail">
               </div> <!-- times-div-Mail -->
             </div> <!-- times-div -->
@@ -335,36 +481,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Mail" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">6 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">mail.tests.CreateDraftTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">afterSute</span>
-                <br/>
-                <span class="ignored-method-name">beforeSute</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">mail.tests.VerifyDraftsTests</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">afterSute</span>
-                <br/>
-                <span class="ignored-method-name">beforeSute</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">mail.tests.LogOutTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">afterSute</span>
-                <br/>
-                <span class="ignored-method-name">beforeSute</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Mail" class="panel">
@@ -374,66 +493,149 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">mail.tests.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforeSute</span>
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(1)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">logInTest</span>
-                <span class="method-start">127 ms</span>
+                <span class="method-name">login</span>
+                <span class="method-start">5758 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">12464 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">mail.tests.SendLetterTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(1)</span>
+                <span class="method-start">14063 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">setLogin</span>
+                <span class="method-start">20170 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">sendLetter(gadwil@yandex.ru, test message №1, Some message №1)</span>
+                <span class="method-start">23044 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">deleteSendedMessage</span>
+                <span class="method-start">32971 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">sendLetter(gadwil@yandex.ru, test message №2, Some message №2)</span>
+                <span class="method-start">33757 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">deleteSendedMessage</span>
+                <span class="method-start">38366 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">38958 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">mail.tests.TransferDraft</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(1)</span>
+                <span class="method-start">40731 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">setLogin</span>
+                <span class="method-start">45852 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">trancferDrafts(gadwil@yandex.ru, test message №1, Some message №1)</span>
+                <span class="method-start">52308 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">trancferDrafts(gadwil@yandex.ru, test message №2, Some message №2)</span>
+                <span class="method-start">60538 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">75042 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mail.tests.CreateDraftTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(1)</span>
+                <span class="method-start">76708 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">setLogin</span>
+                <span class="method-start">81986 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">createDraft(gadwil@yandex.ru, test message, Some message)</span>
-                <span class="method-start">8977 ms</span>
+                <span class="method-name">createMessage(gadwil@yandex.ru, test message №1, Some message №1)</span>
+                <span class="method-start">88790 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">createDraft(g, t, S)</span>
-                <span class="method-start">11096 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createMessage(gadwil@yandex.ru, test message №2, Some message №2)</span>
+                <span class="method-start">92547 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">deleteDrafts</span>
+                <span class="method-start">92652 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">93884 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mail.tests.VerifyDraftsTests</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(1)</span>
+                <span class="method-start">95949 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">13260 ms</span>
-              </div> <!-- configuration-method before -->
+                <span class="method-start">101114 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">verifyDraft(gadwil@yandex.ru, test message, Some message)</span>
-                <span class="method-start">13262 ms</span>
+                <span class="method-name">verifyDraft(gadwil@yandex.ru, test message №1, Some message №1)</span>
+                <span class="method-start">104934 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">deleteDrafts</span>
-                <span class="method-start">14966 ms</span>
+                <span class="method-start">113212 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">16906 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyDraft(g, t, S)</span>
-                <span class="method-start">16908 ms</span>
+                <span class="method-name">verifyDraft(gadwil@yandex.ru, test message №2, Some message №2)</span>
+                <span class="method-start">114673 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">deleteDrafts</span>
-                <span class="method-start">18612 ms</span>
+                <span class="method-start">119653 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">120787 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mail.tests.LogOutTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(1)</span>
+                <span class="method-start">122605 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">logOut</span>
-                <span class="method-start">20788 ms</span>
+                <span class="method-start">128666 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">mail.tests.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSute</span>
-                <span class="method-start">22432 ms</span>
-              </div> <!-- configuration-suite after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">135178 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

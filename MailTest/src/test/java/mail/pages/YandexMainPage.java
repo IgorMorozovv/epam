@@ -20,6 +20,7 @@ public class YandexMainPage {
 
     public boolean enterButtonIsDisplay() {
 	return enterMailButton.isDisplayed();
+
     }
 
 }
