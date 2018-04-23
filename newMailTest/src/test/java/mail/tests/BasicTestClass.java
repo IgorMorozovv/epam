@@ -117,7 +117,7 @@ public class BasicTestClass {
     }
 
     public InboxPage getInboxPage() {
-	
+
 	return inboxPage;
     }
 

@@ -29,7 +29,7 @@ public class CreateDraftTest extends BasicTestClass {
 
     @AfterClass
     private void deleteDrafts() {
-	
+
 	drafts.deleteDrafts();
     }
 

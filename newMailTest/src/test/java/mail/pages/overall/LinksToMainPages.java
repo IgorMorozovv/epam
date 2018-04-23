@@ -36,11 +36,9 @@ public class LinksToMainPages extends OverallButtonsOnPages {
 	    new WebDriverWait(driver, WAIT_TIME).until(ExpectedConditions.visibilityOf(element));
 	} catch (ElementNotVisibleException e) {
 	    e.printStackTrace();
-	}
-	catch (TimeoutException e) {
-	   e.printStackTrace();
-	}
-	catch (Exception e) {
+	} catch (TimeoutException e) {
+	    e.printStackTrace();
+	} catch (Exception e) {
 	    e.printStackTrace();
 	}
 

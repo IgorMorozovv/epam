@@ -20,7 +20,7 @@ public class InboxPage extends Page {
     WebElement title1;
 
     public boolean isLoad() {
-	
+
 	waitTitle();
 	String currentTitle;
 	currentTitle = driver.getTitle();

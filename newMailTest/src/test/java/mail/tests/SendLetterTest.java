@@ -17,17 +17,17 @@ public class SendLetterTest extends BasicTestClass {
     @Test(groups = { "other-functions" }, dataProvider = "FillLetter", priority = 3)
     public void sendLetter(String receiver, String subject, String message) {
 
-	drafts.fillFields(receiver, subject, message);	
+	drafts.fillFields(receiver, subject, message);
 	writeLetterPage.clickSubmitButton();
 
 	sentMessagesPage.waitSent();
 	sentMessagesPage.closeInfomWindow();
 
-	drafts.refresh();	
+	drafts.refresh();
 
 	linksToMainPages.toSentMessageClick();
 	sentMessagesPage.waitTitle();
-	
+
 	assertTrue(message.contains(sentMessagesPage.getFirstSendedMessage()));
 
     }

@@ -49,9 +49,9 @@ public class Drafts {
     public void refresh() {
 	basicTestClass.getLinksToMainPages().ToInboxClick();
 	basicTestClass.getInboxPage().waitTitle();
-	
+
 	basicTestClass.getCommonButtons().refreshButton();
-	
+
 	basicTestClass.getLinksToMainPages().toDraftLinkClick();
 	basicTestClass.getDraftPage().waitTitle();
 

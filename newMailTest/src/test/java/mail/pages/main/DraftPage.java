@@ -19,12 +19,12 @@ public class DraftPage extends Page {
 	title = TITLE;
 
     }
-    
+
     private By messages = new By.ByXPath("//*[contains(@class,'js-message-snippet-body')]");
 
     @FindBy(xpath = "//*[contains(@class,'js-message-snippet-body')]")
     private List<WebElement> drafts;
- 
+
     @FindBy(xpath = "//*[contains(@class, 'nb-checkbox-normal-flag')]")
     private List<WebElement> checkBoxDrafts;
 
@@ -53,7 +53,6 @@ public class DraftPage extends Page {
 
     public void dropLetter() {
 
-	
 	waitVisibleElement(drafts.get(firstDraftIndex));
 	new Actions(driver).dragAndDrop(drafts.get(firstDraftIndex), linksToMainPages.getToDelete()).build().perform();
 

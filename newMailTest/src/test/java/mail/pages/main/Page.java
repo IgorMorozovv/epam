@@ -34,14 +34,11 @@ public class Page {
 	    new WebDriverWait(driver, waitTime).until(ExpectedConditions.visibilityOf(element));
 	} catch (ElementNotVisibleException e) {
 	    e.printStackTrace();
-	}
-	catch (TimeoutException e) {
-	   e.printStackTrace();
-	}
-	catch (Exception e) {
+	} catch (TimeoutException e) {
+	    e.printStackTrace();
+	} catch (Exception e) {
 	    e.printStackTrace();
 	}
-	
 
     }
 
@@ -50,14 +47,12 @@ public class Page {
 	    new WebDriverWait(driver, waitTime).until(ExpectedConditions.titleContains(title));
 	} catch (ElementNotVisibleException e) {
 	    e.printStackTrace();
-	}
-	catch (TimeoutException e) {
-	   e.printStackTrace();
-	}
-	catch (Exception e) {
+	} catch (TimeoutException e) {
+	    e.printStackTrace();
+	} catch (Exception e) {
 	    e.printStackTrace();
 	}
-	
+
     }
 
 }
