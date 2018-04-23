@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" name="Failed suite [Mail]" guice-stage="DEVELOPMENT">
+  <test name="TestMail1(failed)">
+    <parameter name="start" value="hub"/>
+    <classes>
+      <class name="mail.tests.LoginTest">
+        <methods>
+          <include name="login"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- mail.tests.LoginTest -->
+      <class name="mail.tests.CreateDraftTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="setLogin"/>
+          <include name="afterClass"/>
+          <include name="deleteDrafts"/>
+          <include name="createMessage"/>
+        </methods>
+      </class> <!-- mail.tests.CreateDraftTest -->
+      <class name="mail.tests.VerifyDraftsTests">
+        <methods>
+          <include name="verifyDraft" invocation-numbers="0 1"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="setUp"/>
+          <include name="deleteDrafts"/>
+        </methods>
+      </class> <!-- mail.tests.VerifyDraftsTests -->
+    </classes>
+  </test> <!-- TestMail1(failed) -->
+</suite> <!-- Failed suite [Mail] -->

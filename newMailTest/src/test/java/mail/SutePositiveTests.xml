@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Mail">
+
+
+	<test name="TestMail1">
+		<parameter name="start" value="driver"></parameter>
+<!-- 		<parameter name="start" value="hub"></parameter> -->
+		<groups>
+
+			<dependencies>
+				<group depends-on="basic-functions" name="other-functions"></group>
+			</dependencies>
+
+
+
+		</groups>
+		<classes>
+			<class name="mail.tests.LoginTest"></class>
+			<class name="mail.tests.CreateDraftTest"></class>
+			<class name="mail.tests.VerifyDraftsTests"></class>
+			<class name="mail.tests.SendLetterTest"></class>
+			<class name="mail.tests.TransferDraft"></class>
+			<class name="mail.tests.LogOutTest"></class>
+		</classes>
+	</test>
+
+
+
+</suite>

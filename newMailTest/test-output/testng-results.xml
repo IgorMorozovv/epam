@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-04-23T13:57:34Z" name="Mail" finished-at="2018-04-23T13:59:58Z" duration-ms="143495">
+    <groups>
+      <group name="basic-functions">
+        <method signature="CreateDraftTest.createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.CreateDraftTest@71238fc2]" name="createMessage" class="mail.tests.CreateDraftTest"/>
+        <method signature="LoginTest.login()[pri:0, instance:mail.tests.LoginTest@fa49800]" name="login" class="mail.tests.LoginTest"/>
+      </group> <!-- basic-functions -->
+      <group name="other-functions">
+        <method signature="LogOutTest.logOut()[pri:10, instance:mail.tests.LogOutTest@4efc180e]" name="logOut" class="mail.tests.LogOutTest"/>
+        <method signature="SendLetterTest.sendLetter(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mail.tests.SendLetterTest@505fc5a4]" name="sendLetter" class="mail.tests.SendLetterTest"/>
+        <method signature="TransferDraft.trancferDrafts(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mail.tests.TransferDraft@5fbdfdcf]" name="trancferDrafts" class="mail.tests.TransferDraft"/>
+        <method signature="VerifyDraftsTests.verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.tests.VerifyDraftsTests@2a54a73f]" name="verifyDraft" class="mail.tests.VerifyDraftsTests"/>
+      </group> <!-- other-functions -->
+    </groups>
+    <test started-at="2018-04-23T13:57:34Z" name="TestMail1" finished-at="2018-04-23T13:59:58Z" duration-ms="143495">
+      <class name="mail.tests.TransferDraft">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.TransferDraft@5fbdfdcf]" started-at="2018-04-23T16:59:13Z" name="beforeClass" finished-at="2018-04-23T16:59:18Z" duration-ms="4759" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[driver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="setLogin()[pri:0, instance:mail.tests.TransferDraft@5fbdfdcf]" started-at="2018-04-23T16:59:18Z" name="setLogin" finished-at="2018-04-23T16:59:22Z" duration-ms="3856" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setLogin -->
+        <test-method signature="trancferDrafts(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mail.tests.TransferDraft@5fbdfdcf]" started-at="2018-04-23T16:59:22Z" name="trancferDrafts" data-provider="letterData" depends-on-groups="basic-functions" finished-at="2018-04-23T16:59:32Z" duration-ms="10336" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trancferDrafts -->
+        <test-method signature="trancferDrafts(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mail.tests.TransferDraft@5fbdfdcf]" started-at="2018-04-23T16:59:32Z" name="trancferDrafts" data-provider="letterData" depends-on-groups="basic-functions" finished-at="2018-04-23T16:59:39Z" duration-ms="7099" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trancferDrafts -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.TransferDraft@5fbdfdcf]" started-at="2018-04-23T16:59:39Z" name="afterClass" finished-at="2018-04-23T16:59:42Z" duration-ms="2444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- mail.tests.TransferDraft -->
+      <class name="mail.tests.LogOutTest">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.LogOutTest@4efc180e]" started-at="2018-04-23T16:59:42Z" name="beforeClass" finished-at="2018-04-23T16:59:47Z" duration-ms="4933" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[driver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="logOut()[pri:10, instance:mail.tests.LogOutTest@4efc180e]" started-at="2018-04-23T16:59:47Z" name="logOut" depends-on-groups="basic-functions" finished-at="2018-04-23T16:59:56Z" duration-ms="9253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.LogOutTest@4efc180e]" started-at="2018-04-23T16:59:56Z" name="afterClass" finished-at="2018-04-23T16:59:58Z" duration-ms="1825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- mail.tests.LogOutTest -->
+      <class name="mail.tests.CreateDraftTest">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@71238fc2]" started-at="2018-04-23T16:57:49Z" name="beforeClass" finished-at="2018-04-23T16:57:54Z" duration-ms="4993" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[driver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="setLogin()[pri:0, instance:mail.tests.CreateDraftTest@71238fc2]" started-at="2018-04-23T16:57:54Z" name="setLogin" finished-at="2018-04-23T16:58:00Z" duration-ms="6375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setLogin -->
+        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.CreateDraftTest@71238fc2]" started-at="2018-04-23T16:58:00Z" name="createMessage" data-provider="letterData" finished-at="2018-04-23T16:58:06Z" duration-ms="5392" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createMessage -->
+        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.CreateDraftTest@71238fc2]" started-at="2018-04-23T16:58:06Z" name="createMessage" data-provider="letterData" finished-at="2018-04-23T16:58:09Z" duration-ms="3415" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createMessage -->
+        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.CreateDraftTest@71238fc2]" started-at="2018-04-23T16:58:09Z" name="deleteDrafts" finished-at="2018-04-23T16:58:12Z" duration-ms="2572" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteDrafts -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.CreateDraftTest@71238fc2]" started-at="2018-04-23T16:58:12Z" name="afterClass" finished-at="2018-04-23T16:58:14Z" duration-ms="1932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- mail.tests.CreateDraftTest -->
+      <class name="mail.tests.SendLetterTest">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.SendLetterTest@505fc5a4]" started-at="2018-04-23T16:58:44Z" name="beforeClass" finished-at="2018-04-23T16:58:49Z" duration-ms="4897" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[driver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="setLogin()[pri:0, instance:mail.tests.SendLetterTest@505fc5a4]" started-at="2018-04-23T16:58:49Z" name="setLogin" finished-at="2018-04-23T16:58:53Z" duration-ms="3742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setLogin -->
+        <test-method signature="sendLetter(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mail.tests.SendLetterTest@505fc5a4]" started-at="2018-04-23T16:58:53Z" name="sendLetter" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-23T16:59:03Z" duration-ms="10352" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendLetter -->
+        <test-method is-config="true" signature="deleteSendedMessage()[pri:0, instance:mail.tests.SendLetterTest@505fc5a4]" started-at="2018-04-23T16:59:03Z" name="deleteSendedMessage" finished-at="2018-04-23T16:59:04Z" duration-ms="995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSendedMessage -->
+        <test-method signature="sendLetter(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mail.tests.SendLetterTest@505fc5a4]" started-at="2018-04-23T16:59:04Z" name="sendLetter" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-23T16:59:10Z" duration-ms="6035" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendLetter -->
+        <test-method is-config="true" signature="deleteSendedMessage()[pri:0, instance:mail.tests.SendLetterTest@505fc5a4]" started-at="2018-04-23T16:59:10Z" name="deleteSendedMessage" finished-at="2018-04-23T16:59:11Z" duration-ms="1077" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSendedMessage -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.SendLetterTest@505fc5a4]" started-at="2018-04-23T16:59:11Z" name="afterClass" finished-at="2018-04-23T16:59:13Z" duration-ms="1833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- mail.tests.SendLetterTest -->
+      <class name="mail.tests.VerifyDraftsTests">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.VerifyDraftsTests@2a54a73f]" started-at="2018-04-23T16:58:14Z" name="beforeClass" finished-at="2018-04-23T16:58:19Z" duration-ms="5885" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[driver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.tests.VerifyDraftsTests@2a54a73f]" started-at="2018-04-23T16:58:19Z" name="setUp" finished-at="2018-04-23T16:58:23Z" duration-ms="3627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.tests.VerifyDraftsTests@2a54a73f]" started-at="2018-04-23T16:58:23Z" name="verifyDraft" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-23T16:58:33Z" duration-ms="10375" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDraft -->
+        <test-method signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.tests.VerifyDraftsTests@2a54a73f]" started-at="2018-04-23T16:58:33Z" name="verifyDraft" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-23T16:58:40Z" duration-ms="6637" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDraft -->
+        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.VerifyDraftsTests@2a54a73f]" started-at="2018-04-23T16:58:40Z" name="deleteDrafts" finished-at="2018-04-23T16:58:43Z" duration-ms="2444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteDrafts -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.VerifyDraftsTests@2a54a73f]" started-at="2018-04-23T16:58:43Z" name="afterClass" finished-at="2018-04-23T16:58:44Z" duration-ms="1822" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- mail.tests.VerifyDraftsTests -->
+      <class name="mail.tests.LoginTest">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.LoginTest@fa49800]" started-at="2018-04-23T16:57:34Z" name="beforeClass" finished-at="2018-04-23T16:57:40Z" duration-ms="5393" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[driver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="login()[pri:0, instance:mail.tests.LoginTest@fa49800]" started-at="2018-04-23T16:57:40Z" name="login" finished-at="2018-04-23T16:57:47Z" duration-ms="6944" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.LoginTest@fa49800]" started-at="2018-04-23T16:57:47Z" name="afterClass" finished-at="2018-04-23T16:57:49Z" duration-ms="2197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- mail.tests.LoginTest -->
+    </test> <!-- TestMail1 -->
+  </suite> <!-- Mail -->
+</testng-results>
