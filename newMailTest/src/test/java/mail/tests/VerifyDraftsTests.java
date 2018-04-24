@@ -3,25 +3,21 @@ package mail.tests;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import mail.pages.main.InboxPage;
-import mail.pages.main.SentMessagesPage;
 import mail.pages.write.LetterFieldsAssert;
-import mail.tests.common.Drafts;
+import mail.tests.common.GeneralActions;
 
-public class VerifyDraftsTests extends Drafts {
+public class VerifyDraftsTests extends GeneralActions {
 
     private LetterFieldsAssert letterFieldsAssert;
-    
+
     @BeforeClass
-    public void setUp() {	
-	letterFieldsAssert = new LetterFieldsAssert(driver);	
+    public void setUp() {
+	letterFieldsAssert = new LetterFieldsAssert(driver);
     }
-    
+
     @AfterClass
     public void deleteDrafts() {
 	deleteAllDrafts();
@@ -29,7 +25,6 @@ public class VerifyDraftsTests extends Drafts {
 
     @Test(groups = { "other-functions" }, dataProvider = "FillLetter", priority = 2)
     private void verifyDraft(String receiver, String subject, String message) {
-
 	fillFields(receiver, subject, message);
 	saveLetterAsDraft();
 	refresh();

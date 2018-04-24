@@ -7,25 +7,24 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import mail.pages.write.WriteLetterPage;
-import mail.tests.common.Drafts;
+import mail.tests.common.GeneralActions;
 import mail.using.ReadFromXML;
 
-
-public class CreateDraftTest extends Drafts {
+public class CreateDraftTest extends GeneralActions {
 
     private WriteLetterPage writeLetterPage;
-    
+
     @BeforeClass
     public void setUp() {
 	writeLetterPage = new WriteLetterPage(driver);
     }
-   
+
     @Test(groups = "basic-functions", dataProvider = "letterData", priority = 1)
     public void createMessage(String receiver, String subject, String message) {
 	inboxPage.waitTitle();
 	fillFields(receiver, subject, message);
 	saveLetterAsDraft();
-	assertTrue(writeLetterPage.isVisibleSavedText());
+	assertTrue(writeLetterPage.getSavedTextArea().isDisplayed());
 	inboxPage.linksToMainPages.clickInboxLink();
 	inboxPage.waitTitle();
     }

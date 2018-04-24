@@ -1,14 +1,10 @@
 package mail.pages.overall;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import mail.pages.BasicPage;
 
@@ -17,7 +13,6 @@ import mail.pages.BasicPage;
  */
 public class LinksToMainPages extends BasicPage {
 
-    private final static int ATTEMPTS = 2;
     private final static int SLEEP_TIME = 100;
 
     private By toDraftPage = new By.ByXPath("//*[text() = 'Черновики']");

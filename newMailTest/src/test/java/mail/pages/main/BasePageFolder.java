@@ -13,6 +13,7 @@ import mail.pages.overall.OverallButtonsOnPages;
 public class BasePageFolder extends BasicPage {
 
     protected final static int firstDraftIndex = 0;
+    
     public LinksToMainPages linksToMainPages;
     public OverallButtonsOnPages overallButtonsOnPages;
     protected String title;

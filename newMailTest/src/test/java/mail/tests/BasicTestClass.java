@@ -10,22 +10,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
 import mail.pages.LoginPage;
-import mail.pages.YandexMainPage;
 import mail.pages.main.DraftPage;
 import mail.pages.main.InboxPage;
-import mail.pages.main.SentMessagesPage;
-import mail.pages.overall.LinksToMainPages;
-import mail.pages.overall.OverallButtonsOnPages;
-import mail.pages.write.LetterFieldsAssert;
 import mail.pages.write.WriteLetterPage;
-import mail.tests.common.Drafts;
 
 public class BasicTestClass {
 
@@ -40,7 +30,6 @@ public class BasicTestClass {
     protected DraftPage draftPage;
     protected WriteLetterPage writeLetterPage;
     protected LoginPage loginPage;
-   
 
     public BasicTestClass() {
 
@@ -65,7 +54,7 @@ public class BasicTestClass {
 	    driver = new RemoteWebDriver(new URL(URL), capability);
 	    break;
 	case START_BY_DRIVER:
-	    System.setProperty("webdriver.gecko.driver","geckodriver.exe");
+	    System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
 	    driver = new FirefoxDriver();
 	    break;
 	default:
@@ -80,12 +69,12 @@ public class BasicTestClass {
     private void logIn() {
 	loginPage.fillAccountData();
 	loginPage.clickEnter();
-    }
+    }  
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
 
-	if (driver != null) {
+	if (driver != null) {	   
 	    driver.quit();
 	}
     }

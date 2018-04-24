@@ -7,20 +7,20 @@ import org.openqa.selenium.support.PageFactory;
 
 import mail.pages.BasicPage;
 
-public class LetterFieldsAssert extends BasicPage{   
+public class LetterFieldsAssert extends BasicPage {
 
     @FindBy(name = "to")
-    protected WebElement receiverFieldAssert;
+    private WebElement receiverFieldAssert;
 
     @FindBy(name = "subj")
-    protected WebElement subjectField;
+    private WebElement subjectField;
 
     @FindBy(xpath = "//*[@role = 'textbox']/div")
-    protected WebElement messageFieldAssert;
-         
+    private WebElement messageFieldAssert;
+
     public LetterFieldsAssert(WebDriver driver) {
 	super(driver);
-	PageFactory.initElements(driver, this);	
+	PageFactory.initElements(driver, this);
     }
 
     public boolean assertReceiver(String receiver) {
@@ -34,5 +34,5 @@ public class LetterFieldsAssert extends BasicPage{
     public boolean assertMessage(String message) {
 	return messageFieldAssert.getText().contains(message);
     }
-    
+
 }

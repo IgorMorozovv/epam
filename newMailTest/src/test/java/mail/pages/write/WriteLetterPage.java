@@ -6,9 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import mail.pages.BasicPage;
 
 public class WriteLetterPage extends BasicPage {
@@ -49,7 +46,7 @@ public class WriteLetterPage extends BasicPage {
     }
 
     public void fillMessageField(String message) {
-	
+
 	new Actions(driver).click(messageField).sendKeys(messageField, message).build().perform();
 
     }
@@ -60,14 +57,13 @@ public class WriteLetterPage extends BasicPage {
 
     }
 
-    public void save() {
+    public void saveLetterAsDraft() {
 	new Actions(driver).keyDown(Keys.CONTROL).sendKeys("S").keyUp(Keys.CONTROL).build().perform();
 	waitVisibleElement(textBySaved);
     }
 
-    // TODO: методы с маленькой буквы. Не стоит выносить в отдельный метод.
-    public boolean isVisibleSavedText() {
-	return textBySaved.isDisplayed();
+    public WebElement getSavedTextArea() {
+	return textBySaved;	
     }
 
     public void clickByMessageField() {

@@ -1,8 +1,6 @@
 package mail.pages.main;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class InboxPage extends BasePageFolder {
@@ -16,7 +14,7 @@ public class InboxPage extends BasePageFolder {
 	title = TITLE;
     }
 
-    public boolean isLoad() {
+    public boolean isTitleLoad() {
 	waitTitle();
 	return driver.getTitle().contains(title);
     }

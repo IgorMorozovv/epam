@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasicPage {
 
+    protected final static int ATTEMPTS = 2;
     protected final static int WAIT_IN_SECONDS = 10;
     protected WebDriver driver;
 

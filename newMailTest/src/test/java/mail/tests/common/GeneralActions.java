@@ -1,15 +1,9 @@
 package mail.tests.common;
 
 import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeClass;
-
-import mail.pages.main.DraftPage;
-import mail.pages.main.InboxPage;
-import mail.pages.write.WriteLetterPage;
 import mail.tests.BasicTestClass;
 
-public class Drafts extends BasicTestClass {
+public class GeneralActions extends BasicTestClass {
 
     public void deleteAllDrafts() {
 
@@ -33,7 +27,7 @@ public class Drafts extends BasicTestClass {
     }
 
     public void saveLetterAsDraft() {
-	writeLetterPage.save();
+	writeLetterPage.saveLetterAsDraft();
     }
 
     public void refresh() {

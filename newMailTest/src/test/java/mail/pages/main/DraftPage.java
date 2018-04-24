@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 public class DraftPage extends BasePageFolder {
 
     private final static String TITLE = "Черновик";
+    
     private By messages = new By.ByXPath("//*[contains(@class,'js-message-snippet-body')]");
 
     @FindBy(xpath = "//*[contains(@class,'js-message-snippet-body')]")
@@ -52,9 +53,4 @@ public class DraftPage extends BasePageFolder {
     public void waitVisibleLetters() {
 	waitVisibleElement(drafts.get(firstDraftIndex));
     }
-
-    public boolean isEnableCheckBox() {
-	return driver.findElements(messages).get(firstDraftIndex).isEnabled();
-    }
-
 }

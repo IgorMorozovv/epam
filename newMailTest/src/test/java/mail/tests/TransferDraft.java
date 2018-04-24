@@ -1,17 +1,14 @@
 package mail.tests;
 
 import static org.testng.Assert.assertTrue;
-
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import mail.tests.common.Drafts;
+import mail.tests.common.GeneralActions;
 import mail.using.ReadFromXML;
 
-public class TransferDraft extends Drafts {
+public class TransferDraft extends GeneralActions {
 
     @BeforeMethod
     public void deleteDrafts() {

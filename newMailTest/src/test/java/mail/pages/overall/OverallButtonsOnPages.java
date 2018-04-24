@@ -16,8 +16,7 @@ import mail.pages.BasicPage;
  */
 public class OverallButtonsOnPages extends BasicPage {
 
-    private final static int WAIT_TIME = 10;
-    private final static int TIMES = 2;
+
 
     @FindBy(xpath = "//*[@href=\"#compose\"]")
     private WebElement writeMessageButton;
@@ -42,23 +41,14 @@ public class OverallButtonsOnPages extends BasicPage {
     public void refreshButton() {
 	new Actions(driver).click(refreshButton).build().perform();
     }
-
-    public void waitVisibleElement(WebElement element) {
-
-	try {
-	    new WebDriverWait(driver, WAIT_TIME).until(ExpectedConditions.visibilityOf(element));
-	} catch (ElementNotVisibleException | TimeoutException e) {
-	    e.printStackTrace();
-	}
-    }
-
+   
     public void clickWriteMessageButton() {
 	new Actions(driver).click(writeMessageButton).build().perform();
     }
 
     public void clickDeleteButton() {
 
-	for (int i = 0; i < TIMES; i++) {
+	for (int i = 0; i < ATTEMPTS; i++) {
 	    new Actions(driver).click(deleteDraft).build().perform();
 	}
     }

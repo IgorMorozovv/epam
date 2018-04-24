@@ -6,18 +6,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import mail.pages.main.SentMessagesPage;
-import mail.tests.common.Drafts;
+import mail.tests.common.GeneralActions;
 
-public class SendLetterTest extends Drafts {
+public class SendLetterTest extends GeneralActions {
 
- 
     private SentMessagesPage sentMessagesPage;
-    
+
     @BeforeClass
-    public void setUp() {	
-	sentMessagesPage = new SentMessagesPage(driver);	
+    public void setUp() {
+	sentMessagesPage = new SentMessagesPage(driver);
     }
-    
+
     @Test(groups = { "other-functions" }, dataProvider = "FillLetter", priority = 3)
     public void sendLetter(String receiver, String subject, String message) {
 	fillFields(receiver, subject, message);
