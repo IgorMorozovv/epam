@@ -9,17 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class WriteLetterPage {
+import mail.pages.BasicPage;
 
-    private final static int WAIT_TIME = 10;
-
-    public WriteLetterPage(WebDriver driver) {
-	PageFactory.initElements(driver, this);
-	this.driver = driver;
-
-    }
-
-    public WebDriver driver;
+public class WriteLetterPage extends BasicPage {
 
     @FindBy(xpath = "//*[@type = 'submit']")
     private WebElement submitButton;
@@ -39,14 +31,12 @@ public class WriteLetterPage {
     @FindBy(xpath = "//*[contains(text(), 'как черновик')]")
     private WebElement textBySaved;
 
-    public void waitVisibleElement(WebElement element) {
-
-	new WebDriverWait(driver, WAIT_TIME).until(ExpectedConditions.visibilityOf(element));
-
+    public WriteLetterPage(WebDriver driver) {
+	super(driver);
+	PageFactory.initElements(driver, this);
     }
 
     public void fillToField(String receiver) {
-
 	waitVisibleElement(receiverField);
 	new Actions(driver).sendKeys(receiverField, receiver).sendKeys(Keys.ENTER).build().perform();
 
@@ -59,9 +49,8 @@ public class WriteLetterPage {
     }
 
     public void fillMessageField(String message) {
-	// TODO: это можно сделать в 1 строку
-	new Actions(driver).click(messageField).build().perform();
-	new Actions(driver).sendKeys(messageField, message).build().perform();
+	
+	new Actions(driver).click(messageField).sendKeys(messageField, message).build().perform();
 
     }
 
@@ -73,13 +62,11 @@ public class WriteLetterPage {
 
     public void save() {
 	new Actions(driver).keyDown(Keys.CONTROL).sendKeys("S").keyUp(Keys.CONTROL).build().perform();
-	new WebDriverWait(driver, WAIT_TIME).until(ExpectedConditions.visibilityOf(textBySaved));
-
+	waitVisibleElement(textBySaved);
     }
 
     // TODO: методы с маленькой буквы. Не стоит выносить в отдельный метод.
-    public boolean SavedTextVisible() {
-
+    public boolean isVisibleSavedText() {
 	return textBySaved.isDisplayed();
     }
 

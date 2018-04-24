@@ -5,14 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LetterFieldsAssert {
+import mail.pages.BasicPage;
 
-    public LetterFieldsAssert(WebDriver driver) {
-	PageFactory.initElements(driver, this);
-	this.driver = driver;
-    }
-
-    public WebDriver driver;
+public class LetterFieldsAssert extends BasicPage{   
 
     @FindBy(name = "to")
     protected WebElement receiverFieldAssert;
@@ -22,9 +17,13 @@ public class LetterFieldsAssert {
 
     @FindBy(xpath = "//*[@role = 'textbox']/div")
     protected WebElement messageFieldAssert;
+         
+    public LetterFieldsAssert(WebDriver driver) {
+	super(driver);
+	PageFactory.initElements(driver, this);	
+    }
 
     public boolean assertReceiver(String receiver) {
-
 	return receiver.contains(receiverFieldAssert.getText());
     }
 
@@ -35,10 +34,5 @@ public class LetterFieldsAssert {
     public boolean assertMessage(String message) {
 	return messageFieldAssert.getText().contains(message);
     }
-
-    // TODO: не используется и выглядит очень странно
-    public String getReceiced() {
-
-	return null;
-    }
+    
 }

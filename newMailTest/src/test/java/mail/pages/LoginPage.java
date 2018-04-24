@@ -7,20 +7,17 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+import mail.using.LoginPageData;
 
+public class LoginPage extends BasicPage {
+
+    private String login = LoginPageData.LOGIN;
+    private String password = LoginPageData.PASSWORD;
+    private String loginPageURL = LoginPageData.LOGIN_URL;
     private final static String SCRIPT = "var elements = document.getElementsByClassName('passport-Button-Text');"
 	    + "elements[0].click();";
 
-    public LoginPage(WebDriver driver) {
-
-	PageFactory.initElements(driver, this);
-	this.driver = driver;
-	js = ((JavascriptExecutor) driver);
-    }
-
-    JavascriptExecutor js;
-    public WebDriver driver;
+    private JavascriptExecutor js;
 
     @FindBy(name = "login")
     private WebElement loginField;
@@ -31,24 +28,28 @@ public class LoginPage {
     @FindBy(css = "button.passport-Button")
     private WebElement enterButton;
 
-    public void inputLogin(String login) {
+    public LoginPage(WebDriver driver) {
+	super(driver);
+	PageFactory.initElements(driver, this);
+	js = ((JavascriptExecutor) driver);
+    }
 
+    public void inputLogin(String login) {
 	new Actions(driver).sendKeys(loginField, login).build().perform();
     }
 
     public void inputPassword(String password) {
-
 	new Actions(driver).sendKeys(passwordField, password).build().perform();
     }
 
     public void clickEnter() {
-
-	((JavascriptExecutor) driver).executeScript(SCRIPT);
-
+	js.executeScript(SCRIPT);
     }
 
-    public void clickLastDraft() {
-
+    public void fillAccountData() {
+	driver.get(loginPageURL);
+	inputLogin(login);
+	inputPassword(password);
     }
 
 }

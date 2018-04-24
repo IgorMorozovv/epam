@@ -10,73 +10,54 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LinksToMainPages extends OverallButtonsOnPages {
+import mail.pages.BasicPage;
+
+/*
+ * Страница с сылками на папки: входящие, удаленные, отправленные и черновики
+ */
+public class LinksToMainPages extends BasicPage {
 
     private final static int ATTEMPTS = 2;
     private final static int SLEEP_TIME = 100;
-    private final static int WAIT_TIME = 10;
-
-    /*
-     * Страница с сылками на папки: входящие, удаленные, отправленные и черновики
-     */
-    public LinksToMainPages(WebDriver driver) {
-	super(driver);
-	PageFactory.initElements(driver, this);
-
-    }
 
     private By toDraftPage = new By.ByXPath("//*[text() = 'Черновики']");
     private By toSentMessages = new By.ByXPath("//*[text() = 'Отправленные']");
     private By toInBox = new By.ByXPath("//*[text() = 'Входящие']");
     private By toDelete = new By.ByXPath("//*[text() = 'Удалённые']");
 
-    @Override
-    public void waitVisibleElement(WebElement element) {
-
-	try {
-	    new WebDriverWait(driver, WAIT_TIME).until(ExpectedConditions.visibilityOf(element));
-	} catch (ElementNotVisibleException e) {
-	    e.printStackTrace();
-	} catch (TimeoutException e) {
-	    e.printStackTrace();
-	} catch (Exception e) {
-	    e.printStackTrace();
-	}
-
+    public LinksToMainPages(WebDriver driver) {
+	super(driver);
+	PageFactory.initElements(driver, this);
     }
 
     private void click(By locator) {
+
 	for (int i = 0; i < ATTEMPTS; i++) {
+
 	    try {
 		WebElement element = driver.findElement(locator);
 		element.click();
 		Thread.sleep(SLEEP_TIME);
-	    } catch (StaleElementReferenceException e) {
-		e.printStackTrace();
-	    } catch (InterruptedException e) {
+	    } catch (StaleElementReferenceException | InterruptedException e) {
 		e.printStackTrace();
 	    }
 	}
     }
 
-    public void toDraftLinkClick() {
-
+    public void clickDraftLink() {
 	click(toDraftPage);
-
     }
 
-    public void toSentMessageClick() {
+    public void clickSentLink() {
 
 	click(toSentMessages);
     }
 
-    // TODO: названия таких методов делаются по шаблону doElementNameElementType.
-    // Например clickInboxButton
-    public void ToInboxClick() {
+    public void clickInboxLink() {
 	click(toInBox);
     }
 
-    public WebElement getToDelete() {
+    public WebElement getDeleteLink() {
 	return driver.findElement(toDelete);
     }
 

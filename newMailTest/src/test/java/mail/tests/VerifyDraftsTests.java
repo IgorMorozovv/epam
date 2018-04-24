@@ -8,47 +8,43 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class VerifyDraftsTests extends BasicTestClass {
+import mail.pages.main.InboxPage;
+import mail.pages.main.SentMessagesPage;
+import mail.pages.write.LetterFieldsAssert;
+import mail.tests.common.Drafts;
 
-    @BeforeClass()
-    public void setUp() {
-	login.log();
+public class VerifyDraftsTests extends Drafts {
 
+    private LetterFieldsAssert letterFieldsAssert;
+    
+    @BeforeClass
+    public void setUp() {	
+	letterFieldsAssert = new LetterFieldsAssert(driver);	
     }
-
+    
     @AfterClass
     public void deleteDrafts() {
-
-	drafts.deleteDrafts();
-
+	deleteAllDrafts();
     }
 
     @Test(groups = { "other-functions" }, dataProvider = "FillLetter", priority = 2)
     private void verifyDraft(String receiver, String subject, String message) {
 
-	drafts.fillFields(receiver, subject, message);
-	drafts.save();
-
-	drafts.refresh();	
-	
-	linksToMainPages.toDraftLinkClick();
+	fillFields(receiver, subject, message);
+	saveLetterAsDraft();
+	refresh();
+	draftPage.linksToMainPages.clickDraftLink();
 	draftPage.waitTitle();
-	
-	draftPage.loadLastDraft();
-
+	draftPage.clickFirstDraft();
 	assertTrue(letterFieldsAssert.assertReceiver(receiver));
 	assertTrue(letterFieldsAssert.assertSubject(subject));
 	assertTrue(letterFieldsAssert.assertMessage(message));
-
-	linksToMainPages.ToInboxClick();
+	inboxPage.linksToMainPages.clickInboxLink();
 	inboxPage.waitTitle();
     }
 
-
-
     @DataProvider(name = "FillLetter")
     private Object[][] dataToFillLetter() {
-
 	return mail.using.ReadFromXML.getData(FILE_NAME);
     }
 

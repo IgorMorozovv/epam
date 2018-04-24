@@ -10,23 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SentMessagesPage extends Page {
+public class SentMessagesPage extends BasePageFolder {
 
-    // TODO:  не забывай про модификаторы доступа к элементам, проверь везде
-    String TITLE = "Отправленные";
-
-    public SentMessagesPage(WebDriver driver) {
-
-	super(driver);
-	PageFactory.initElements(driver, this);
-	title = TITLE;
-    }
+    private final static String TITLE = "Отправленные";
 
     @FindBy(xpath = "//*[contains(@class,'js-message-snippet-firstline')]/span")
     List<WebElement> messages;
-
-    @FindBy(xpath = "//*[contains(@class,'checkbox-normal-flag')]")
-    List<WebElement> checkBoxMessages;
 
     @FindBy(xpath = "//*[@class='checkbox_view']")
     private List<WebElement> checkAllLetters;
@@ -37,6 +26,12 @@ public class SentMessagesPage extends Page {
     @FindBy(xpath = "//*[contains(@class,'mail-Notification-Close')]")
     WebElement closeInfomWindow;
 
+    public SentMessagesPage(WebDriver driver) {
+	super(driver);
+	PageFactory.initElements(driver, this);
+	title = TITLE;
+    }
+
     public void closeInfomWindow() {
 	waitVisibleElement(closeInfomWindow);
 	new Actions(driver).click(closeInfomWindow).build().perform();
@@ -45,6 +40,7 @@ public class SentMessagesPage extends Page {
     public String getFirstSendedMessage() {
 
 	String firstMessage;
+
 	try {
 	    firstMessage = messages.get(firstDraftIndex).getAttribute("title");
 	} catch (IndexOutOfBoundsException e) {
@@ -55,20 +51,12 @@ public class SentMessagesPage extends Page {
 	return firstMessage;
     }
 
-    // TODO: нигде не используется + некорректное название
-    public void checkFirstMessage() {
-	new Actions(driver).click(checkBoxMessages.get(firstDraftIndex)).build().perform();
-
-    }
-
     public void waitSent() {
 	waitVisibleElement(sentMessage);
-
     }
 
-    // TODO: лишние скобки
     public void waitLoad() {
-	(new WebDriverWait(driver, waitTime)).until(ExpectedConditions.titleContains(title));
+	waitTitle();
 
     }
 

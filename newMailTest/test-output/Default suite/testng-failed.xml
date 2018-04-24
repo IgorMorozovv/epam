@@ -3,15 +3,15 @@
 <suite thread-count="-1" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="mail.tests.SendLetterTest">
+      <class name="mail.tests.CreateDraftTest">
         <methods>
           <include name="beforeClass"/>
-          <include name="sendLetter"/>
-          <include name="deleteSendedMessage"/>
-          <include name="setLogin"/>
+          <include name="deleteDraft"/>
           <include name="afterClass"/>
+          <include name="createMessage" invocation-numbers="0 1"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- mail.tests.SendLetterTest -->
+      </class> <!-- mail.tests.CreateDraftTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
