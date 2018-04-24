@@ -22,6 +22,7 @@ public class Drafts {
 	    basicTestClass.getDraftPage().waitLetters();
 	    basicTestClass.getDraftPage().selectAllDrafts();
 	    basicTestClass.getCommonButtons().clickDeleteButton();
+	    // TODO: Не стоит так делать
 	} catch (StaleElementReferenceException e) {
 
 	}

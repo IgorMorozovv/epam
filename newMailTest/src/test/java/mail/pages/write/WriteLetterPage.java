@@ -59,7 +59,7 @@ public class WriteLetterPage {
     }
 
     public void fillMessageField(String message) {
-
+	// TODO: это можно сделать в 1 строку
 	new Actions(driver).click(messageField).build().perform();
 	new Actions(driver).sendKeys(messageField, message).build().perform();
 
@@ -77,6 +77,7 @@ public class WriteLetterPage {
 
     }
 
+    // TODO: методы с маленькой буквы. Не стоит выносить в отдельный метод.
     public boolean SavedTextVisible() {
 
 	return textBySaved.isDisplayed();

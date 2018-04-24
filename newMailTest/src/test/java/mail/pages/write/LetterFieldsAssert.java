@@ -36,6 +36,7 @@ public class LetterFieldsAssert {
 	return messageFieldAssert.getText().contains(message);
     }
 
+    // TODO: не используется и выглядит очень странно
     public String getReceiced() {
 
 	return null;

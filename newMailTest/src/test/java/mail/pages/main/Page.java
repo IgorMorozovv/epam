@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import mail.pages.overall.LinksToMainPages;
 import mail.pages.overall.OverallButtonsOnPages;
 
+//TODO: на мой взгляд базовую страницу лучше назвать BasePage
 public class Page {
 
     protected WebDriver driver;
@@ -29,7 +30,7 @@ public class Page {
     }
 
     public void waitVisibleElement(WebElement element) {
-
+	// TODO: Иcпользуй здесь мульти catch
 	try {
 	    new WebDriverWait(driver, waitTime).until(ExpectedConditions.visibilityOf(element));
 	} catch (ElementNotVisibleException e) {

@@ -1,6 +1,7 @@
 package mail.pages.main;
 
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,8 @@ public class DraftPage extends Page {
 
     private final static String TITLE = "Черновик";
 
+    // TODO: проверить порядок расположения полей и методов на страницах. Сначала
+    // поля, потом методы
     public DraftPage(WebDriver driver) {
 
 	super(driver);
@@ -58,6 +61,8 @@ public class DraftPage extends Page {
 
     }
 
+    // TODO: пример излишней декомпозиции. Просто вызови метод isDisplayed там, где
+    // это необходимо. Здесь же некорректное название у метода
     public boolean noLetters() {
 
 	return noLetters.isDisplayed();

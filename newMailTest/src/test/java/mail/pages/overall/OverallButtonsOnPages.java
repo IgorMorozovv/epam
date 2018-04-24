@@ -19,12 +19,13 @@ public class OverallButtonsOnPages {
      * Кнопки, доступные из любогой другой страницы
      */
     public OverallButtonsOnPages(WebDriver driver) {
-
+	// TODO: выглядит странно. Зачем дважды инициализировать элементы?
 	PageFactory.initElements(driver, this);
 	this.driver = driver;
 	PageFactory.initElements(driver, this);
     }
 
+    // TODO: сначала объявляются открытые поля, затем защищенные, затем приватные
     public WebDriver driver;
 
     @FindBy(xpath = "//*[@href=\"#compose\"]")
@@ -36,6 +37,7 @@ public class OverallButtonsOnPages {
     @FindBy(xpath = "//*[@class='mail-User-Name']")
     private WebElement userName;
 
+    // TODO: не очень удачный вариант локатора
     @FindBy(xpath = "//*[@class = 'b-user-dropdown-content']/div[8]/a")
     private WebElement logout;
 
@@ -79,7 +81,8 @@ public class OverallButtonsOnPages {
     }
 
     public void logout() {
-
+	// TODO: лучше вынести одинаковые ожидание в отдельное место, мб в базовый класс
+	// и оттуда дергать. Я уже видела такой метод в классе LinksToMainPage
 	new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(logout));
 	new Actions(driver).click(logout).build().perform();
     }

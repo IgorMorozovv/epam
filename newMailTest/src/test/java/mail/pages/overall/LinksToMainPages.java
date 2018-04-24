@@ -30,6 +30,7 @@ public class LinksToMainPages extends OverallButtonsOnPages {
     private By toInBox = new By.ByXPath("//*[text() = 'Входящие']");
     private By toDelete = new By.ByXPath("//*[text() = 'Удалённые']");
 
+    @Override
     public void waitVisibleElement(WebElement element) {
 
 	try {
@@ -69,6 +70,8 @@ public class LinksToMainPages extends OverallButtonsOnPages {
 	click(toSentMessages);
     }
 
+    // TODO: названия таких методов делаются по шаблону doElementNameElementType.
+    // Например clickInboxButton
     public void ToInboxClick() {
 	click(toInBox);
     }

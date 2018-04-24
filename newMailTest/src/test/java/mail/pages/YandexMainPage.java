@@ -20,6 +20,7 @@ public class YandexMainPage {
     @FindBy(xpath = ".//*[contains(@class, \"login-enter\")]")
     private WebElement enterMailButton;
 
+    // TODO: IsDisplayedEnterButton
     public boolean enterButtonIsDisplay() {
 	new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(enterMailButton));
 	return enterMailButton.isDisplayed();

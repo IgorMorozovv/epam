@@ -1,6 +1,7 @@
 package mail.pages.main;
 
 import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SentMessagesPage extends Page {
 
+    // TODO:  не забывай про модификаторы доступа к элементам, проверь везде
     String TITLE = "Отправленные";
 
     public SentMessagesPage(WebDriver driver) {
@@ -53,6 +55,7 @@ public class SentMessagesPage extends Page {
 	return firstMessage;
     }
 
+    // TODO: нигде не используется + некорректное название
     public void checkFirstMessage() {
 	new Actions(driver).click(checkBoxMessages.get(firstDraftIndex)).build().perform();
 
@@ -63,6 +66,7 @@ public class SentMessagesPage extends Page {
 
     }
 
+    // TODO: лишние скобки
     public void waitLoad() {
 	(new WebDriverWait(driver, waitTime)).until(ExpectedConditions.titleContains(title));
 

@@ -10,6 +10,10 @@ public class LogOutTest extends BasicTestClass {
     public void logOut() {
 	login.log();
 	inboxPage.waitTitle();
+	// TODO: в классах с тестами должно идти создание переменных страниц и действия
+	// с ними.
+	// Пример: Инициализация поля private MainPage mainPage = new MainPage
+	// Использование поля в тесте mainPage.fillSomeFields();
 	commonButtons.clickUserName();
 	commonButtons.logout();
 	assertTrue(yandexMainPage.enterButtonIsDisplay());

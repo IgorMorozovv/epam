@@ -10,14 +10,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import mail.pages.YandexMainPage;
 import mail.pages.main.DraftPage;
 import mail.pages.main.InboxPage;
-import mail.pages.main.Page;
 import mail.pages.main.SentMessagesPage;
 import mail.pages.overall.LinksToMainPages;
 import mail.pages.overall.OverallButtonsOnPages;
@@ -42,6 +40,8 @@ public class BasicTestClass {
     protected Drafts drafts;
     protected WebDriver driver;
 
+    // TODO: константы выносятся в начало класса, не забывай про порядок
+    // модификаторов доступа
     protected static final String FILE_NAME = "forDraft.xml";
     static final String URL = "http://localhost:4441/wd/hub/";
     static final private String START_BY_HUB = "hub";
