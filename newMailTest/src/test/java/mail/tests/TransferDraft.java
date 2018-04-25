@@ -32,4 +32,5 @@ public class TransferDraft extends GeneralActions {
     private Object[][] letterData() {
 	return ReadFromXML.getData(FILE_NAME);
     }
+    
 }

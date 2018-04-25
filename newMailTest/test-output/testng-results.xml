@@ -2,22 +2,22 @@
 <testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-04-24T13:52:31Z" name="Mail" finished-at="2018-04-24T13:55:04Z" duration-ms="153088">
+  <suite started-at="2018-04-25T09:57:44Z" name="Mail" finished-at="2018-04-25T10:00:13Z" duration-ms="149282">
     <groups>
       <group name="basic-functions">
-        <method signature="CreateDraftTest.createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.CreateDraftTest@fba92d3]" name="createMessage" class="mail.tests.CreateDraftTest"/>
-        <method signature="LoginTest.login()[pri:0, instance:mail.tests.LoginTest@67c33749]" name="login" class="mail.tests.LoginTest"/>
+        <method signature="CreateDraftTest.createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.CreateDraftTest@1b1426f4]" name="createMessage" class="mail.tests.CreateDraftTest"/>
+        <method signature="LoginTest.login()[pri:0, instance:mail.tests.LoginTest@28f3b248]" name="login" class="mail.tests.LoginTest"/>
       </group> <!-- basic-functions -->
       <group name="other-functions">
-        <method signature="LogOutTest.logOut()[pri:10, instance:mail.tests.LogOutTest@3d6f0054]" name="logOut" class="mail.tests.LogOutTest"/>
-        <method signature="SendLetterTest.sendLetter(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mail.tests.SendLetterTest@2a54a73f]" name="sendLetter" class="mail.tests.SendLetterTest"/>
-        <method signature="TransferDraft.trancferDrafts(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mail.tests.TransferDraft@16a0ee18]" name="trancferDrafts" class="mail.tests.TransferDraft"/>
-        <method signature="VerifyDraftsTests.verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.tests.VerifyDraftsTests@662b4c69]" name="verifyDraft" class="mail.tests.VerifyDraftsTests"/>
+        <method signature="LogOutTest.logOut()[pri:10, instance:mail.tests.LogOutTest@78123e82]" name="logOut" class="mail.tests.LogOutTest"/>
+        <method signature="SendLetterTest.sendLetter(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mail.tests.SendLetterTest@57d7f8ca]" name="sendLetter" class="mail.tests.SendLetterTest"/>
+        <method signature="TransferDraft.trancferDrafts(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mail.tests.TransferDraft@76c3e77a]" name="trancferDrafts" class="mail.tests.TransferDraft"/>
+        <method signature="VerifyDraftsTests.verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.tests.VerifyDraftsTests@32b260fa]" name="verifyDraft" class="mail.tests.VerifyDraftsTests"/>
       </group> <!-- other-functions -->
     </groups>
-    <test started-at="2018-04-24T13:52:31Z" name="TestMail1" finished-at="2018-04-24T13:55:04Z" duration-ms="153088">
+    <test started-at="2018-04-25T09:57:44Z" name="TestMail1" finished-at="2018-04-25T10:00:13Z" duration-ms="149282">
       <class name="mail.tests.TransferDraft">
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.TransferDraft@16a0ee18]" started-at="2018-04-24T16:54:16Z" name="beforeClass" finished-at="2018-04-24T16:54:25Z" duration-ms="9094" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.TransferDraft@76c3e77a]" started-at="2018-04-25T12:59:26Z" name="beforeClass" finished-at="2018-04-25T12:59:35Z" duration-ms="8682" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,11 +28,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.TransferDraft@16a0ee18]" started-at="2018-04-24T16:54:25Z" name="deleteDrafts" finished-at="2018-04-24T16:54:30Z" duration-ms="5204" status="PASS">
+        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.TransferDraft@76c3e77a]" started-at="2018-04-25T12:59:35Z" name="deleteDrafts" finished-at="2018-04-25T12:59:40Z" duration-ms="4923" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteDrafts -->
-        <test-method signature="trancferDrafts(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mail.tests.TransferDraft@16a0ee18]" started-at="2018-04-24T16:54:30Z" name="trancferDrafts" data-provider="letterData" depends-on-groups="basic-functions" finished-at="2018-04-24T16:54:37Z" duration-ms="7549" status="PASS">
+        <test-method signature="trancferDrafts(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mail.tests.TransferDraft@76c3e77a]" started-at="2018-04-25T12:59:40Z" name="trancferDrafts" data-provider="letterData" depends-on-groups="basic-functions" finished-at="2018-04-25T12:59:48Z" duration-ms="8214" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,11 +53,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trancferDrafts -->
-        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.TransferDraft@16a0ee18]" started-at="2018-04-24T16:54:37Z" name="deleteDrafts" finished-at="2018-04-24T16:54:39Z" duration-ms="1714" status="PASS">
+        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.TransferDraft@76c3e77a]" started-at="2018-04-25T12:59:48Z" name="deleteDrafts" finished-at="2018-04-25T12:59:49Z" duration-ms="1635" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteDrafts -->
-        <test-method signature="trancferDrafts(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mail.tests.TransferDraft@16a0ee18]" started-at="2018-04-24T16:54:39Z" name="trancferDrafts" data-provider="letterData" depends-on-groups="basic-functions" finished-at="2018-04-24T16:54:44Z" duration-ms="5316" status="PASS">
+        <test-method signature="trancferDrafts(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mail.tests.TransferDraft@76c3e77a]" started-at="2018-04-25T12:59:49Z" name="trancferDrafts" data-provider="letterData" depends-on-groups="basic-functions" finished-at="2018-04-25T12:59:55Z" duration-ms="5789" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -78,13 +78,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trancferDrafts -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.TransferDraft@16a0ee18]" started-at="2018-04-24T16:54:44Z" name="afterClass" finished-at="2018-04-24T16:54:46Z" duration-ms="1987" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.TransferDraft@76c3e77a]" started-at="2018-04-25T12:59:55Z" name="afterClass" finished-at="2018-04-25T12:59:57Z" duration-ms="1940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- mail.tests.TransferDraft -->
       <class name="mail.tests.LogOutTest">
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.LogOutTest@3d6f0054]" started-at="2018-04-24T16:54:46Z" name="beforeClass" finished-at="2018-04-24T16:54:56Z" duration-ms="9866" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.LogOutTest@78123e82]" started-at="2018-04-25T12:59:57Z" name="beforeClass" finished-at="2018-04-25T13:00:07Z" duration-ms="9838" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -95,21 +95,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.tests.LogOutTest@3d6f0054]" started-at="2018-04-24T16:54:56Z" name="setUp" finished-at="2018-04-24T16:54:56Z" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="logOut()[pri:10, instance:mail.tests.LogOutTest@3d6f0054]" started-at="2018-04-24T16:54:56Z" name="logOut" depends-on-groups="basic-functions" finished-at="2018-04-24T16:55:02Z" duration-ms="5334" status="PASS">
+        <test-method signature="logOut()[pri:10, instance:mail.tests.LogOutTest@78123e82]" started-at="2018-04-25T13:00:07Z" name="logOut" depends-on-groups="basic-functions" finished-at="2018-04-25T13:00:11Z" duration-ms="4537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.LogOutTest@3d6f0054]" started-at="2018-04-24T16:55:02Z" name="afterClass" finished-at="2018-04-24T16:55:04Z" duration-ms="2253" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.LogOutTest@78123e82]" started-at="2018-04-25T13:00:11Z" name="afterClass" finished-at="2018-04-25T13:00:13Z" duration-ms="1583" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- mail.tests.LogOutTest -->
       <class name="mail.tests.CreateDraftTest">
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@fba92d3]" started-at="2018-04-24T16:52:49Z" name="beforeClass" finished-at="2018-04-24T16:52:59Z" duration-ms="9768" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.CreateDraftTest@1b1426f4]" started-at="2018-04-25T12:58:03Z" name="beforeClass" finished-at="2018-04-25T12:58:12Z" duration-ms="9146" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -120,11 +116,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.tests.CreateDraftTest@fba92d3]" started-at="2018-04-24T16:52:59Z" name="setUp" finished-at="2018-04-24T16:52:59Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.CreateDraftTest@fba92d3]" started-at="2018-04-24T16:52:59Z" name="createMessage" data-provider="letterData" finished-at="2018-04-24T16:53:07Z" duration-ms="8184" status="PASS">
+        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.CreateDraftTest@1b1426f4]" started-at="2018-04-25T12:58:12Z" name="createMessage" data-provider="letterData" finished-at="2018-04-25T12:58:19Z" duration-ms="6871" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -145,7 +137,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createMessage -->
-        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.CreateDraftTest@fba92d3]" started-at="2018-04-24T16:53:07Z" name="createMessage" data-provider="letterData" finished-at="2018-04-24T16:53:10Z" duration-ms="3028" status="PASS">
+        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.tests.CreateDraftTest@1b1426f4]" started-at="2018-04-25T12:58:19Z" name="createMessage" data-provider="letterData" finished-at="2018-04-25T12:58:23Z" duration-ms="3555" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -166,17 +158,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createMessage -->
-        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.CreateDraftTest@fba92d3]" started-at="2018-04-24T16:53:10Z" name="deleteDrafts" finished-at="2018-04-24T16:53:13Z" duration-ms="2454" status="PASS">
+        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.CreateDraftTest@1b1426f4]" started-at="2018-04-25T12:58:23Z" name="deleteDrafts" finished-at="2018-04-25T12:58:25Z" duration-ms="2270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteDrafts -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.CreateDraftTest@fba92d3]" started-at="2018-04-24T16:53:13Z" name="afterClass" finished-at="2018-04-24T16:53:15Z" duration-ms="2311" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.CreateDraftTest@1b1426f4]" started-at="2018-04-25T12:58:25Z" name="afterClass" finished-at="2018-04-25T12:58:27Z" duration-ms="1904" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- mail.tests.CreateDraftTest -->
       <class name="mail.tests.SendLetterTest">
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.SendLetterTest@2a54a73f]" started-at="2018-04-24T16:53:47Z" name="beforeClass" finished-at="2018-04-24T16:53:56Z" duration-ms="9216" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.SendLetterTest@57d7f8ca]" started-at="2018-04-25T12:58:58Z" name="beforeClass" finished-at="2018-04-25T12:59:07Z" duration-ms="8843" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -187,11 +179,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.tests.SendLetterTest@2a54a73f]" started-at="2018-04-24T16:53:56Z" name="setUp" finished-at="2018-04-24T16:53:56Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="sendLetter(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mail.tests.SendLetterTest@2a54a73f]" started-at="2018-04-24T16:53:56Z" name="sendLetter" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-24T16:54:06Z" duration-ms="10015" status="PASS">
+        <test-method signature="sendLetter(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mail.tests.SendLetterTest@57d7f8ca]" started-at="2018-04-25T12:59:07Z" name="sendLetter" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-25T12:59:17Z" duration-ms="10174" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -212,11 +200,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendLetter -->
-        <test-method is-config="true" signature="deleteSendedMessage()[pri:0, instance:mail.tests.SendLetterTest@2a54a73f]" started-at="2018-04-24T16:54:06Z" name="deleteSendedMessage" finished-at="2018-04-24T16:54:07Z" duration-ms="1073" status="PASS">
+        <test-method is-config="true" signature="deleteSendedMessage()[pri:0, instance:mail.tests.SendLetterTest@57d7f8ca]" started-at="2018-04-25T12:59:17Z" name="deleteSendedMessage" finished-at="2018-04-25T12:59:18Z" duration-ms="1180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteSendedMessage -->
-        <test-method signature="sendLetter(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mail.tests.SendLetterTest@2a54a73f]" started-at="2018-04-24T16:54:07Z" name="sendLetter" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-24T16:54:13Z" duration-ms="5540" status="PASS">
+        <test-method signature="sendLetter(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mail.tests.SendLetterTest@57d7f8ca]" started-at="2018-04-25T12:59:18Z" name="sendLetter" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-25T12:59:23Z" duration-ms="4911" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -237,17 +225,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendLetter -->
-        <test-method is-config="true" signature="deleteSendedMessage()[pri:0, instance:mail.tests.SendLetterTest@2a54a73f]" started-at="2018-04-24T16:54:13Z" name="deleteSendedMessage" finished-at="2018-04-24T16:54:14Z" duration-ms="751" status="PASS">
+        <test-method is-config="true" signature="deleteSendedMessage()[pri:0, instance:mail.tests.SendLetterTest@57d7f8ca]" started-at="2018-04-25T12:59:23Z" name="deleteSendedMessage" finished-at="2018-04-25T12:59:24Z" duration-ms="787" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteSendedMessage -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.SendLetterTest@2a54a73f]" started-at="2018-04-24T16:54:14Z" name="afterClass" finished-at="2018-04-24T16:54:16Z" duration-ms="1872" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.SendLetterTest@57d7f8ca]" started-at="2018-04-25T12:59:24Z" name="afterClass" finished-at="2018-04-25T12:59:26Z" duration-ms="2116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- mail.tests.SendLetterTest -->
       <class name="mail.tests.VerifyDraftsTests">
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.VerifyDraftsTests@662b4c69]" started-at="2018-04-24T16:53:15Z" name="beforeClass" finished-at="2018-04-24T16:53:24Z" duration-ms="9315" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.VerifyDraftsTests@32b260fa]" started-at="2018-04-25T12:58:27Z" name="beforeClass" finished-at="2018-04-25T12:58:36Z" duration-ms="9297" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -258,11 +246,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.tests.VerifyDraftsTests@662b4c69]" started-at="2018-04-24T16:53:24Z" name="setUp" finished-at="2018-04-24T16:53:24Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.tests.VerifyDraftsTests@32b260fa]" started-at="2018-04-25T12:58:36Z" name="setUp" finished-at="2018-04-25T12:58:36Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.tests.VerifyDraftsTests@662b4c69]" started-at="2018-04-24T16:53:24Z" name="verifyDraft" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-24T16:53:38Z" duration-ms="13144" status="PASS">
+        <test-method signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.tests.VerifyDraftsTests@32b260fa]" started-at="2018-04-25T12:58:36Z" name="verifyDraft" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-25T12:58:48Z" duration-ms="11427" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -283,7 +271,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDraft -->
-        <test-method signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.tests.VerifyDraftsTests@662b4c69]" started-at="2018-04-24T16:53:38Z" name="verifyDraft" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-24T16:53:43Z" duration-ms="5556" status="PASS">
+        <test-method signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.tests.VerifyDraftsTests@32b260fa]" started-at="2018-04-25T12:58:48Z" name="verifyDraft" data-provider="FillLetter" depends-on-groups="basic-functions" finished-at="2018-04-25T12:58:54Z" duration-ms="5974" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -304,17 +292,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDraft -->
-        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.VerifyDraftsTests@662b4c69]" started-at="2018-04-24T16:53:43Z" name="deleteDrafts" finished-at="2018-04-24T16:53:45Z" duration-ms="1865" status="PASS">
+        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.tests.VerifyDraftsTests@32b260fa]" started-at="2018-04-25T12:58:54Z" name="deleteDrafts" finished-at="2018-04-25T12:58:56Z" duration-ms="2191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteDrafts -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.VerifyDraftsTests@662b4c69]" started-at="2018-04-24T16:53:45Z" name="afterClass" finished-at="2018-04-24T16:53:47Z" duration-ms="2090" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.VerifyDraftsTests@32b260fa]" started-at="2018-04-25T12:58:56Z" name="afterClass" finished-at="2018-04-25T12:58:58Z" duration-ms="1933" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- mail.tests.VerifyDraftsTests -->
       <class name="mail.tests.LoginTest">
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.LoginTest@67c33749]" started-at="2018-04-24T16:52:31Z" name="beforeClass" finished-at="2018-04-24T16:52:44Z" duration-ms="12702" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:mail.tests.LoginTest@28f3b248]" started-at="2018-04-25T12:57:44Z" name="beforeClass" finished-at="2018-04-25T12:57:59Z" duration-ms="14896" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -325,15 +313,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.tests.LoginTest@67c33749]" started-at="2018-04-24T16:52:44Z" name="setUp" finished-at="2018-04-24T16:52:44Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="login()[pri:0, instance:mail.tests.LoginTest@67c33749]" started-at="2018-04-24T16:52:44Z" name="login" finished-at="2018-04-24T16:52:47Z" duration-ms="3569" status="PASS">
+        <test-method signature="login()[pri:0, instance:mail.tests.LoginTest@28f3b248]" started-at="2018-04-25T12:57:59Z" name="login" finished-at="2018-04-25T12:58:01Z" duration-ms="2558" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.LoginTest@67c33749]" started-at="2018-04-24T16:52:47Z" name="afterClass" finished-at="2018-04-24T16:52:49Z" duration-ms="2241" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.tests.LoginTest@28f3b248]" started-at="2018-04-25T12:58:01Z" name="afterClass" finished-at="2018-04-25T12:58:03Z" duration-ms="2060" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

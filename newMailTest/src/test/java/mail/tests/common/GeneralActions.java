@@ -29,13 +29,13 @@ public class GeneralActions extends BasicTestClass {
     public void saveLetterAsDraft() {
 	writeLetterPage.saveLetterAsDraft();
     }
-   
+
     public void refresh() {
 	inboxPage.linksToMainPages.clickInboxLink();
 	inboxPage.waitTitle();
 	inboxPage.overallButtonsOnPages.clickRefreshButton();
 	draftPage = inboxPage.linksToMainPages.clickDraftLink();
-	draftPage.waitTitle();	
+	draftPage.waitTitle();
     }
 
 }

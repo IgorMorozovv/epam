@@ -12,13 +12,13 @@ import mail.pages.write.WriteLetterPage;
 public class DraftPage extends BasePageFolder {
 
     private final static String TITLE = "Черновик";
-       
+
     @FindBy(xpath = "//*[contains(@class,'js-message-snippet-body')]")
     private List<WebElement> drafts;
 
     @FindBy(xpath = "//*[@class='checkbox_view']")
     private List<WebElement> checkAllDrafts;
-   
+
     @FindBy(xpath = "//*[contains(text(), 'нет писем')]")
     private WebElement noLettersText;
 
@@ -28,8 +28,6 @@ public class DraftPage extends BasePageFolder {
 	title = TITLE;
     }
 
-    // каждый метод в классе страницы должен по возможности возвращать экземпляр
-    // страницы
     public WriteLetterPage clickFirstDraft() {
 	WebElement webElement = drafts.get(firstDraftIndex);
 	waitVisibleElement(webElement);
@@ -54,4 +52,5 @@ public class DraftPage extends BasePageFolder {
     public void waitVisibleLetters() {
 	waitVisibleElement(drafts.get(firstDraftIndex));
     }
+    
 }

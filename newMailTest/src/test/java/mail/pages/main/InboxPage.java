@@ -18,4 +18,5 @@ public class InboxPage extends BasePageFolder {
 	waitTitle();
 	return driver.getTitle().contains(title);
     }
+    
 }

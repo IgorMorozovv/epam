@@ -8,9 +8,10 @@ import org.testng.annotations.Test;
 import mail.pages.main.InboxPage;
 
 public class LoginTest extends BasicTestClass {
-   
+
     @Test(groups = "basic-functions", priority = 0)
     public void login() {
 	assertTrue(inboxPage.isTitleLoad());
     }
+    
 }

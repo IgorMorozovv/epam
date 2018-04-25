@@ -15,8 +15,6 @@ import mail.pages.write.WriteLetterPage;
  */
 public class OverallButtonsOnPages extends BasicPage {
 
-
-
     @FindBy(xpath = "//*[@href=\"#compose\"]")
     private WebElement writeMessageButton;
 
@@ -25,7 +23,7 @@ public class OverallButtonsOnPages extends BasicPage {
 
     @FindBy(xpath = "//*[@class='mail-User-Name']")
     private WebElement userName;
-    
+
     @FindBy(xpath = "//*[contains(text(),'Выйти')]")
     private WebElement logout;
 
@@ -36,11 +34,11 @@ public class OverallButtonsOnPages extends BasicPage {
 	super(driver);
 	PageFactory.initElements(driver, this);
     }
-   
+
     public void clickRefreshButton() {
 	new Actions(driver).click(refreshButton).build().perform();
     }
-   
+
     public WriteLetterPage clickWriteMessageButton() {
 	new Actions(driver).click(writeMessageButton).build().perform();
 	return new WriteLetterPage(driver);

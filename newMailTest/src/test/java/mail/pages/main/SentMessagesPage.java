@@ -36,7 +36,6 @@ public class SentMessagesPage extends BasePageFolder {
     }
 
     public String getFirstSendedMessage() {
-
 	String firstMessage;
 
 	try {
@@ -45,7 +44,7 @@ public class SentMessagesPage extends BasePageFolder {
 	    e.printStackTrace();
 	    firstMessage = null;
 	}
-	
+
 	return firstMessage;
     }
 
@@ -55,10 +54,10 @@ public class SentMessagesPage extends BasePageFolder {
 
     public void waitLoad() {
 	waitTitle();
-
     }
 
     public void selectAllDrafts() {
 	new Actions(driver).click(checkAllLetters.get(firstDraftIndex)).build().perform();
     }
+    
 }

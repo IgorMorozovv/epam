@@ -63,11 +63,12 @@ public class WriteLetterPage extends BasicPage {
     }
 
     public WebElement getSavedTextArea() {
-	return textBySaved;	
+	return textBySaved;
     }
 
     public void clickByMessageField() {
 	new Actions(driver).click(messageField).build().perform();
 
     }
+    
 }

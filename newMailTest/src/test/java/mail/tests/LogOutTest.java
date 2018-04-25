@@ -15,4 +15,5 @@ public class LogOutTest extends BasicTestClass {
 	yandexMainPage = inboxPage.overallButtonsOnPages.logout();
 	assertTrue(yandexMainPage.IsDisplayedEnterButton());
     }
+    
 }

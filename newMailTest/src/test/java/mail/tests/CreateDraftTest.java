@@ -12,14 +12,13 @@ import mail.tests.common.GeneralActions;
 import mail.using.ReadFromXML;
 
 public class CreateDraftTest extends GeneralActions {
-  
+
     @Test(groups = "basic-functions", dataProvider = "letterData", priority = 1)
     public void createMessage(String receiver, String subject, String message) {
 	inboxPage.waitTitle();
 	fillFields(receiver, subject, message);
 	saveLetterAsDraft();
-	assertTrue(writeLetterPage.getSavedTextArea().isDisplayed(), 
-		"Verify that saved text is displayed");
+	assertTrue(writeLetterPage.getSavedTextArea().isDisplayed(), "Verify that saved text is displayed");
 	inboxPage.linksToMainPages.clickInboxLink();
 	inboxPage.waitTitle();
     }
@@ -33,4 +32,5 @@ public class CreateDraftTest extends GeneralActions {
     private Object[][] letterData() {
 	return ReadFromXML.getData(FILE_NAME);
     }
+    
 }
