@@ -3,11 +3,8 @@ package mail.tests;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import mail.pages.write.WriteLetterPage;
 import mail.tests.common.GeneralActions;
 import mail.using.ReadFromXML;
 
