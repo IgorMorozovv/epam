@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import mail.pages.BasicPage;
+import mail.pages.main.DraftPage;
+import mail.pages.main.InboxPage;
+import mail.pages.main.SentMessagesPage;
 
 /*
  * Страница с сылками на папки: входящие, удаленные, отправленные и черновики
@@ -39,17 +42,19 @@ public class LinksToMainPages extends BasicPage {
 	}
     }
 
-    public void clickDraftLink() {
+    public DraftPage clickDraftLink() {
 	click(toDraftPage);
+	return new DraftPage(driver);
     }
 
-    public void clickSentLink() {
-
+    public SentMessagesPage clickSentLink() {
 	click(toSentMessages);
+	return new SentMessagesPage(driver);
     }
 
-    public void clickInboxLink() {
+    public InboxPage clickInboxLink() {
 	click(toInBox);
+	return new InboxPage(driver);
     }
 
     public WebElement getDeleteLink() {

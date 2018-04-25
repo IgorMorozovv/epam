@@ -1,26 +1,18 @@
 package mail.tests;
 
 import static org.testng.Assert.assertTrue;
-
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import mail.pages.YandexMainPage;
-import mail.pages.main.InboxPage;
 
 public class LogOutTest extends BasicTestClass {
 
     private YandexMainPage yandexMainPage;
 
-    @BeforeClass
-    public void setUp() {
-	yandexMainPage = new YandexMainPage(driver);
-    }
-
     @Test(groups = { "other-functions" }, priority = 10)
     public void logOut() {
 	inboxPage.waitTitle();
 	inboxPage.overallButtonsOnPages.clickUserNameIcon();
-	inboxPage.overallButtonsOnPages.logout();
+	yandexMainPage = inboxPage.overallButtonsOnPages.logout();
 	assertTrue(yandexMainPage.IsDisplayedEnterButton());
     }
 }

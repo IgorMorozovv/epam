@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import mail.pages.BasicPage;
+import mail.pages.YandexMainPage;
+import mail.pages.write.WriteLetterPage;
 
 /*
  * Кнопки, доступные из любогой другой страницы
@@ -23,8 +25,8 @@ public class OverallButtonsOnPages extends BasicPage {
 
     @FindBy(xpath = "//*[@class='mail-User-Name']")
     private WebElement userName;
-    // попробуй подобрать другой локатор пожалуйста
-    @FindBy(xpath = "//*[@class = 'b-user-dropdown-content']/div[8]/a")
+    
+    @FindBy(xpath = "//*[contains(text(),'Выйти')]")
     private WebElement logout;
 
     @FindBy(xpath = "//span[contains(@class, 'Refresh')]")
@@ -34,14 +36,14 @@ public class OverallButtonsOnPages extends BasicPage {
 	super(driver);
 	PageFactory.initElements(driver, this);
     }
-
-    // должен называться clickRefreshButton() или refresh()
-    public void refreshButton() {
+   
+    public void clickRefreshButton() {
 	new Actions(driver).click(refreshButton).build().perform();
     }
    
-    public void clickWriteMessageButton() {
+    public WriteLetterPage clickWriteMessageButton() {
 	new Actions(driver).click(writeMessageButton).build().perform();
+	return new WriteLetterPage(driver);
     }
 
     public void clickDeleteButton() {
@@ -55,9 +57,10 @@ public class OverallButtonsOnPages extends BasicPage {
 	new Actions(driver).click(userName).build().perform();
     }
 
-    public void logout() {
+    public YandexMainPage logout() {
 	waitVisibleElement(logout);
 	new Actions(driver).click(logout).build().perform();
+	return new YandexMainPage(driver);
     }
 
 }

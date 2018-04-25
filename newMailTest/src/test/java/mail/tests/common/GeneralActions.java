@@ -9,7 +9,7 @@ public class GeneralActions extends BasicTestClass {
 
 	refresh();
 	try {
-	    draftPage.linksToMainPages.clickDraftLink();
+	    inboxPage.linksToMainPages.clickDraftLink();
 	    draftPage.waitTitle();
 	    draftPage.selectAllDrafts();
 	    draftPage.overallButtonsOnPages.clickDeleteButton();
@@ -19,7 +19,7 @@ public class GeneralActions extends BasicTestClass {
     }
 
     public void fillFields(String receiver, String subject, String message) {
-	inboxPage.overallButtonsOnPages.clickWriteMessageButton();
+	writeLetterPage = inboxPage.overallButtonsOnPages.clickWriteMessageButton();
 	writeLetterPage.fillToField(receiver);
 	writeLetterPage.clickByMessageField();
 	writeLetterPage.fillSubjectField(subject);
@@ -29,14 +29,13 @@ public class GeneralActions extends BasicTestClass {
     public void saveLetterAsDraft() {
 	writeLetterPage.saveLetterAsDraft();
     }
-
+   
     public void refresh() {
 	inboxPage.linksToMainPages.clickInboxLink();
 	inboxPage.waitTitle();
-	inboxPage.overallButtonsOnPages.refreshButton();
-	inboxPage.linksToMainPages.clickDraftLink();
-	draftPage.waitTitle();
-
+	inboxPage.overallButtonsOnPages.clickRefreshButton();
+	draftPage = inboxPage.linksToMainPages.clickDraftLink();
+	draftPage.waitTitle();	
     }
 
 }

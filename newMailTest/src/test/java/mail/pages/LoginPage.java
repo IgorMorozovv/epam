@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import mail.pages.main.InboxPage;
 import mail.using.LoginPageData;
 
 public class LoginPage extends BasicPage {
@@ -43,8 +44,9 @@ public class LoginPage extends BasicPage {
 	new Actions(driver).sendKeys(passwordField, password).build().perform();
     }
 
-    public void clickEnter() {
+    public InboxPage clickEnter() {
 	js.executeScript(SCRIPT);
+	return new InboxPage(driver);
     }
 
     public void fillAccountData() {

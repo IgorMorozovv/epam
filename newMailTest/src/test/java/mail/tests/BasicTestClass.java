@@ -30,20 +30,7 @@ public class BasicTestClass {
     protected DraftPage draftPage;
     protected WriteLetterPage writeLetterPage;
     protected LoginPage loginPage;
-
-    public BasicTestClass() {
-
-	setPages();
-
-    }
-
-    private void setPages() {
-	loginPage = new LoginPage(driver);
-	inboxPage = new InboxPage(driver);
-	draftPage = new DraftPage(driver);
-	writeLetterPage = new WriteLetterPage(driver);
-    }
-
+    
     @Parameters({ "start" })
     @BeforeClass
     public void beforeClass(@Optional(START_BY_DRIVER) String start) throws MalformedURLException {
@@ -61,14 +48,14 @@ public class BasicTestClass {
 	    break;
 	}
 
-	driver.manage().timeouts().implicitlyWait(WAIT_TIME, TimeUnit.SECONDS);
-	setPages();
+	driver.manage().timeouts().implicitlyWait(WAIT_TIME, TimeUnit.SECONDS);	
 	logIn();
     }
 
     private void logIn() {
+	loginPage = new LoginPage(driver);
 	loginPage.fillAccountData();
-	loginPage.clickEnter();
+	inboxPage = loginPage.clickEnter();
     }  
 
     @AfterClass(alwaysRun = true)

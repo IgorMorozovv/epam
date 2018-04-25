@@ -10,24 +10,19 @@ import mail.tests.common.GeneralActions;
 
 public class SendLetterTest extends GeneralActions {
 
-    private SentMessagesPage sentMessagesPage;
-
-    @BeforeClass
-    public void setUp() {
-	sentMessagesPage = new SentMessagesPage(driver);
-    }
+    private SentMessagesPage sentMessagesPage;  
 
     @Test(groups = { "other-functions" }, dataProvider = "FillLetter", priority = 3)
     public void sendLetter(String receiver, String subject, String message) {
 	fillFields(receiver, subject, message);
-	writeLetterPage.clickSubmitButton();
+	sentMessagesPage = writeLetterPage.clickSubmitButton();
 	sentMessagesPage.waitSent();
 	sentMessagesPage.closeInfomWindow();
 	refresh();
-	sentMessagesPage.linksToMainPages.clickSentLink();
+	draftPage.linksToMainPages.clickSentLink();
 	sentMessagesPage.waitTitle();
 	assertTrue(message.contains(sentMessagesPage.getFirstSendedMessage()));
-    }
+    }  
 
     @AfterMethod
     public void deleteSendedMessage() {

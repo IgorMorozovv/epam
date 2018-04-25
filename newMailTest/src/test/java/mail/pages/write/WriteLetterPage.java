@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import mail.pages.BasicPage;
+import mail.pages.main.SentMessagesPage;
 
 public class WriteLetterPage extends BasicPage {
 
@@ -51,10 +52,9 @@ public class WriteLetterPage extends BasicPage {
 
     }
 
-    public void clickSubmitButton() {
-
+    public SentMessagesPage clickSubmitButton() {
 	new Actions(driver).click(submitButton).build().perform();
-
+	return new SentMessagesPage(driver);
     }
 
     public void saveLetterAsDraft() {
