@@ -10,7 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import mail.using.LoginPageData;
 
 public class LoginPage extends BasicPage {
-
+    // раз ты решил вынести данные в отдельный класс, то можно сразу в методе
+    // использовать LoginPageData.LOGIN. Сейчас можешь не исправлять:)
     private String login = LoginPageData.LOGIN;
     private String password = LoginPageData.PASSWORD;
     private String loginPageURL = LoginPageData.LOGIN_URL;

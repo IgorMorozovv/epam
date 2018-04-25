@@ -13,6 +13,7 @@ public class DraftPage extends BasePageFolder {
 
     private final static String TITLE = "Черновик";
     
+    // похоже, что нигде не используется
     private By messages = new By.ByXPath("//*[contains(@class,'js-message-snippet-body')]");
 
     @FindBy(xpath = "//*[contains(@class,'js-message-snippet-body')]")
@@ -21,6 +22,8 @@ public class DraftPage extends BasePageFolder {
     @FindBy(xpath = "//*[@class='checkbox_view']")
     private List<WebElement> checkAllDrafts;
 
+    // все элементы должны в конце названия иметь тип элемента, например
+    // noLettersButton или noLettersLabel
     @FindBy(xpath = "//*[contains(text(), 'нет писем')]")
     private WebElement noLetters;
 
@@ -30,6 +33,8 @@ public class DraftPage extends BasePageFolder {
 	title = TITLE;
     }
 
+    // каждый метод в классе страницы должен по возможности возвращать экземпляр
+    // страницы
     public void clickFirstDraft() {
 	WebElement webElement = drafts.get(firstDraftIndex);
 	waitVisibleElement(webElement);

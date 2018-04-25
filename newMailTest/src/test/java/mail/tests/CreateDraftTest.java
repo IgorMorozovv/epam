@@ -6,6 +6,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import mail.pages.write.WriteLetterPage;
 import mail.tests.common.GeneralActions;
 import mail.using.ReadFromXML;
@@ -24,6 +25,9 @@ public class CreateDraftTest extends GeneralActions {
 	inboxPage.waitTitle();
 	fillFields(receiver, subject, message);
 	saveLetterAsDraft();
+	// при выполнении следующего задания сделай пожалуйста сообщения в проверках
+	// assertTrue(writeLetterPage.getSavedTextArea().isDisplayed(),"Verify that
+	// saved text is displayed");
 	assertTrue(writeLetterPage.getSavedTextArea().isDisplayed());
 	inboxPage.linksToMainPages.clickInboxLink();
 	inboxPage.waitTitle();

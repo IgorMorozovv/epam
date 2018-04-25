@@ -12,6 +12,7 @@ public class SentMessagesPage extends BasePageFolder {
 
     private final static String TITLE = "Отправленные";
 
+    // нет модификаторов доступа
     @FindBy(xpath = "//*[contains(@class,'js-message-snippet-firstline')]/span")
     List<WebElement> messages;
 

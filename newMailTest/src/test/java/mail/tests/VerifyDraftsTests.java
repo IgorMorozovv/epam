@@ -6,6 +6,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import mail.pages.write.LetterFieldsAssert;
 import mail.tests.common.GeneralActions;
 
@@ -34,6 +35,7 @@ public class VerifyDraftsTests extends GeneralActions {
 	assertTrue(letterFieldsAssert.assertReceiver(receiver));
 	assertTrue(letterFieldsAssert.assertSubject(subject));
 	assertTrue(letterFieldsAssert.assertMessage(message));
+	// в таких местах нужно ставить пробел
 	inboxPage.linksToMainPages.clickInboxLink();
 	inboxPage.waitTitle();
     }

@@ -1,14 +1,11 @@
 package mail.pages.overall;
 
-import org.openqa.selenium.ElementNotVisibleException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import mail.pages.BasicPage;
 
 /*
@@ -26,7 +23,7 @@ public class OverallButtonsOnPages extends BasicPage {
 
     @FindBy(xpath = "//*[@class='mail-User-Name']")
     private WebElement userName;
-
+    // попробуй подобрать другой локатор пожалуйста
     @FindBy(xpath = "//*[@class = 'b-user-dropdown-content']/div[8]/a")
     private WebElement logout;
 
@@ -38,6 +35,7 @@ public class OverallButtonsOnPages extends BasicPage {
 	PageFactory.initElements(driver, this);
     }
 
+    // должен называться clickRefreshButton() или refresh()
     public void refreshButton() {
 	new Actions(driver).click(refreshButton).build().perform();
     }
