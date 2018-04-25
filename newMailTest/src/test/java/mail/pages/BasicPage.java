@@ -18,7 +18,6 @@ public class BasicPage {
     }
 
     public void waitVisibleElement(WebElement element) {
-
 	try {
 	    new WebDriverWait(driver, WAIT_IN_SECONDS).until(ExpectedConditions.visibilityOf(element));
 	} catch (ElementNotVisibleException | TimeoutException e) {

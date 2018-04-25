@@ -29,9 +29,7 @@ public class LinksToMainPages extends BasicPage {
     }
 
     private void click(By locator) {
-
 	for (int i = 0; i < ATTEMPTS; i++) {
-
 	    try {
 		WebElement element = driver.findElement(locator);
 		element.click();

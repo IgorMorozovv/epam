@@ -1,12 +1,12 @@
 package mail.tests.common;
 
 import org.openqa.selenium.StaleElementReferenceException;
+
 import mail.tests.BasicTestClass;
 
 public class GeneralActions extends BasicTestClass {
 
     public void deleteAllDrafts() {
-
 	refresh();
 	try {
 	    inboxPage.linksToMainPages.clickDraftLink();

@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Mail">
 	<test name="TestMail1">
-		<parameter name="start" value="driver"></parameter>
-<!-- 		<parameter name="start" value="hub"></parameter> -->
+<!-- 		<parameter name="start" value="driver"></parameter> -->
+		<parameter name="start" value="hub"></parameter>
 		<groups>
 
 			<dependencies>

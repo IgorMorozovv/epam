@@ -2,28 +2,25 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" name="Failed suite [Mail]" guice-stage="DEVELOPMENT">
   <test name="TestMail1(failed)">
-    <parameter name="start" value="driver"/>
+    <parameter name="start" value="hub"/>
     <classes>
       <class name="mail.tests.LoginTest">
         <methods>
           <include name="login"/>
           <include name="beforeClass"/>
-          <include name="setUp"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- mail.tests.LoginTest -->
       <class name="mail.tests.LogOutTest">
         <methods>
           <include name="beforeClass"/>
+          <include name="logOut"/>
           <include name="afterClass"/>
-          <include name="logOutFromMail"/>
-          <include name="setUp"/>
         </methods>
       </class> <!-- mail.tests.LogOutTest -->
       <class name="mail.tests.SendLetterTest">
         <methods>
           <include name="beforeClass"/>
-          <include name="setUp"/>
           <include name="sendLetter"/>
           <include name="deleteSendedMessage"/>
           <include name="afterClass"/>
@@ -43,7 +40,6 @@
           <include name="afterClass"/>
           <include name="deleteDrafts"/>
           <include name="createMessage"/>
-          <include name="setUp"/>
         </methods>
       </class> <!-- mail.tests.CreateDraftTest -->
       <class name="mail.tests.VerifyDraftsTests">

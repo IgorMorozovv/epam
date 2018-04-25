@@ -32,7 +32,6 @@ public class VerifyDraftsTests extends GeneralActions {
 	draftPage.linksToMainPages.clickDraftLink();
 	draftPage.waitTitle();
 	draftPage.clickFirstDraft();
-
 	assertTrue(letterFieldsAssert.assertReceiver(receiver));
 	assertTrue(letterFieldsAssert.assertSubject(subject));
 	assertTrue(letterFieldsAssert.assertMessage(message));

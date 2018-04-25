@@ -1,2 +1,2 @@
 cd %cd%
-java -jar selenium-server-standalone-3.11.0.jar -role hub -port 4441
+java -jar selenium-server-standalone-3.11.0.jar -role hub -port 4444

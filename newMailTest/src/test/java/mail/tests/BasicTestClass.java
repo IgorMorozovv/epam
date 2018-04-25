@@ -12,6 +12,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+
 import mail.pages.LoginPage;
 import mail.pages.main.DraftPage;
 import mail.pages.main.InboxPage;
@@ -20,7 +21,7 @@ import mail.pages.write.WriteLetterPage;
 public class BasicTestClass {
 
     protected static final String FILE_NAME = "forDraft.xml";
-    private static final String URL = "http://localhost:4441/wd/hub/";
+    private static final String URL = "http://10.19.10.150:4444/wd/hub";
     private static final String START_BY_HUB = "hub";
     private static final String START_BY_DRIVER = "driver";
     private static final int WAIT_TIME = 10;
@@ -34,14 +35,13 @@ public class BasicTestClass {
     @Parameters({ "start" })
     @BeforeClass
     public void beforeClass(@Optional(START_BY_DRIVER) String start) throws MalformedURLException {
-
+	System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
 	switch (start) {
 	case START_BY_HUB:
 	    DesiredCapabilities capability = DesiredCapabilities.firefox();
-	    driver = new RemoteWebDriver(new URL(URL), capability);
+	    driver = new RemoteWebDriver(new URL(URL), DesiredCapabilities.chrome());
 	    break;
 	case START_BY_DRIVER:
-	    System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
 	    driver = new FirefoxDriver();
 	    break;
 	default:
@@ -60,10 +60,9 @@ public class BasicTestClass {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-
 	if (driver != null) {
 	    driver.quit();
 	}
     }
-    
+
 }
