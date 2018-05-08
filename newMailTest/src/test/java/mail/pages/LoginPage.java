@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import mail.pages.main.InboxPage;
-import mail.using.LoginPageData;
+import mail.utility.LoginPageData;
 
 public class LoginPage extends BasicPage {
     // раз ты решил вынести данные в отдельный класс, то можно сразу в методе

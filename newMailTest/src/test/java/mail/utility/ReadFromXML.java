@@ -1,4 +1,4 @@
-package mail.using;
+package mail.utility;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,7 +14,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-public class ReadFromXML {
+public class ReadFromXML implements Read {
 
     private static Object[][] data;
     private static String MAIN_NODE = "draft";
@@ -23,13 +23,14 @@ public class ReadFromXML {
     private static String MESSAGE_NODE = "message";
     private static int NUMBER_LETTER_FIELD = 3;
 
-    public static Object[][] getData(String fileName) {
+    @Override
+    public Object[][] getData(String fileName) {
 
 	try {
 	    File xmlFile = new File(fileName);
 	    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 	    DocumentBuilder db = dbf.newDocumentBuilder();
-	    Document doc = db.parse(xmlFile);	    
+	    Document doc = db.parse(xmlFile);
 	    doc.getDocumentElement().normalize();
 	    NodeList nList = doc.getElementsByTagName(MAIN_NODE);
 	    data = new Object[nList.getLength()][NUMBER_LETTER_FIELD];
@@ -47,7 +48,7 @@ public class ReadFromXML {
 	return data;
     }
 
-    private static void readNode(NodeList nList) {
+    private void readNode(NodeList nList) {
 	for (int temp = 0; temp < nList.getLength(); temp++) {
 	    Node nNode = nList.item(temp);
 	    Element eElement = (Element) nNode;

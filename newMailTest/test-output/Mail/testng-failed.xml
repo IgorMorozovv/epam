@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" name="Failed suite [Mail]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
   <test name="TestMail1(failed)">
-    <parameter name="start" value="hub"/>
     <classes>
       <class name="mail.tests.LoginTest">
         <methods>
@@ -11,46 +14,6 @@
           <include name="afterClass"/>
         </methods>
       </class> <!-- mail.tests.LoginTest -->
-      <class name="mail.tests.LogOutTest">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="logOut"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- mail.tests.LogOutTest -->
-      <class name="mail.tests.SendLetterTest">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="sendLetter"/>
-          <include name="deleteSendedMessage"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- mail.tests.SendLetterTest -->
-      <class name="mail.tests.TransferDraft">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="deleteDrafts"/>
-          <include name="trancferDrafts"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- mail.tests.TransferDraft -->
-      <class name="mail.tests.CreateDraftTest">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-          <include name="deleteDrafts"/>
-          <include name="createMessage"/>
-        </methods>
-      </class> <!-- mail.tests.CreateDraftTest -->
-      <class name="mail.tests.VerifyDraftsTests">
-        <methods>
-          <include name="verifyDraft"/>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-          <include name="setUp"/>
-          <include name="deleteDrafts"/>
-        </methods>
-      </class> <!-- mail.tests.VerifyDraftsTests -->
     </classes>
   </test> <!-- TestMail1(failed) -->
 </suite> <!-- Failed suite [Mail] -->

@@ -70,5 +70,5 @@ public class WriteLetterPage extends BasicPage {
 	new Actions(driver).click(messageField).build().perform();
 
     }
-    
+
 }

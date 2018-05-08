@@ -31,7 +31,9 @@ public class LinksToMainPages extends BasicPage {
     private void click(By locator) {
 	for (int i = 0; i < ATTEMPTS; i++) {
 	    try {
+
 		WebElement element = driver.findElement(locator);
+		logger.warn("Попытка перейти на страницу " + element.getText());
 		element.click();
 		Thread.sleep(SLEEP_TIME);
 	    } catch (StaleElementReferenceException | InterruptedException e) {

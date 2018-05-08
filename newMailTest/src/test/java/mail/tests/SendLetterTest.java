@@ -1,9 +1,11 @@
 package mail.tests;
 
 import static org.testng.Assert.assertTrue;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import mail.pages.main.SentMessagesPage;
 import mail.tests.common.GeneralActions;
 
@@ -33,7 +35,7 @@ public class SendLetterTest extends GeneralActions {
 
     @DataProvider(name = "FillLetter")
     private Object[][] dataToFillLetter() {
-	return mail.using.ReadFromXML.getData(FILE_NAME);
+	return dataReader.getData(FILE_NAME);
     }
-    
+
 }

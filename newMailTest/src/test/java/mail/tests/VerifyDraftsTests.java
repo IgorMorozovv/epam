@@ -42,7 +42,7 @@ public class VerifyDraftsTests extends GeneralActions {
 
     @DataProvider(name = "FillLetter")
     private Object[][] dataToFillLetter() {
-	return mail.using.ReadFromXML.getData(FILE_NAME);
+	return dataReader.getData(FILE_NAME);
     }
 
 }

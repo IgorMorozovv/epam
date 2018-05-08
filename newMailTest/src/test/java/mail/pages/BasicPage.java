@@ -1,5 +1,6 @@
 package mail.pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,8 @@ public class BasicPage {
     protected final static int ATTEMPTS = 2;
     protected final static int WAIT_IN_SECONDS = 10;
     protected WebDriver driver;
+
+    protected Logger logger = Logger.getLogger(BasicPage.class);
 
     public BasicPage(WebDriver driver) {
 	this.driver = driver;

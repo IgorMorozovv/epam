@@ -1,12 +1,12 @@
 package mail.tests;
 
 import static org.testng.Assert.assertTrue;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import mail.tests.common.GeneralActions;
-import mail.using.ReadFromXML;
 
 public class TransferDraft extends GeneralActions {
 
@@ -30,7 +30,7 @@ public class TransferDraft extends GeneralActions {
 
     @DataProvider
     private Object[][] letterData() {
-	return ReadFromXML.getData(FILE_NAME);
+	return dataReader.getData(FILE_NAME);
     }
-    
+
 }

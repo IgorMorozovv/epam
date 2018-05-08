@@ -52,5 +52,5 @@ public class DraftPage extends BasePageFolder {
     public void waitVisibleLetters() {
 	waitVisibleElement(drafts.get(firstDraftIndex));
     }
-    
+
 }

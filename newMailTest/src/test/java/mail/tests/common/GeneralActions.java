@@ -9,8 +9,8 @@ public class GeneralActions extends BasicTestClass {
     public void deleteAllDrafts() {
 	refresh();
 	try {
-	    inboxPage.linksToMainPages.clickDraftLink();
-	    draftPage.waitTitle();
+	    logger.info("");
+	    inboxPage.linksToMainPages.clickDraftLink().waitTitle();
 	    draftPage.selectAllDrafts();
 	    draftPage.overallButtonsOnPages.clickDeleteButton();
 	} catch (StaleElementReferenceException e) {

@@ -59,5 +59,5 @@ public class SentMessagesPage extends BasePageFolder {
     public void selectAllDrafts() {
 	new Actions(driver).click(checkAllLetters.get(firstDraftIndex)).build().perform();
     }
-    
+
 }

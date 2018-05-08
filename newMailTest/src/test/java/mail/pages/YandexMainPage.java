@@ -19,5 +19,5 @@ public class YandexMainPage extends BasicPage {
 	waitVisibleElement(enterMailButton);
 	return enterMailButton.isDisplayed();
     }
-    
+
 }
