@@ -1,0 +1,5 @@
+<configuration>
+<browserName>firefox</browserName>
+<pathToData>data/forDraft.csv</pathToData>
+<typeOfDriver>driver</typeOfDriver>
+</configuration>
