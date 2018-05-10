@@ -2,12 +2,14 @@ package mail.pom.tests;
 
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.uncommons.reportng.HTMLReporter;
+
 import mail.configuration.ReadConfiguration;
 import mail.logging.LoggingMessages;
 import mail.pom.pages.LoginPage;
@@ -30,24 +32,24 @@ public class BasicTestClass {
     protected WriteLetterPage writeLetterPage;
     protected LoginPage loginPage;
 
-    protected Logger logger = Logger.getLogger(BasicTestClass.class);
+    protected Logger logger = Logger.getLogger(getClass());
 
     protected Read dataReader = new ReadFromCsv();
-    
+
     private Driver getDriver = new Driver();
 
     @BeforeClass
-   
-    public void beforeClass() throws MalformedURLException {	
+
+    public void beforeClass() throws MalformedURLException {
 	driver = getDriver.getDriver();
 	driver.manage().timeouts().implicitlyWait(WAIT_TIME, TimeUnit.SECONDS);
 	logIn();
-//	logger.info(LoggingMessages.START_MESSAGE + getClass().getName() );
+	// logger.info(LoggingMessages.START_MESSAGE + getClass().getName() );
     }
 
     private void logIn() {
 	loginPage = new LoginPage(driver);
-	logger.info("Страница входа, заполнение полей");	
+	logger.info("Страница входа, заполнение полей");
 	loginPage.fillAccountData();
 	logger.info("Нажатие кнопки вход");
 	inboxPage = loginPage.clickEnter();
@@ -56,7 +58,7 @@ public class BasicTestClass {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-	logger.info(LoggingMessages.END_MESSAGE + getClass().getName() );
+	logger.info(LoggingMessages.END_MESSAGE + getClass().getName());
 	if (driver != null) {
 	    driver.quit();
 	}

@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" name="Failed suite [Mail]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [Mail]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
   <test name="TestMail1(failed)">
     <classes>
-      <class name="mail.tests.LoginTest">
+      <class name="mail.pom.tests.cases.LoginTest">
         <methods>
+          <include name="afterClass"/>
           <include name="login"/>
           <include name="beforeClass"/>
-          <include name="afterClass"/>
         </methods>
-      </class> <!-- mail.tests.LoginTest -->
+      </class> <!-- mail.pom.tests.cases.LoginTest -->
+      <class name="mail.pom.tests.cases.CreateDraftTest">
+        <methods>
+          <include name="createMessage"/>
+          <include name="setUp"/>
+          <include name="afterClass"/>
+          <include name="deleteDrafts"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- mail.pom.tests.cases.CreateDraftTest -->
+      <class name="mail.pom.tests.cases.VerifyDraftsTests">
+        <methods>
+          <include name="deleteDrafts"/>
+          <include name="setUp"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="verifyDraft" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- mail.pom.tests.cases.VerifyDraftsTests -->
     </classes>
   </test> <!-- TestMail1(failed) -->
 </suite> <!-- Failed suite [Mail] -->

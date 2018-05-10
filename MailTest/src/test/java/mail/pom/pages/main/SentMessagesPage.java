@@ -48,9 +48,9 @@ public class SentMessagesPage extends BasePageFolder {
 	return firstMessage;
     }
 
-    public SentMessagesPage waitSent() {
+    public boolean isSentMessageDisplay() {
 	waitVisibleElement(sentMessage);
-	return this;
+	return true;
     }
 
     public void selectAllDrafts() {

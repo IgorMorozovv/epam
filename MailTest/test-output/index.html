@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Igor_Morozov\AppData\Local\Temp\testng-eclipse--300662447\testng-customsuite.xml</span>
+                    <span>C:\Users\Igor_Morozov\AppData\Local\Temp\testng-eclipse-1403317705\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,12 +102,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="mail.pom.tests.cases.CreateDraftTest" class="method navigator-link" hash-for-method="createMessage(gadwil@yandex.ru, test message №1, Some message №1)">createMessage(gadwil@yandex.ru, test message №1, Some message №1)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="mail.pom.tests.cases.VerifyDraftsTests" class="method navigator-link" hash-for-method="verifyDraft(gadwil@yandex.ru, test message №1, Some message №1)">verifyDraft(gadwil@yandex.ru, test message №1, Some message №1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="mail.pom.tests.cases.CreateDraftTest" class="method navigator-link" hash-for-method="createMessage(gadwil@yandex.ru, test message №2, Some message №2)">createMessage(gadwil@yandex.ru, test message №2, Some message №2)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="mail.pom.tests.cases.VerifyDraftsTests" class="method navigator-link" hash-for-method="verifyDraft(gadwil@yandex.ru, test message №2, Some message №2)">verifyDraft(gadwil@yandex.ru, test message №2, Some message №2)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -125,22 +125,22 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">mail.pom.tests.cases.CreateDraftTest</span>
+              <span class="class-name">mail.pom.tests.cases.VerifyDraftsTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createMessage(gadwil@yandex.ru, test message №1, Some message №1)">
-                  </a> <!-- createMessage(gadwil@yandex.ru, test message №1, Some message №1) -->
-                  <span class="method-name">createMessage</span>
+                  <a name="verifyDraft(gadwil@yandex.ru, test message №1, Some message №1)">
+                  </a> <!-- verifyDraft(gadwil@yandex.ru, test message №1, Some message №1) -->
+                  <span class="method-name">verifyDraft</span>
                   <span class="parameters">(gadwil@yandex.ru, test message №1, Some message №1)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="createMessage(gadwil@yandex.ru, test message №2, Some message №2)">
-                  </a> <!-- createMessage(gadwil@yandex.ru, test message №2, Some message №2) -->
-                  <span class="method-name">createMessage</span>
+                  <a name="verifyDraft(gadwil@yandex.ru, test message №2, Some message №2)">
+                  </a> <!-- verifyDraft(gadwil@yandex.ru, test message №2, Some message №2) -->
+                  <span class="method-name">verifyDraft</span>
                   <span class="parameters">(gadwil@yandex.ru, test message №2, Some message №2)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -149,7 +149,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Igor_Morozov\AppData\Local\Temp\testng-eclipse--300662447\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Igor_Morozov\AppData\Local\Temp\testng-eclipse-1403317705\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -158,7 +158,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;mail.pom.tests.cases.CreateDraftTest&quot;/&gt;
+      &lt;class name=&quot;mail.pom.tests.cases.VerifyDraftsTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -183,10 +183,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">basic-functions</span>
+              <span class="test-group-name">other-functions</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">createMessage</span>
+                <span class="method-in-group-name">verifyDraft</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -208,18 +208,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createMessage')
-data.setCell(0, 2, 'mail.pom.tests.cases.CreateDraftTest')
-data.setCell(0, 3, 5740);
+data.setCell(0, 1, 'verifyDraft')
+data.setCell(0, 2, 'mail.pom.tests.cases.VerifyDraftsTests')
+data.setCell(0, 3, 7685);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createMessage')
-data.setCell(1, 2, 'mail.pom.tests.cases.CreateDraftTest')
-data.setCell(1, 3, 3872);
+data.setCell(1, 1, 'verifyDraft')
+data.setCell(1, 2, 'mail.pom.tests.cases.VerifyDraftsTests')
+data.setCell(1, 3, 6947);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -231,32 +231,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">createMessage(gadwil@yandex.ru, test message №1, Some message №1)</span>
+              <span class="reporter-method-name">verifyDraft(gadwil@yandex.ru, test message №1, Some message №1)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><br>2018-05-10 10:48:24,724 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
+                <span class="reporter-method-output"><br>2018-05-10 16:26:48,373 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
 </br></span>
-                <span class="reporter-method-output"><br>2018-05-10 10:48:28,674 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+                <span class="reporter-method-output"><br>2018-05-10 16:26:50,590 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
 </br></span>
-                <span class="reporter-method-output"><br>2018-05-10 10:48:29,595 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+                <span class="reporter-method-output"><br>2018-05-10 16:26:51,362 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
 </br></span>
-                <span class="reporter-method-output"><br>2018-05-10 10:48:29,711 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+                <span class="reporter-method-output"><br>2018-05-10 16:26:53,661 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
 </br></span>
-                <span class="reporter-method-output"><br>2018-05-10 10:48:30,276 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+                <span class="reporter-method-output"><br>2018-05-10 16:26:54,456 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
 </br></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">createMessage(gadwil@yandex.ru, test message №2, Some message №2)</span>
+              <span class="reporter-method-name">verifyDraft(gadwil@yandex.ru, test message №2, Some message №2)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><br>2018-05-10 10:48:30,461 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
+                <span class="reporter-method-output"><br>2018-05-10 16:26:56,056 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
 </br></span>
-                <span class="reporter-method-output"><br>2018-05-10 10:48:32,510 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+                <span class="reporter-method-output"><br>2018-05-10 16:26:57,855 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
 </br></span>
-                <span class="reporter-method-output"><br>2018-05-10 10:48:33,227 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+                <span class="reporter-method-output"><br>2018-05-10 16:26:58,382 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
 </br></span>
-                <span class="reporter-method-output"><br>2018-05-10 10:48:33,259 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+                <span class="reporter-method-output"><br>2018-05-10 16:27:00,665 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
 </br></span>
-                <span class="reporter-method-output"><br>2018-05-10 10:48:33,681 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+                <span class="reporter-method-output"><br>2018-05-10 16:27:01,426 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
 </br></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
@@ -275,30 +275,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">mail.pom.tests.cases.CreateDraftTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">mail.pom.tests.cases.VerifyDraftsTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">25336 ms</span>
+                <span class="method-start">13606 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">createMessage(gadwil@yandex.ru, test message №1, Some message №1)</span>
-                <span class="method-start">25539 ms</span>
+                <span class="method-name">verifyDraft(gadwil@yandex.ru, test message №1, Some message №1)</span>
+                <span class="method-start">17082 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">createMessage(gadwil@yandex.ru, test message №2, Some message №2)</span>
-                <span class="method-start">31280 ms</span>
+                <span class="method-name">verifyDraft(gadwil@yandex.ru, test message №2, Some message №2)</span>
+                <span class="method-start">24769 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">deleteDrafts</span>
-                <span class="method-start">35152 ms</span>
+                <span class="method-start">31718 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">38371 ms</span>
+                <span class="method-start">34656 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,13 +1,14 @@
 package mail.pom.pages.main;
 
 import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import mail.pom.pages.write.WriteLetterPage;
+import mail.pom.pages.write.LetterFieldsAssert;
 
 public class DraftPage extends BasePageFolder {
 
@@ -28,11 +29,11 @@ public class DraftPage extends BasePageFolder {
 	title = TITLE;
     }
 
-    public WriteLetterPage clickFirstDraft() {
+    public LetterFieldsAssert clickFirstDraft() {
 	WebElement webElement = drafts.get(firstDraftIndex);
 	waitVisibleElement(webElement);
 	new Actions(driver).click(webElement).build().perform();
-	return new WriteLetterPage(driver);
+	return new LetterFieldsAssert(driver);
     }
 
     public void selectAllDrafts() {

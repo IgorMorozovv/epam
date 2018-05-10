@@ -14,8 +14,10 @@ public class LoggingMessages {
     public static final String CKICK_USER_ICON_MESSAGE = "Нажатие на иконку пользователя";
     public static final String LOGOUT_MESSAGE = "Выход из почты";
     public static final String SENDING_MESSAGE = "Отправка сообщения";
-    public static final String WAIT_AND_CLOSE_SENT_MESSAGE = "Ожидание отправки и появления сообщения \"Отправленно\"";
     public static final String DELETE_SENT_LETTERS_MESSAGE = "Удаление всех отправленных сообщений";
-    
-    
+    public static final String ASSERT_SENT_LETTER_MESSAGE = "Проверка отправленного сообщения";
+    public static final String DROP_LETTER_MESSAGE = "Перенос черновика в папку Удалённые";
+    public static final String ASSERT_FILL_FIELDS = "Проверка корректности заполненных полей";
+    public static final String TO_FIRST_DRAFT_MESSAGE = "Открытие первого письма в папке Черновики";
+
 }

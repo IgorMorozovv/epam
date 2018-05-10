@@ -14,7 +14,7 @@ public class BasicPage {
     protected final static int WAIT_IN_SECONDS = 10;
     protected WebDriver driver;
 
-    protected Logger logger = Logger.getLogger(BasicPage.class);
+    protected Logger logger = Logger.getLogger(this.getClass());
 
     public BasicPage(WebDriver driver) {
 	this.driver = driver;

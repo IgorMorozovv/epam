@@ -16,7 +16,8 @@ import mail.pom.pages.main.SentMessagesPage;
  */
 public class LinksToMainPages extends BasicPage {
 
-    private final static int SLEEP_TIME = 100;
+    private final static int SLEEP_TIME = 500;
+    private final static int MAX_TIMER = 5000;
 
     private By toDraftPage = new By.ByXPath("//*[text() = 'Черновики']");
     private By toSentMessages = new By.ByXPath("//*[text() = 'Отправленные']");
@@ -29,15 +30,20 @@ public class LinksToMainPages extends BasicPage {
     }
 
     private void click(By locator) {
-	for (int i = 0; i < ATTEMPTS; i++) {
-	    try {
+	boolean isNotFind = true;
+	int timer = 0;
+	WebElement element;
 
-		WebElement element = driver.findElement(locator);
-		logger.warn("Попытка перейти на страницу " + element.getText());
-		element.click();
+	while (isNotFind && timer <= MAX_TIMER) {
+	    try {
 		Thread.sleep(SLEEP_TIME);
+		element = driver.findElement(locator);
+		element.click();
+		isNotFind = false;
 	    } catch (StaleElementReferenceException | InterruptedException e) {
 		e.printStackTrace();
+		timer += SLEEP_TIME;
+		logger.error(e.getMessage());
 	    }
 	}
     }

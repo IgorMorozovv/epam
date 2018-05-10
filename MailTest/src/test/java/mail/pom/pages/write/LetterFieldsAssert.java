@@ -9,7 +9,9 @@ import mail.pom.pages.BasicPage;
 
 public class LetterFieldsAssert extends BasicPage {
 
-    @FindBy(name = "to")
+    private static final String DATA_EMAIL = "data-yabble-email";
+
+    @FindBy(xpath = "//*[@name='to']/span")
     private WebElement receiverFieldAssert;
 
     @FindBy(name = "subj")
@@ -33,6 +35,19 @@ public class LetterFieldsAssert extends BasicPage {
 
     public boolean assertMessage(String message) {
 	return messageFieldAssert.getText().contains(message);
+    }
+
+    public String getReceiver() {
+	waitVisibleElement(receiverFieldAssert);
+	return receiverFieldAssert.getAttribute(DATA_EMAIL);
+    }
+
+    public String getSubject() {
+	return subjectField.getAttribute("value");
+    }
+
+    public String getMessage() {
+	return messageFieldAssert.getText();
     }
 
 }

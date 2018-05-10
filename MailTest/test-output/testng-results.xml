@@ -2,115 +2,107 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:14,361 [main] INFO  mail.pom.tests.BasicTestClass - Страница входа, заполнение полей
+      <![CDATA[<br>2018-05-10 16:26:36,762 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Страница входа, заполнение полей
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:21,429 [main] INFO  mail.pom.tests.BasicTestClass - Нажатие кнопки вход
+      <![CDATA[<br>2018-05-10 16:26:40,756 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Нажатие кнопки вход
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:24,724 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
+      <![CDATA[<br>2018-05-10 16:26:44,892 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:28,674 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+      <![CDATA[<br>2018-05-10 16:26:47,289 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Удаление всех сообщений 
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:29,595 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+      <![CDATA[<br>2018-05-10 16:26:48,373 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:29,711 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+      <![CDATA[<br>2018-05-10 16:26:50,590 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:30,276 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+      <![CDATA[<br>2018-05-10 16:26:51,362 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:30,461 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
+      <![CDATA[<br>2018-05-10 16:26:53,661 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:32,510 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+      <![CDATA[<br>2018-05-10 16:26:54,456 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:33,227 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+      <![CDATA[<br>2018-05-10 16:26:56,056 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:33,259 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+      <![CDATA[<br>2018-05-10 16:26:57,855 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:33,681 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+      <![CDATA[<br>2018-05-10 16:26:58,382 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:34,332 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Удаление всех сообщений 
+      <![CDATA[<br>2018-05-10 16:27:00,665 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:34,332 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Обновление почты 
+      <![CDATA[<br>2018-05-10 16:27:01,426 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:34,382 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+      <![CDATA[<br>2018-05-10 16:27:03,003 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:34,682 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+      <![CDATA[<br>2018-05-10 16:27:04,806 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Удаление всех сообщений 
 </br>]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-10 10:48:35,200 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Черновики
-</br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>2018-05-10 10:48:35,416 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Черновики
-</br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>2018-05-10 10:48:36,117 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Черновики
-</br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>2018-05-10 10:48:36,387 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Черновики
-</br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>2018-05-10 10:48:37,551 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Конец выполнения теста mail.pom.tests.cases.CreateDraftTest
+      <![CDATA[<br>2018-05-10 16:27:05,941 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Конец выполнения теста mail.pom.tests.cases.VerifyDraftsTests
 </br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2018-05-10T07:47:59Z" name="Default suite" finished-at="2018-05-10T07:48:40Z" duration-ms="41335">
+  <suite started-at="2018-05-10T13:26:31Z" name="Default suite" finished-at="2018-05-10T13:27:08Z" duration-ms="36969">
     <groups>
-      <group name="basic-functions">
-        <method signature="CreateDraftTest.createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.pom.tests.cases.CreateDraftTest@3012646b]" name="createMessage" class="mail.pom.tests.cases.CreateDraftTest"/>
-      </group> <!-- basic-functions -->
+      <group name="other-functions">
+        <method signature="VerifyDraftsTests.verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.pom.tests.cases.VerifyDraftsTests@72e5a8e]" name="verifyDraft" class="mail.pom.tests.cases.VerifyDraftsTests"/>
+      </group> <!-- other-functions -->
     </groups>
-    <test started-at="2018-05-10T07:47:59Z" name="Default test" finished-at="2018-05-10T07:48:40Z" duration-ms="41335">
-      <class name="mail.pom.tests.cases.CreateDraftTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:mail.pom.tests.cases.CreateDraftTest@3012646b]" started-at="2018-05-10T10:47:59Z" name="beforeClass" finished-at="2018-05-10T10:48:24Z" duration-ms="25336" status="PASS">
+    <test started-at="2018-05-10T13:26:31Z" name="Default test" finished-at="2018-05-10T13:27:08Z" duration-ms="36969">
+      <class name="mail.pom.tests.cases.VerifyDraftsTests">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:mail.pom.tests.cases.VerifyDraftsTests@72e5a8e]" started-at="2018-05-10T16:26:31Z" name="beforeClass" finished-at="2018-05-10T16:26:44Z" duration-ms="13606" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:14,361 [main] INFO  mail.pom.tests.BasicTestClass - Страница входа, заполнение полей
+              <![CDATA[<br>2018-05-10 16:26:36,762 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Страница входа, заполнение полей
 </br>]]>
             </line>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:21,429 [main] INFO  mail.pom.tests.BasicTestClass - Нажатие кнопки вход
+              <![CDATA[<br>2018-05-10 16:26:40,756 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Нажатие кнопки вход
 </br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.pom.tests.cases.CreateDraftTest@3012646b]" started-at="2018-05-10T10:48:24Z" name="setUp" finished-at="2018-05-10T10:48:24Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.pom.tests.cases.VerifyDraftsTests@72e5a8e]" started-at="2018-05-10T16:26:44Z" name="setUp" finished-at="2018-05-10T16:26:48Z" duration-ms="3446" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[<br>2018-05-10 16:26:44,892 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
+</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>2018-05-10 16:26:47,289 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Удаление всех сообщений 
+</br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.pom.tests.cases.CreateDraftTest@3012646b]" started-at="2018-05-10T10:48:24Z" name="createMessage" data-provider="letterData" finished-at="2018-05-10T10:48:30Z" duration-ms="5740" status="PASS">
+        <test-method signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.pom.tests.cases.VerifyDraftsTests@72e5a8e]" started-at="2018-05-10T16:26:48Z" name="verifyDraft" data-provider="FillLetter" finished-at="2018-05-10T16:26:56Z" duration-ms="7685" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -130,28 +122,28 @@
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:24,724 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
+              <![CDATA[<br>2018-05-10 16:26:48,373 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
 </br>]]>
             </line>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:28,674 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+              <![CDATA[<br>2018-05-10 16:26:50,590 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
 </br>]]>
             </line>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:29,595 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+              <![CDATA[<br>2018-05-10 16:26:51,362 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
 </br>]]>
             </line>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:29,711 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+              <![CDATA[<br>2018-05-10 16:26:53,661 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
 </br>]]>
             </line>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:30,276 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+              <![CDATA[<br>2018-05-10 16:26:54,456 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
 </br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- createMessage -->
-        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.pom.tests.cases.CreateDraftTest@3012646b]" started-at="2018-05-10T10:48:30Z" name="createMessage" data-provider="letterData" finished-at="2018-05-10T10:48:34Z" duration-ms="3872" status="PASS">
+        </test-method> <!-- verifyDraft -->
+        <test-method signature="verifyDraft(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mail.pom.tests.cases.VerifyDraftsTests@72e5a8e]" started-at="2018-05-10T16:26:56Z" name="verifyDraft" data-provider="FillLetter" finished-at="2018-05-10T16:27:03Z" duration-ms="6947" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -171,72 +163,48 @@
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:30,461 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
+              <![CDATA[<br>2018-05-10 16:26:56,056 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
 </br>]]>
             </line>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:32,510 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+              <![CDATA[<br>2018-05-10 16:26:57,855 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
 </br>]]>
             </line>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:33,227 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+              <![CDATA[<br>2018-05-10 16:26:58,382 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
 </br>]]>
             </line>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:33,259 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+              <![CDATA[<br>2018-05-10 16:27:00,665 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
 </br>]]>
             </line>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:33,681 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
+              <![CDATA[<br>2018-05-10 16:27:01,426 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
 </br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- createMessage -->
-        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.pom.tests.cases.CreateDraftTest@3012646b]" started-at="2018-05-10T10:48:34Z" name="deleteDrafts" finished-at="2018-05-10T10:48:37Z" duration-ms="3219" status="PASS">
+        </test-method> <!-- verifyDraft -->
+        <test-method is-config="true" signature="deleteDrafts()[pri:0, instance:mail.pom.tests.cases.VerifyDraftsTests@72e5a8e]" started-at="2018-05-10T16:27:03Z" name="deleteDrafts" finished-at="2018-05-10T16:27:05Z" duration-ms="2938" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:34,332 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Удаление всех сообщений 
+              <![CDATA[<br>2018-05-10 16:27:03,003 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
 </br>]]>
             </line>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:34,332 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Обновление почты 
-</br>]]>
-            </line>
-            <line>
-              <![CDATA[<br>2018-05-10 10:48:34,382 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
-</br>]]>
-            </line>
-            <line>
-              <![CDATA[<br>2018-05-10 10:48:34,682 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Входящие
-</br>]]>
-            </line>
-            <line>
-              <![CDATA[<br>2018-05-10 10:48:35,200 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Черновики
-</br>]]>
-            </line>
-            <line>
-              <![CDATA[<br>2018-05-10 10:48:35,416 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Черновики
-</br>]]>
-            </line>
-            <line>
-              <![CDATA[<br>2018-05-10 10:48:36,117 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Черновики
-</br>]]>
-            </line>
-            <line>
-              <![CDATA[<br>2018-05-10 10:48:36,387 [main] WARN  mail.pom.pages.BasicPage - Попытка перейти на страницу Черновики
+              <![CDATA[<br>2018-05-10 16:27:04,806 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Удаление всех сообщений 
 </br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- deleteDrafts -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.pom.tests.cases.CreateDraftTest@3012646b]" started-at="2018-05-10T10:48:37Z" name="afterClass" finished-at="2018-05-10T10:48:40Z" duration-ms="2957" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.pom.tests.cases.VerifyDraftsTests@72e5a8e]" started-at="2018-05-10T16:27:05Z" name="afterClass" finished-at="2018-05-10T16:27:08Z" duration-ms="2305" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[<br>2018-05-10 10:48:37,551 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Конец выполнения теста mail.pom.tests.cases.CreateDraftTest
+              <![CDATA[<br>2018-05-10 16:27:05,941 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Конец выполнения теста mail.pom.tests.cases.VerifyDraftsTests
 </br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- mail.pom.tests.cases.CreateDraftTest -->
+      </class> <!-- mail.pom.tests.cases.VerifyDraftsTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

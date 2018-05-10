@@ -15,12 +15,12 @@
 			</dependencies>
 		</groups>
 		<classes>
-			<class name="mail.tests.LoginTest"></class>
-<!-- 			<class name="mail.tests.CreateDraftTest"></class> -->
-<!-- 			<class name="mail.tests.VerifyDraftsTests"></class> -->
-<!-- 			<class name="mail.tests.SendLetterTest"></class> -->
-<!-- 			<class name="mail.tests.TransferDraft"></class> -->
-<!-- 			<class name="mail.tests.LogOutTest"></class> -->
+			<class name="mail.pom.tests.cases.LoginTest"></class>
+			<class name="mail.pom.tests.cases.CreateDraftTest"></class>
+			<class name="mail.pom.tests.cases.VerifyDraftsTests"></class>
+			<class name="mail.pom.tests.cases.SendLetterTest"></class>
+			<class name="mail.pom.tests.cases.TransferDraft"></class>
+			<class name="mail.pom.tests.cases.LogOutTest"></class>
 		</classes>
 	</test>
 </suite>

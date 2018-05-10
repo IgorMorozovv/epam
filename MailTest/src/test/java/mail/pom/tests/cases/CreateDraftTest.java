@@ -1,12 +1,14 @@
 package mail.pom.tests.cases;
 
 import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.fail;
 
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import mail.logging.LoggingMessages;
 import mail.pom.tests.common.GeneralActions;
 
@@ -18,10 +20,17 @@ public class CreateDraftTest extends GeneralActions {
     }
 
     @Test(groups = "basic-functions", dataProvider = "letterData", priority = 1)
-    public void createMessage(String receiver, String subject, String message) {	
-	fillFields(receiver, subject, message);	
+    public void createMessage(String receiver, String subject, String message) {
+	fillFields(receiver, subject, message);
 	saveLetterAsDraft();
-	assertTrue(writeLetterPage.getSavedTextArea().isDisplayed(), "Verify that saved text is displayed");	
+
+	try {
+	    assertTrue(writeLetterPage.getSavedTextArea().isDisplayed(), "Сообщение о сохранении не появилось");
+	} catch (AssertionError e) {
+	    logger.error(e.getMessage());
+	    fail(e.getMessage());
+	}
+
 	logger.info(LoggingMessages.GO_TO_MESSAGE + LoggingMessages.INBOX_MESSAGE);
 	inboxPage.linksToMainPages.clickInboxLink().waitTitle();
     }
