@@ -24,11 +24,11 @@ public class TransferDraft extends GeneralActions {
 	refresh();
 	draftPage.linksToMainPages.clickDraftLink().waitTitle();
 	draftPage.selectAllDrafts();
-	logger.info(LoggingMessages.DROP_LETTER_MESSAGE);
+	logger.info(LoggingMessages.ASSERT_TRANSFER_LETTER_MESSAGE);
 	draftPage.dropLetter();
 
 	try {
-	    assertTrue(draftPage.isDisplayLackLettersText(), "В черновиках остались сообщения");
+	    assertTrue(draftPage.isDisplayLackLettersText(), LoggingMessages.FAILURE_VERIFY_TRANSFER_DRAFT_MESSAGE);
 	} catch (AssertionError e) {
 	    logger.error(e.getMessage());
 	    fail(e.getMessage());
@@ -40,6 +40,7 @@ public class TransferDraft extends GeneralActions {
 
     @DataProvider
     private Object[][] letterData() {
+
 	return dataReader.getData(FILE_NAME);
     }
 

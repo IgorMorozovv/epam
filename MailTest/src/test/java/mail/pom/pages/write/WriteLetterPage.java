@@ -32,7 +32,7 @@ public class WriteLetterPage extends BasicPage {
 
     public WriteLetterPage(WebDriver driver) {
 	super(driver);
-	PageFactory.initElements(driver, this);	
+	PageFactory.initElements(driver, this);
     }
 
     public WriteLetterPage fillField(String receiver) {

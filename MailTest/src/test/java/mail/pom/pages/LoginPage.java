@@ -11,7 +11,7 @@ import mail.pom.pages.main.InboxPage;
 import mail.utility.LoginPageData;
 
 public class LoginPage extends BasicPage {
-    
+
     private String login = LoginPageData.LOGIN;
     private String password = LoginPageData.PASSWORD;
     private String loginPageURL = LoginPageData.LOGIN_URL;

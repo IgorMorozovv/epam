@@ -24,13 +24,14 @@ public class CreateDraftTest extends GeneralActions {
 	fillFields(receiver, subject, message);
 	saveLetterAsDraft();
 
+	logger.info(LoggingMessages.ASSERT_CREATE_DRAFT_MESSAGE);
 	try {
-	    assertTrue(writeLetterPage.getSavedTextArea().isDisplayed(), "Сообщение о сохранении не появилось");
+	    assertTrue(writeLetterPage.getSavedTextArea().isDisplayed(),
+		    LoggingMessages.FAILURE_VERIFY_CREATE_DRAFT_MESSAGE);
 	} catch (AssertionError e) {
 	    logger.error(e.getMessage());
 	    fail(e.getMessage());
 	}
-
 	logger.info(LoggingMessages.GO_TO_MESSAGE + LoggingMessages.INBOX_MESSAGE);
 	inboxPage.linksToMainPages.clickInboxLink().waitTitle();
     }

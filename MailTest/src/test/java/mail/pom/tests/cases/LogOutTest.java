@@ -19,8 +19,9 @@ public class LogOutTest extends BasicTestClass {
 	inboxPage.overallButtonsOnPages.clickUserNameIcon();
 	logger.info(LoggingMessages.LOGOUT_MESSAGE);
 	yandexMainPage = inboxPage.overallButtonsOnPages.logout();
+	logger.info(LoggingMessages.ASSERT_LOGOUT_MESSAGE);
 	try {
-	    assertTrue(yandexMainPage.IsDisplayedEnterButton(), "Выход из почты не удался");
+	    assertTrue(yandexMainPage.IsDisplayedEnterButton(), LoggingMessages.FAILURE_VERIFY_LOOUT_MESSAGE);
 	} catch (AssertionError e) {
 	    logger.error(e.getMessage());
 	    fail(e.getMessage());

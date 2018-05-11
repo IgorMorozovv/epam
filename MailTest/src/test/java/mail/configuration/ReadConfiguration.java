@@ -31,7 +31,7 @@ public class ReadConfiguration {
     private static String pathToData;
     private static String typeOfDriver;
 
-    public static void getData() {
+    public static boolean getData() {
 	try {
 	    File xmlFile = new File(PATH_TO_CONFIGURATION);
 	    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -40,19 +40,20 @@ public class ReadConfiguration {
 	    doc.getDocumentElement().normalize();
 	    NodeList nList = doc.getElementsByTagName(MAIN_NODE);
 	    readNode(nList);
+	    return true;
 	} catch (FileNotFoundException | ParserConfigurationException | SAXException e) {
 	    e.printStackTrace();
+	    return false;
 	} catch (IOException e) {
 	    e.printStackTrace();
+	    return false;
 	}
     }
 
     private static void readNode(NodeList nList) {
 	for (int temp = 0; temp < nList.getLength(); temp++) {
-
 	    // Элемент корневого узла configuration
 	    Element eElement = (Element) nList.item(NODE_POSITION);
-
 	    browserName = eElement.getElementsByTagName(BROWSER_NAME_MESSAGE).item(NODE_POSITION).getTextContent();
 	    pathToData = eElement.getElementsByTagName(PATH_TO_DATA_MESSAGE).item(NODE_POSITION).getTextContent();
 	    typeOfDriver = eElement.getElementsByTagName(TYPE_OF_DRIVER_MESSAGE).item(NODE_POSITION).getTextContent();
@@ -72,5 +73,5 @@ public class ReadConfiguration {
     public static String getTypeOfDriver() {
 	getData();
 	return typeOfDriver;
-    }  
+    }
 }

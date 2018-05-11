@@ -20,9 +20,9 @@ public class SendLetterTest extends GeneralActions {
 	fillFields(receiver, subject, message);
 	logger.info(LoggingMessages.SENDING_MESSAGE);
 	sentMessagesPage = writeLetterPage.clickSubmitButton();
-	logger.info(LoggingMessages.ASSERT_SENT_LETTER_MESSAGE);
+	logger.info(LoggingMessages.ASSERT_SEND_LETTER_MESSAGE);
 	try {
-	    assertTrue(sentMessagesPage.isSentMessageDisplay(), "Сообщение не отправлено");
+	    assertTrue(sentMessagesPage.isSentMessageDisplay(), LoggingMessages.FAILURE_VERIFY_SEND_LETTER_MESSAGE);
 	} catch (AssertionError e) {
 	    logger.error(e.getMessage());
 	    fail(e.getMessage());
@@ -43,6 +43,7 @@ public class SendLetterTest extends GeneralActions {
 
     @DataProvider(name = "FillLetter")
     private Object[][] dataToFillLetter() {
+	logger.info(LoggingMessages.GET_DATA_MESSAGE);
 	return dataReader.getData(FILE_NAME);
     }
 

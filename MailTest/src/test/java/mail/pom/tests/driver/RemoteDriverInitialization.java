@@ -19,6 +19,6 @@ public class RemoteDriverInitialization implements GetDriver {
 	    e.printStackTrace();
 	    return null;
 	}
-	return new RemoteWebDriver(hubURL, DesiredCapabilities.chrome());	
+	return new RemoteWebDriver(hubURL, DesiredCapabilities.chrome());
     }
 }

@@ -25,6 +25,7 @@ public class BasicPage {
 	    new WebDriverWait(driver, WAIT_IN_SECONDS).until(ExpectedConditions.visibilityOf(element));
 	} catch (ElementNotVisibleException | TimeoutException e) {
 	    e.printStackTrace();
+	    logger.error(e.getMessage());
 	}
     }
 }

@@ -19,7 +19,6 @@ public class VerifyDraftsTests extends GeneralActions {
 
     @BeforeClass
     public void setUp() {
-	// logger = Logger.getLogger(VerifyDraftsTests.class);
 	deleteAllDrafts();
     }
 
@@ -32,18 +31,17 @@ public class VerifyDraftsTests extends GeneralActions {
 	draftPage = inboxPage.linksToMainPages.clickDraftLink();
 	draftPage.waitTitle();
 	letterFieldsAssert = draftPage.clickFirstDraft();
-
 	logger.info(LoggingMessages.ASSERT_FILL_FIELDS);
 	try {
-	    assertEquals(receiver, letterFieldsAssert.getReceiver(), "Значения не совпадают");
-	    assertEquals(subject, letterFieldsAssert.getSubject(), "Значения не совпадают");
-	    assertEquals(message, letterFieldsAssert.getMessage(), "значения не совпадают");
+	    assertEquals(receiver, letterFieldsAssert.getReceiver(),
+		    LoggingMessages.FAILURE_VERIFY_FIELDS_DRAFT_MESSAGE);
+	    assertEquals(subject, letterFieldsAssert.getSubject(), LoggingMessages.FAILURE_VERIFY_FIELDS_DRAFT_MESSAGE);
+	    assertEquals(message, letterFieldsAssert.getMessage(), LoggingMessages.FAILURE_VERIFY_FIELDS_DRAFT_MESSAGE);
 	} catch (AssertionError | MoveTargetOutOfBoundsException e) {
 	    logger.error(e.getMessage());
 	    fail(e.getMessage());
 	}
 	draftPage.linksToMainPages.clickInboxLink().waitTitle();
-
     }
 
     @AfterClass

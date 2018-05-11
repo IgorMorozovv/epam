@@ -44,7 +44,6 @@ public class BasicTestClass {
 	driver = getDriver.getDriver();
 	driver.manage().timeouts().implicitlyWait(WAIT_TIME, TimeUnit.SECONDS);
 	logIn();
-	// logger.info(LoggingMessages.START_MESSAGE + getClass().getName() );
     }
 
     private void logIn() {
@@ -58,7 +57,7 @@ public class BasicTestClass {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-	logger.info(LoggingMessages.END_MESSAGE + getClass().getName());
+	logger.info(LoggingMessages.END_TEST_MESSAGE + getClass().getName());
 	if (driver != null) {
 	    driver.quit();
 	}

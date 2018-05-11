@@ -29,7 +29,8 @@ public class BasePageFolder extends BasicPage {
 	    new WebDriverWait(driver, WAIT_IN_SECONDS).until(ExpectedConditions.titleContains(title));
 	} catch (ElementNotVisibleException | TimeoutException e) {
 	    e.printStackTrace();
+	    logger.error(e.getMessage());
 	}
 	return this;
-    }    
+    }
 }
