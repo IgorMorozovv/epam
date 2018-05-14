@@ -15,10 +15,14 @@ public class LogOutTest extends BasicTestClass {
 
     @Test(groups = { "other-functions" }, priority = 10)
     public void logOut() {
+	// TODO: Если уж ты решил прологировать каждое действие в тесте, то разделяй эти
+	// шаги пробелами
 	logger.info(LoggingMessages.CKICK_USER_ICON_MESSAGE);
 	inboxPage.overallButtonsOnPages.clickUserNameIcon();
+
 	logger.info(LoggingMessages.LOGOUT_MESSAGE);
 	yandexMainPage = inboxPage.overallButtonsOnPages.logout();
+
 	logger.info(LoggingMessages.ASSERT_LOGOUT_MESSAGE);
 	try {
 	    assertTrue(yandexMainPage.IsDisplayedEnterButton(), LoggingMessages.FAILURE_VERIFY_LOOUT_MESSAGE);

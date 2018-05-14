@@ -24,6 +24,7 @@ public class BasicPage {
 	try {
 	    new WebDriverWait(driver, WAIT_IN_SECONDS).until(ExpectedConditions.visibilityOf(element));
 	} catch (ElementNotVisibleException | TimeoutException e) {
+	    // TODO: см BasePageFolder
 	    e.printStackTrace();
 	    logger.error(e.getMessage());
 	}

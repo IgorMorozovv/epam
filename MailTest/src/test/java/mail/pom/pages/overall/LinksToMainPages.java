@@ -41,6 +41,7 @@ public class LinksToMainPages extends BasicPage {
 		element.click();
 		isNotFind = false;
 	    } catch (StaleElementReferenceException | InterruptedException e) {
+		// TODO: то же самое, что и в BasePageFolder
 		e.printStackTrace();
 		timer += SLEEP_TIME;
 		logger.error(e.getMessage());

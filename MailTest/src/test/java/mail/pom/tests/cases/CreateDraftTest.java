@@ -25,6 +25,10 @@ public class CreateDraftTest extends GeneralActions {
 	saveLetterAsDraft();
 
 	logger.info(LoggingMessages.ASSERT_CREATE_DRAFT_MESSAGE);
+	// TODO: Наличие вот этого параметра
+	// "LoggingMessages.FAILURE_VERIFY_CREATE_DRAFT_MESSAGE" в тесте уже
+	// предполагает, что при падении нужное сообщение появится на экране. Зачем ты
+	// делаешь try-catch? Пожалуйста, посмотри это для каждого теста.
 	try {
 	    assertTrue(writeLetterPage.getSavedTextArea().isDisplayed(),
 		    LoggingMessages.FAILURE_VERIFY_CREATE_DRAFT_MESSAGE);

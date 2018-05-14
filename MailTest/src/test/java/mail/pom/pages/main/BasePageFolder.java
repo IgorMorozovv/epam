@@ -28,6 +28,8 @@ public class BasePageFolder extends BasicPage {
 	try {
 	    new WebDriverWait(driver, WAIT_IN_SECONDS).until(ExpectedConditions.titleContains(title));
 	} catch (ElementNotVisibleException | TimeoutException e) {
+	    // TODO: лучше вывести элемент на экран, чтобы сообщение об ошибке было
+	    // нагляднеее и понятнее на каком элементе тест упал или что произошло
 	    e.printStackTrace();
 	    logger.error(e.getMessage());
 	}

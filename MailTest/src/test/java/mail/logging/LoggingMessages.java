@@ -18,6 +18,7 @@ public class LoggingMessages {
 
     // Сообщения перед assert
     public static final String ASSERT_LOGGING_MESSAGE = "Проверка отображения страницы Входящие после входа в почту";
+    // TODO: "...MESSAGE"
     public static final String ASSERT_FILL_FIELDS = "Проверка корректности заполненных полей";
     public static final String ASSERT_SEND_LETTER_MESSAGE = "Проверка отправления сообщения - всплывающее окно с текстом \"Сообщение тправлено\"";
     public static final String ASSERT_TRANSFER_LETTER_MESSAGE = "Проверка переноса черновика в папку Удалённые";

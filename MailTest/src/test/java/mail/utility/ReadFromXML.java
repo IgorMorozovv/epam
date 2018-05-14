@@ -35,6 +35,7 @@ public class ReadFromXML implements Read {
 	    NodeList nList = doc.getElementsByTagName(MAIN_NODE);
 	    data = new Object[nList.getLength()][NUMBER_LETTER_FIELD];
 	    readNode(nList);
+	    // TODO: Multiple catch
 	} catch (FileNotFoundException e) {
 	    return null;
 	} catch (ParserConfigurationException e) {
