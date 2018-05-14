@@ -1,9 +1,7 @@
 package mail.pom.tests.cases;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.fail;
 
-import org.openqa.selenium.interactions.MoveTargetOutOfBoundsException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -27,20 +25,17 @@ public class VerifyDraftsTests extends GeneralActions {
 	fillFields(receiver, subject, message);
 	saveLetterAsDraft();
 	refresh();
+
 	logger.info(LoggingMessages.TO_FIRST_DRAFT_MESSAGE);
 	draftPage = inboxPage.linksToMainPages.clickDraftLink();
 	draftPage.waitTitle();
 	letterFieldsAssert = draftPage.clickFirstDraft();
-	logger.info(LoggingMessages.ASSERT_FILL_FIELDS);
-	try {
-	    assertEquals(receiver, letterFieldsAssert.getReceiver(),
-		    LoggingMessages.FAILURE_VERIFY_FIELDS_DRAFT_MESSAGE);
-	    assertEquals(subject, letterFieldsAssert.getSubject(), LoggingMessages.FAILURE_VERIFY_FIELDS_DRAFT_MESSAGE);
-	    assertEquals(message, letterFieldsAssert.getMessage(), LoggingMessages.FAILURE_VERIFY_FIELDS_DRAFT_MESSAGE);
-	} catch (AssertionError | MoveTargetOutOfBoundsException e) {
-	    logger.error(e.getMessage());
-	    fail(e.getMessage());
-	}
+
+	logger.info(LoggingMessages.ASSERT_FILL_FIELDS_MESSAGE);
+	assertEquals(receiver, letterFieldsAssert.getReceiver(), LoggingMessages.FAILURE_VERIFY_FIELDS_DRAFT_MESSAGE);
+	assertEquals(subject, letterFieldsAssert.getSubject(), LoggingMessages.FAILURE_VERIFY_FIELDS_DRAFT_MESSAGE);
+	assertEquals(message, letterFieldsAssert.getMessage(), LoggingMessages.FAILURE_VERIFY_FIELDS_DRAFT_MESSAGE);
+
 	draftPage.linksToMainPages.clickInboxLink().waitTitle();
     }
 
@@ -51,7 +46,7 @@ public class VerifyDraftsTests extends GeneralActions {
 
     @DataProvider(name = "FillLetter")
     private Object[][] dataToFillLetter() {
-	return dataReader.getData(FILE_NAME);
+	return dataReader.getData();
     }
 
 }

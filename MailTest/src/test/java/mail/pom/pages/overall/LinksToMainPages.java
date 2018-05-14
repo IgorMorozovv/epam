@@ -16,13 +16,16 @@ import mail.pom.pages.main.SentMessagesPage;
  */
 public class LinksToMainPages extends BasicPage {
 
-    private final static int SLEEP_TIME = 500;
-    private final static int MAX_TIMER = 5000;
+    private static final int SLEEP_TIME = 500;
+    private static final int MAX_TIMER = 5000;
+    private static final String ERROR_FOLDER_CLICK_MESSAGE = "Ошибка  при попытке перехода в папку ";
 
     private By toDraftPage = new By.ByXPath("//*[text() = 'Черновики']");
     private By toSentMessages = new By.ByXPath("//*[text() = 'Отправленные']");
     private By toInBox = new By.ByXPath("//*[text() = 'Входящие']");
     private By toDelete = new By.ByXPath("//*[text() = 'Удалённые']");
+
+    private char backSlash = '\'';
 
     public LinksToMainPages(WebDriver driver) {
 	super(driver);
@@ -41,12 +44,17 @@ public class LinksToMainPages extends BasicPage {
 		element.click();
 		isNotFind = false;
 	    } catch (StaleElementReferenceException | InterruptedException e) {
-		// TODO: то же самое, что и в BasePageFolder
 		e.printStackTrace();
 		timer += SLEEP_TIME;
-		logger.error(e.getMessage());
+		logger.error(ERROR_FOLDER_CLICK_MESSAGE + getElementName(locator.toString()));
 	    }
 	}
+    }
+
+    private String getElementName(String locator) {
+	int firstIndex = locator.indexOf(backSlash) + 1;
+	return locator.substring(firstIndex, locator.indexOf(backSlash, firstIndex));
+
     }
 
     public DraftPage clickDraftLink() {

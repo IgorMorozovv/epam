@@ -1,10 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Mail">
+<suite name="YandexMail">
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
-	<test name="TestMail1">
+	<test name="TestYandexMail">
 		<groups>
 			<dependencies>
 				<group depends-on="basic-functions" name="other-functions"></group>

@@ -15,11 +15,11 @@ public class LoggingMessages {
     public static final String SENDING_MESSAGE = "Отправка сообщения";
     public static final String DELETE_SENT_LETTERS_MESSAGE = "Удаление всех отправленных сообщений";
     public static final String TO_FIRST_DRAFT_MESSAGE = "Открытие первого письма в папке Черновики";
+    public static final String GET_DATA_MESSAGE = "Получение данных для теста из файла";
 
     // Сообщения перед assert
     public static final String ASSERT_LOGGING_MESSAGE = "Проверка отображения страницы Входящие после входа в почту";
-    // TODO: "...MESSAGE"
-    public static final String ASSERT_FILL_FIELDS = "Проверка корректности заполненных полей";
+    public static final String ASSERT_FILL_FIELDS_MESSAGE = "Проверка корректности заполненных полей";
     public static final String ASSERT_SEND_LETTER_MESSAGE = "Проверка отправления сообщения - всплывающее окно с текстом \"Сообщение тправлено\"";
     public static final String ASSERT_TRANSFER_LETTER_MESSAGE = "Проверка переноса черновика в папку Удалённые";
     public static final String ASSERT_LOGOUT_MESSAGE = "Проверка выхода - переход на главную страницу яндекса";
@@ -33,6 +33,7 @@ public class LoggingMessages {
     public static final String FAILURE_VERIFY_TRANSFER_DRAFT_MESSAGE = "Не удалось перенести сообщение в папку Удалённые";
     public static final String FAILURE_VERIFY_FIELDS_DRAFT_MESSAGE = "Значения не совпадают";
 
-    public static final String GET_DATA_MESSAGE = "Получение данных для теста из файла";
+    public static final String ENTER_PAGE_MESSAGE = "Страница входа, заполнение полей";
+    public static final String ENTER_BUTTON_CLICK_MESSAGE = "Нажатие кнопки вход";
 
 }

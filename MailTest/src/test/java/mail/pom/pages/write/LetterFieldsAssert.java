@@ -11,6 +11,8 @@ public class LetterFieldsAssert extends BasicPage {
 
     private static final String DATA_EMAIL = "data-yabble-email";
 
+    private static final String RECEIVER_FIELD_MESSAGE = " поле получателя";
+
     @FindBy(xpath = "//*[@name='to']/span")
     private WebElement receiverFieldAssert;
 
@@ -38,7 +40,7 @@ public class LetterFieldsAssert extends BasicPage {
     }
 
     public String getReceiver() {
-	waitVisibleElement(receiverFieldAssert);
+	waitVisibleElement(receiverFieldAssert, RECEIVER_FIELD_MESSAGE);
 	return receiverFieldAssert.getAttribute(DATA_EMAIL);
     }
 

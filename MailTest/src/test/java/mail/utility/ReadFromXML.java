@@ -14,6 +14,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import mail.configuration.ReadConfiguration;
+
 public class ReadFromXML implements Read {
 
     private static Object[][] data;
@@ -24,10 +26,10 @@ public class ReadFromXML implements Read {
     private static int NUMBER_LETTER_FIELD = 3;
 
     @Override
-    public Object[][] getData(String fileName) {
+    public Object[][] getData() {
 
 	try {
-	    File xmlFile = new File(fileName);
+	    File xmlFile = new File(ReadConfiguration.getPathToData());
 	    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 	    DocumentBuilder db = dbf.newDocumentBuilder();
 	    Document doc = db.parse(xmlFile);
@@ -35,17 +37,11 @@ public class ReadFromXML implements Read {
 	    NodeList nList = doc.getElementsByTagName(MAIN_NODE);
 	    data = new Object[nList.getLength()][NUMBER_LETTER_FIELD];
 	    readNode(nList);
-	    // TODO: Multiple catch
-	} catch (FileNotFoundException e) {
-	    return null;
-	} catch (ParserConfigurationException e) {
-	    return null;
-	} catch (SAXException e) {
+	} catch (FileNotFoundException | ParserConfigurationException | SAXException e) {
 	    return null;
 	} catch (IOException e) {
 	    return null;
 	}
-
 	return data;
     }
 

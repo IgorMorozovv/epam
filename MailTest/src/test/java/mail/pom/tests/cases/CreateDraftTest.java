@@ -1,7 +1,6 @@
 package mail.pom.tests.cases;
 
 import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.fail;
 
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterClass;
@@ -25,17 +24,9 @@ public class CreateDraftTest extends GeneralActions {
 	saveLetterAsDraft();
 
 	logger.info(LoggingMessages.ASSERT_CREATE_DRAFT_MESSAGE);
-	// TODO: Наличие вот этого параметра
-	// "LoggingMessages.FAILURE_VERIFY_CREATE_DRAFT_MESSAGE" в тесте уже
-	// предполагает, что при падении нужное сообщение появится на экране. Зачем ты
-	// делаешь try-catch? Пожалуйста, посмотри это для каждого теста.
-	try {
-	    assertTrue(writeLetterPage.getSavedTextArea().isDisplayed(),
-		    LoggingMessages.FAILURE_VERIFY_CREATE_DRAFT_MESSAGE);
-	} catch (AssertionError e) {
-	    logger.error(e.getMessage());
-	    fail(e.getMessage());
-	}
+	assertTrue(writeLetterPage.getSavedTextArea().isDisplayed(),
+		LoggingMessages.FAILURE_VERIFY_CREATE_DRAFT_MESSAGE);
+
 	logger.info(LoggingMessages.GO_TO_MESSAGE + LoggingMessages.INBOX_MESSAGE);
 	inboxPage.linksToMainPages.clickInboxLink().waitTitle();
     }
@@ -47,7 +38,7 @@ public class CreateDraftTest extends GeneralActions {
 
     @DataProvider
     private Object[][] letterData() {
-	return dataReader.getData(FILE_NAME);
+	return dataReader.getData();
     }
 
 }

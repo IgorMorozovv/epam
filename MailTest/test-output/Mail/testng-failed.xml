@@ -23,15 +23,13 @@
           <include name="beforeClass"/>
         </methods>
       </class> <!-- mail.pom.tests.cases.CreateDraftTest -->
-      <class name="mail.pom.tests.cases.VerifyDraftsTests">
+      <class name="mail.pom.tests.cases.LogOutTest">
         <methods>
-          <include name="deleteDrafts"/>
-          <include name="setUp"/>
+          <include name="logOut"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="verifyDraft" invocation-numbers="1"/>
         </methods>
-      </class> <!-- mail.pom.tests.cases.VerifyDraftsTests -->
+      </class> <!-- mail.pom.tests.cases.LogOutTest -->
     </classes>
   </test> <!-- TestMail1(failed) -->
 </suite> <!-- Failed suite [Mail] -->

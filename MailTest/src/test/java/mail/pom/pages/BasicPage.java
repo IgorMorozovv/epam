@@ -20,13 +20,12 @@ public class BasicPage {
 	this.driver = driver;
     }
 
-    public void waitVisibleElement(WebElement element) {
+    public void waitVisibleElement(WebElement element, String nameElement) {
 	try {
 	    new WebDriverWait(driver, WAIT_IN_SECONDS).until(ExpectedConditions.visibilityOf(element));
 	} catch (ElementNotVisibleException | TimeoutException e) {
-	    // TODO: см BasePageFolder
 	    e.printStackTrace();
-	    logger.error(e.getMessage());
+	    logger.error(nameElement + e.getMessage());
 	}
     }
 }

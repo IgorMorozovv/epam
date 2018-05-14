@@ -48,9 +48,11 @@ public class BasicTestClass {
 
     private void logIn() {
 	loginPage = new LoginPage(driver);
-	logger.info("Страница входа, заполнение полей");
+
+	logger.info(LoggingMessages.ENTER_PAGE_MESSAGE);
 	loginPage.fillAccountData();
-	logger.info("Нажатие кнопки вход");
+
+	logger.info(LoggingMessages.ENTER_BUTTON_CLICK_MESSAGE);
 	inboxPage = loginPage.clickEnter();
 	inboxPage.waitTitle();
     }

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 10 16:02:43 MSK 2018</td>
+<td>Started on:</td><td>Fri May 11 15:14:14 MSK 2018</td>
 </tr>
-<tr><td>Total time:</td><td>154 seconds (154696 ms)</td>
+<tr><td>Total time:</td><td>190 seconds (190031 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,54 +75,84 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='mail.pom.tests.cases.VerifyDraftsTests.verifyDraft()'><b>verifyDraft</b><br>Test class: mail.pom.tests.cases.VerifyDraftsTests<br>Parameters: gadwil@yandex.ru, test message №2, Some message №2<br/>
-<a href="#Output-1745608181" onClick='toggleBox("Output-1745608181", this, "Show output", "Hide output");'>Show output</a>
+<td title='mail.pom.tests.cases.LogOutTest.logOut()'><b>logOut</b><br>Test class: mail.pom.tests.cases.LogOutTest<br/>
+<a href="#Output-485047320" onClick='toggleBox("Output-485047320", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1745608181" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1745608181">
-<br>2018-05-10 16:03:50,639 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
+<a href="#Output-485047320" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-485047320">
+<br>2018-05-11 15:16:52,447 [main] INFO  mail.pom.tests.cases.LogOutTest - Нажатие на иконку пользователя
+</br><br/>
+<br>2018-05-11 15:16:52,595 [main] INFO  mail.pom.tests.cases.LogOutTest - Выход из почты
+</br><br/>
+<br>2018-05-11 15:17:12,668 [main] ERROR mail.pom.pages.overall.OverallButtonsOnPages - Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[contains(text(),'Выход')]' (tried for 10 second(s) with 500 milliseconds interval)
 </br><br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: (644, -7) is out of bounds of viewport width (1268) and height (855)
+<td><div><pre>org.openqa.selenium.WebDriverException: Unable to convert: {actions=[org.openqa.selenium.interactions.Sequence@53b98ff6]}
+	at org.openqa.selenium.json.BeanToJsonConverter.convert(BeanToJsonConverter.java:77)
+	at org.openqa.selenium.json.Json.toJson(Json.java:60)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:638)
+	at mail.pom.pages.overall.OverallButtonsOnPages.logout(OverallButtonsOnPages.java:60)
+	at mail.pom.tests.cases.LogOutTest.logOut(LogOutTest.java:21)
+Caused by: org.openqa.selenium.WebDriverException: Unable to convert: {actions=[org.openqa.selenium.interactions.Sequence@53b98ff6]}
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:96)
+	at org.openqa.selenium.json.BeanToJsonConverter.convert(BeanToJsonConverter.java:74)
+	... 35 more
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;EPRURYAW0060&apos;, ip: &apos;10.19.10.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:198)
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:146)
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:134)
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:94)
+	... 36 more
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:181)
+	... 39 more
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[contains(text(),&apos;Выход&apos;)]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
 System info: host: &apos;EPRURYAW0060&apos;, ip: &apos;10.19.10.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4908, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 3604ebf3-d9a2-49ca-b2dd-104088321fd9
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 10444, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: bf5e9ca7-5fda-4571-99e7-812b95b5b31d
+*** Element info: {Using=xpath, value=//*[contains(text(),&apos;Выход&apos;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:638)
-	at mail.pom.pages.overall.OverallButtonsOnPages.clickWriteMessageButton(OverallButtonsOnPages.java:43)
-	at mail.pom.tests.common.GeneralActions.fillFields(GeneralActions.java:26)
-	at mail.pom.tests.cases.VerifyDraftsTests.verifyDraft(VerifyDraftsTests.java:27)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1745608181", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1745608181'><pre>org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: (644, -7) is out of bounds of viewport width (1268) and height (855)
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
-System info: host: &apos;EPRURYAW0060&apos;, ip: &apos;10.19.10.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4908, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 3604ebf3-d9a2-49ca-b2dd-104088321fd9
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy17.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:203)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:154)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	... 43 more
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace485047320", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace485047320'><pre>org.openqa.selenium.WebDriverException: Unable to convert: {actions=[org.openqa.selenium.interactions.Sequence@53b98ff6]}
+	at org.openqa.selenium.json.BeanToJsonConverter.convert(BeanToJsonConverter.java:77)
+	at org.openqa.selenium.json.Json.toJson(Json.java:60)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
 	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
 	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:638)
-	at mail.pom.pages.overall.OverallButtonsOnPages.clickWriteMessageButton(OverallButtonsOnPages.java:43)
-	at mail.pom.tests.common.GeneralActions.fillFields(GeneralActions.java:26)
-	at mail.pom.tests.cases.VerifyDraftsTests.verifyDraft(VerifyDraftsTests.java:27)
+	at mail.pom.pages.overall.OverallButtonsOnPages.logout(OverallButtonsOnPages.java:60)
+	at mail.pom.tests.cases.LogOutTest.logOut(LogOutTest.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -148,9 +178,58 @@ Session ID: 3604ebf3-d9a2-49ca-b2dd-104088321fd9
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Unable to convert: {actions=[org.openqa.selenium.interactions.Sequence@53b98ff6]}
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:96)
+	at org.openqa.selenium.json.BeanToJsonConverter.convert(BeanToJsonConverter.java:74)
+	... 35 more
+Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;EPRURYAW0060&apos;, ip: &apos;10.19.10.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:198)
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:146)
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:134)
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:94)
+	... 36 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.openqa.selenium.json.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:181)
+	... 39 more
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[contains(text(),&apos;Выход&apos;)]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;EPRURYAW0060&apos;, ip: &apos;10.19.10.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 10444, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: bf5e9ca7-5fda-4571-99e7-812b95b5b31d
+*** Element info: {Using=xpath, value=//*[contains(text(),&apos;Выход&apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy17.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:203)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:154)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	... 43 more
 </pre></div></td>
-<td>0</td>
-<td>mail.pom.tests.cases.VerifyDraftsTests@4201c465</td></tr>
+<td>30</td>
+<td>mail.pom.tests.cases.LogOutTest@eadd4fb</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -161,151 +240,169 @@ Session ID: 3604ebf3-d9a2-49ca-b2dd-104088321fd9
 </tr>
 <tr>
 <td title='mail.pom.tests.cases.CreateDraftTest.createMessage()'><b>createMessage</b><br>Test class: mail.pom.tests.cases.CreateDraftTest<br>Parameters: gadwil@yandex.ru, test message №1, Some message №1<br/>
-<a href="#Output-2042917213" onClick='toggleBox("Output-2042917213", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-438123546" onClick='toggleBox("Output-438123546", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2042917213" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2042917213">
-<br>2018-05-10 16:03:14,409 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
+<a href="#Output-438123546" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-438123546">
+<br>2018-05-11 15:14:43,844 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
 </br><br/>
-<br>2018-05-10 16:03:17,384 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+<br>2018-05-11 15:14:46,534 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
 </br><br/>
-<br>2018-05-10 16:03:18,186 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+<br>2018-05-11 15:14:47,084 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Проверка сохранения письма - появление текста "Сохранено"
+</br><br/>
+<br>2018-05-11 15:14:47,148 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
 </br><br/>
 </div>
 </td>
 <td></td>
 <td>4</td>
-<td>mail.pom.tests.cases.CreateDraftTest@7a5ceedd</td></tr>
+<td>mail.pom.tests.cases.CreateDraftTest@5b799640</td></tr>
 <tr>
 <td title='mail.pom.tests.cases.CreateDraftTest.createMessage()'><b>createMessage</b><br>Test class: mail.pom.tests.cases.CreateDraftTest<br>Parameters: gadwil@yandex.ru, test message №2, Some message №2<br/>
-<a href="#Output-953528583" onClick='toggleBox("Output-953528583", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-115397800" onClick='toggleBox("Output-115397800", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-953528583" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-953528583">
-<br>2018-05-10 16:03:19,376 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
+<a href="#Output-115397800" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-115397800">
+<br>2018-05-11 15:14:48,268 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
 </br><br/>
-<br>2018-05-10 16:03:21,204 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+<br>2018-05-11 15:14:50,243 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
 </br><br/>
-<br>2018-05-10 16:03:21,958 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+<br>2018-05-11 15:14:51,784 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Проверка сохранения письма - появление текста "Сохранено"
+</br><br/>
+<br>2018-05-11 15:14:51,852 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
 </br><br/>
 </div>
 </td>
 <td></td>
-<td>3</td>
-<td>mail.pom.tests.cases.CreateDraftTest@7a5ceedd</td></tr>
+<td>4</td>
+<td>mail.pom.tests.cases.CreateDraftTest@5b799640</td></tr>
 <tr>
-<td title='mail.pom.tests.cases.LogOutTest.logOut()'><b>logOut</b><br>Test class: mail.pom.tests.cases.LogOutTest<br/>
-<a href="#Output-738111983" onClick='toggleBox("Output-738111983", this, "Show output", "Hide output");'>Show output</a>
+<td title='mail.pom.tests.cases.LoginTest.login()'><b>login</b><br>Test class: mail.pom.tests.cases.LoginTest<br/>
+<a href="#Output-36627152" onClick='toggleBox("Output-36627152", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-738111983" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-738111983">
-<br>2018-05-10 16:05:14,580 [main] INFO  mail.pom.tests.cases.LogOutTest - Нажатие на иконку пользователя
-</br><br/>
-<br>2018-05-10 16:05:14,788 [main] INFO  mail.pom.tests.cases.LogOutTest - Выход из почты
+<a href="#Output-36627152" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-36627152">
+<br>2018-05-11 15:14:28,973 [main] INFO  mail.pom.tests.cases.LoginTest - Проверка отображения страницы Входящие после входа в почту
 </br><br/>
 </div>
 </td>
-<td></td>
-<td>1</td>
-<td>mail.pom.tests.cases.LogOutTest@2ab4bc72</td></tr>
-<tr>
-<td title='mail.pom.tests.cases.LoginTest.login()'><b>login</b><br>Test class: mail.pom.tests.cases.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>mail.pom.tests.cases.LoginTest@5965d37</td></tr>
+<td>mail.pom.tests.cases.LoginTest@4201c465</td></tr>
 <tr>
 <td title='mail.pom.tests.cases.SendLetterTest.sendLetter()'><b>sendLetter</b><br>Test class: mail.pom.tests.cases.SendLetterTest<br>Parameters: gadwil@yandex.ru, test message №1, Some message №1<br/>
-<a href="#Output-564086167" onClick='toggleBox("Output-564086167", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1614079837" onClick='toggleBox("Output-1614079837", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-564086167" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-564086167">
-<br>2018-05-10 16:04:09,953 [main] INFO  mail.pom.tests.cases.SendLetterTest - Заполнение полей: получатель, тема, сообщение 
+<a href="#Output-1614079837" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1614079837">
+<br>2018-05-11 15:15:48,463 [main] INFO  mail.pom.tests.cases.SendLetterTest - Заполнение полей: получатель, тема, сообщение 
 </br><br/>
-<br>2018-05-10 16:04:13,635 [main] INFO  mail.pom.tests.cases.SendLetterTest - Отправка сообщения
+<br>2018-05-11 15:15:51,708 [main] INFO  mail.pom.tests.cases.SendLetterTest - Отправка сообщения
 </br><br/>
-<br>2018-05-10 16:04:13,804 [main] INFO  mail.pom.tests.cases.SendLetterTest - Проверка отправленного сообщения
+<br>2018-05-11 15:15:51,989 [main] INFO  mail.pom.tests.cases.SendLetterTest - Проверка отправления сообщения - всплывающее окно с текстом "Сообщение тправлено"
 </br><br/>
 </div>
 </td>
 <td></td>
-<td>5</td>
-<td>mail.pom.tests.cases.SendLetterTest@710636b0</td></tr>
+<td>4</td>
+<td>mail.pom.tests.cases.SendLetterTest@2ab4bc72</td></tr>
 <tr>
 <td title='mail.pom.tests.cases.SendLetterTest.sendLetter()'><b>sendLetter</b><br>Test class: mail.pom.tests.cases.SendLetterTest<br>Parameters: gadwil@yandex.ru, test message №2, Some message №2<br/>
-<a href="#Output-761863997" onClick='toggleBox("Output-761863997", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-353206468" onClick='toggleBox("Output-353206468", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-761863997" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-761863997">
-<br>2018-05-10 16:04:17,179 [main] INFO  mail.pom.tests.cases.SendLetterTest - Заполнение полей: получатель, тема, сообщение 
+<a href="#Output-353206468" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-353206468">
+<br>2018-05-11 15:15:55,471 [main] INFO  mail.pom.tests.cases.SendLetterTest - Заполнение полей: получатель, тема, сообщение 
 </br><br/>
-<br>2018-05-10 16:04:19,319 [main] INFO  mail.pom.tests.cases.SendLetterTest - Отправка сообщения
+<br>2018-05-11 15:15:57,809 [main] INFO  mail.pom.tests.cases.SendLetterTest - Отправка сообщения
 </br><br/>
-<br>2018-05-10 16:04:19,473 [main] INFO  mail.pom.tests.cases.SendLetterTest - Проверка отправленного сообщения
+<br>2018-05-11 15:15:57,983 [main] INFO  mail.pom.tests.cases.SendLetterTest - Проверка отправления сообщения - всплывающее окно с текстом "Сообщение тправлено"
 </br><br/>
 </div>
 </td>
 <td></td>
 <td>3</td>
-<td>mail.pom.tests.cases.SendLetterTest@710636b0</td></tr>
+<td>mail.pom.tests.cases.SendLetterTest@2ab4bc72</td></tr>
 <tr>
 <td title='mail.pom.tests.cases.TransferDraft.trancferDrafts()'><b>trancferDrafts</b><br>Test class: mail.pom.tests.cases.TransferDraft<br>Parameters: gadwil@yandex.ru, test message №1, Some message №1<br/>
-<a href="#Output-828610686" onClick='toggleBox("Output-828610686", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-741390111" onClick='toggleBox("Output-741390111", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-828610686" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-828610686">
-<br>2018-05-10 16:04:40,466 [main] INFO  mail.pom.tests.cases.TransferDraft - Заполнение полей: получатель, тема, сообщение 
+<a href="#Output-741390111" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-741390111">
+<br>2018-05-11 15:16:18,136 [main] INFO  mail.pom.tests.cases.TransferDraft - Заполнение полей: получатель, тема, сообщение 
 </br><br/>
-<br>2018-05-10 16:04:43,899 [main] INFO  mail.pom.tests.cases.TransferDraft - Сохранение черновика 
+<br>2018-05-11 15:16:21,187 [main] INFO  mail.pom.tests.cases.TransferDraft - Сохранение черновика 
 </br><br/>
-<br>2018-05-10 16:04:44,664 [main] INFO  mail.pom.tests.cases.TransferDraft - Обновление почты 
+<br>2018-05-11 15:16:21,709 [main] INFO  mail.pom.tests.cases.TransferDraft - Обновление почты 
 </br><br/>
-<br>2018-05-10 16:04:47,782 [main] INFO  mail.pom.tests.cases.TransferDraft - Перенос черновика в папку Удалённые
+<br>2018-05-11 15:16:24,854 [main] INFO  mail.pom.tests.cases.TransferDraft - Проверка переноса черновика в папку Удалённые
 </br><br/>
 </div>
 </td>
 <td></td>
-<td>9</td>
-<td>mail.pom.tests.cases.TransferDraft@3de8f619</td></tr>
+<td>8</td>
+<td>mail.pom.tests.cases.TransferDraft@4e5ed836</td></tr>
 <tr>
 <td title='mail.pom.tests.cases.TransferDraft.trancferDrafts()'><b>trancferDrafts</b><br>Test class: mail.pom.tests.cases.TransferDraft<br>Parameters: gadwil@yandex.ru, test message №2, Some message №2<br/>
-<a href="#Output-238467882" onClick='toggleBox("Output-238467882", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1688770224" onClick='toggleBox("Output-1688770224", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-238467882" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-238467882">
-<br>2018-05-10 16:04:52,545 [main] INFO  mail.pom.tests.cases.TransferDraft - Заполнение полей: получатель, тема, сообщение 
+<a href="#Output-1688770224" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1688770224">
+<br>2018-05-11 15:16:29,446 [main] INFO  mail.pom.tests.cases.TransferDraft - Заполнение полей: получатель, тема, сообщение 
 </br><br/>
-<br>2018-05-10 16:04:54,203 [main] INFO  mail.pom.tests.cases.TransferDraft - Сохранение черновика 
+<br>2018-05-11 15:16:31,673 [main] INFO  mail.pom.tests.cases.TransferDraft - Сохранение черновика 
 </br><br/>
-<br>2018-05-10 16:04:54,980 [main] INFO  mail.pom.tests.cases.TransferDraft - Обновление почты 
+<br>2018-05-11 15:16:32,399 [main] INFO  mail.pom.tests.cases.TransferDraft - Обновление почты 
 </br><br/>
-<br>2018-05-10 16:04:58,065 [main] INFO  mail.pom.tests.cases.TransferDraft - Перенос черновика в папку Удалённые
+<br>2018-05-11 15:16:35,585 [main] INFO  mail.pom.tests.cases.TransferDraft - Проверка переноса черновика в папку Удалённые
 </br><br/>
 </div>
 </td>
 <td></td>
 <td>7</td>
-<td>mail.pom.tests.cases.TransferDraft@3de8f619</td></tr>
+<td>mail.pom.tests.cases.TransferDraft@4e5ed836</td></tr>
 <tr>
 <td title='mail.pom.tests.cases.VerifyDraftsTests.verifyDraft()'><b>verifyDraft</b><br>Test class: mail.pom.tests.cases.VerifyDraftsTests<br>Parameters: gadwil@yandex.ru, test message №1, Some message №1<br/>
-<a href="#Output-1522119751" onClick='toggleBox("Output-1522119751", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-65438140" onClick='toggleBox("Output-65438140", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1522119751" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1522119751">
-<br>2018-05-10 16:03:43,204 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
+<a href="#Output-65438140" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-65438140">
+<br>2018-05-11 15:15:13,907 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
 </br><br/>
-<br>2018-05-10 16:03:46,127 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
+<br>2018-05-11 15:15:16,578 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
 </br><br/>
-<br>2018-05-10 16:03:46,868 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
+<br>2018-05-11 15:15:17,201 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
 </br><br/>
-<br>2018-05-10 16:03:49,164 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
+<br>2018-05-11 15:15:19,525 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
 </br><br/>
-<br>2018-05-10 16:03:50,010 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
+<br>2018-05-11 15:15:20,355 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
 </br><br/>
 </div>
 </td>
 <td></td>
-<td>7</td>
-<td>mail.pom.tests.cases.VerifyDraftsTests@4201c465</td></tr>
+<td>8</td>
+<td>mail.pom.tests.cases.VerifyDraftsTests@6cb107fd</td></tr>
+<tr>
+<td title='mail.pom.tests.cases.VerifyDraftsTests.verifyDraft()'><b>verifyDraft</b><br>Test class: mail.pom.tests.cases.VerifyDraftsTests<br>Parameters: gadwil@yandex.ru, test message №2, Some message №2<br/>
+<a href="#Output-732189840" onClick='toggleBox("Output-732189840", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-732189840" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-732189840">
+<br>2018-05-11 15:15:22,133 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
+</br><br/>
+<br>2018-05-11 15:15:24,159 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
+</br><br/>
+<br>2018-05-11 15:15:25,215 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
+</br><br/>
+<br>2018-05-11 15:15:27,552 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
+</br><br/>
+<br>2018-05-11 15:15:28,369 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
+</br><br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>mail.pom.tests.cases.VerifyDraftsTests@6cb107fd</td></tr>
 </table><p>
 </body>
 </html>

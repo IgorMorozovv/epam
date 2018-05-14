@@ -14,6 +14,8 @@ public class DraftPage extends BasePageFolder {
 
     private final static String TITLE = "Черновик";
 
+    private static final String FIRST_DRAFT_MESSAGE = " первый черновик в папке";
+
     @FindBy(xpath = "//*[contains(@class,'js-message-snippet-body')]")
     private List<WebElement> drafts;
 
@@ -31,7 +33,7 @@ public class DraftPage extends BasePageFolder {
 
     public LetterFieldsAssert clickFirstDraft() {
 	WebElement webElement = drafts.get(firstDraftIndex);
-	waitVisibleElement(webElement);
+	waitVisibleElement(webElement, FIRST_DRAFT_MESSAGE);
 	new Actions(driver).click(webElement).build().perform();
 	return new LetterFieldsAssert(driver);
     }
@@ -41,7 +43,7 @@ public class DraftPage extends BasePageFolder {
     }
 
     public void dropLetter() {
-	waitVisibleElement(drafts.get(firstDraftIndex));
+	waitVisibleElement(drafts.get(firstDraftIndex), FIRST_DRAFT_MESSAGE);
 	new Actions(driver).dragAndDrop(drafts.get(firstDraftIndex), linksToMainPages.getDeleteLink()).build()
 		.perform();
     }
@@ -51,7 +53,7 @@ public class DraftPage extends BasePageFolder {
     }
 
     public void waitVisibleLetters() {
-	waitVisibleElement(drafts.get(firstDraftIndex));
+	waitVisibleElement(drafts.get(firstDraftIndex), FIRST_DRAFT_MESSAGE);
     }
 
 }

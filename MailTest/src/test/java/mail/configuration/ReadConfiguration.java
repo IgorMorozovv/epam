@@ -31,7 +31,7 @@ public class ReadConfiguration {
     private static String pathToData;
     private static String typeOfDriver;
 
-    public static boolean getData() {
+    private static boolean getData() {
 	try {
 	    File xmlFile = new File(PATH_TO_CONFIGURATION);
 	    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();

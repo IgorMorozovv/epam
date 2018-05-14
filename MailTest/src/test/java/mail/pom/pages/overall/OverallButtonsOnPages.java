@@ -15,6 +15,8 @@ import mail.pom.pages.write.WriteLetterPage;
  */
 public class OverallButtonsOnPages extends BasicPage {
 
+    private static final String LOGOUT_BUTTON_MESSAGE = " кнопка выхода из почты";
+
     @FindBy(xpath = "//*[@href=\"#compose\"]")
     private WebElement writeMessageButton;
 
@@ -25,7 +27,7 @@ public class OverallButtonsOnPages extends BasicPage {
     private WebElement userName;
 
     @FindBy(xpath = "//*[contains(text(),'Выйти')]")
-    private WebElement logout;
+    private WebElement logoutButton;
 
     @FindBy(xpath = "//span[contains(@class, 'Refresh')]")
     private WebElement refreshButton;
@@ -45,10 +47,7 @@ public class OverallButtonsOnPages extends BasicPage {
     }
 
     public void clickDeleteButton() {
-
-	for (int i = 0; i < ATTEMPTS; i++) {
-	    new Actions(driver).click(deleteDraft).build().perform();
-	}
+	new Actions(driver).click(deleteDraft).build().perform();
     }
 
     public void clickUserNameIcon() {
@@ -56,8 +55,8 @@ public class OverallButtonsOnPages extends BasicPage {
     }
 
     public YandexMainPage logout() {
-	waitVisibleElement(logout);
-	new Actions(driver).click(logout).build().perform();
+	waitVisibleElement(logoutButton, LOGOUT_BUTTON_MESSAGE);
+	new Actions(driver).click(logoutButton).build().perform();
 	return new YandexMainPage(driver);
     }
 

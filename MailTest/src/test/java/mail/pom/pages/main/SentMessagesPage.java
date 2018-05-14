@@ -10,7 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SentMessagesPage extends BasePageFolder {
 
-    private final static String TITLE = "Отправленные";
+    private static final String TITLE = "Отправленные";
+    private static final String CLOSE_INFORM_BUTTON_MESSAGE = " кнопка закрытия окна Отправлено";
+    private static final String SENT_FORM_MESSAGE = " текст Отправлено";
 
     @FindBy(xpath = "//*[contains(@class,'js-message-snippet-firstline')]/span")
     private List<WebElement> messages;
@@ -31,7 +33,7 @@ public class SentMessagesPage extends BasePageFolder {
     }
 
     public void closeInformWindow() {
-	waitVisibleElement(closeInfomWindow);
+	waitVisibleElement(closeInfomWindow, CLOSE_INFORM_BUTTON_MESSAGE);
 	new Actions(driver).click(closeInfomWindow).build().perform();
     }
 
@@ -49,7 +51,7 @@ public class SentMessagesPage extends BasePageFolder {
     }
 
     public boolean isSentMessageDisplay() {
-	waitVisibleElement(sentMessage);
+	waitVisibleElement(sentMessage, SENT_FORM_MESSAGE);
 	return true;
     }
 

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class YandexMainPage extends BasicPage {
 
+    private static final String ENTER_BUTTON_MESSAGE = " кнопка входа в почту";
     @FindBy(xpath = ".//*[contains(@class, \"login-enter\")]")
     private WebElement enterMailButton;
 
@@ -16,7 +17,7 @@ public class YandexMainPage extends BasicPage {
     }
 
     public boolean IsDisplayedEnterButton() {
-	waitVisibleElement(enterMailButton);
+	waitVisibleElement(enterMailButton, ENTER_BUTTON_MESSAGE);
 	return enterMailButton.isDisplayed();
     }
 

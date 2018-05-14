@@ -1,7 +1,6 @@
 package mail.pom.tests.cases;
 
 import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.fail;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -24,15 +23,10 @@ public class TransferDraft extends GeneralActions {
 	refresh();
 	draftPage.linksToMainPages.clickDraftLink().waitTitle();
 	draftPage.selectAllDrafts();
+
 	logger.info(LoggingMessages.ASSERT_TRANSFER_LETTER_MESSAGE);
 	draftPage.dropLetter();
-
-	try {
-	    assertTrue(draftPage.isDisplayLackLettersText(), LoggingMessages.FAILURE_VERIFY_TRANSFER_DRAFT_MESSAGE);
-	} catch (AssertionError e) {
-	    logger.error(e.getMessage());
-	    fail(e.getMessage());
-	}
+	assertTrue(draftPage.isDisplayLackLettersText(), LoggingMessages.FAILURE_VERIFY_TRANSFER_DRAFT_MESSAGE);
 
 	draftPage.linksToMainPages.clickInboxLink();
 	inboxPage.waitTitle();
@@ -41,7 +35,7 @@ public class TransferDraft extends GeneralActions {
     @DataProvider
     private Object[][] letterData() {
 
-	return dataReader.getData(FILE_NAME);
+	return dataReader.getData();
     }
 
 }

@@ -1,7 +1,6 @@
 package mail.pom.tests.cases;
 
 import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.fail;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
@@ -18,15 +17,12 @@ public class SendLetterTest extends GeneralActions {
     @Test(groups = { "other-functions" }, dataProvider = "FillLetter", priority = 3)
     public void sendLetter(String receiver, String subject, String message) {
 	fillFields(receiver, subject, message);
+
 	logger.info(LoggingMessages.SENDING_MESSAGE);
 	sentMessagesPage = writeLetterPage.clickSubmitButton();
+
 	logger.info(LoggingMessages.ASSERT_SEND_LETTER_MESSAGE);
-	try {
-	    assertTrue(sentMessagesPage.isSentMessageDisplay(), LoggingMessages.FAILURE_VERIFY_SEND_LETTER_MESSAGE);
-	} catch (AssertionError e) {
-	    logger.error(e.getMessage());
-	    fail(e.getMessage());
-	}
+	assertTrue(sentMessagesPage.isSentMessageDisplay(), LoggingMessages.FAILURE_VERIFY_SEND_LETTER_MESSAGE);
 
 	sentMessagesPage.closeInformWindow();
     }
@@ -44,7 +40,7 @@ public class SendLetterTest extends GeneralActions {
     @DataProvider(name = "FillLetter")
     private Object[][] dataToFillLetter() {
 	logger.info(LoggingMessages.GET_DATA_MESSAGE);
-	return dataReader.getData(FILE_NAME);
+	return dataReader.getData();
     }
 
 }
