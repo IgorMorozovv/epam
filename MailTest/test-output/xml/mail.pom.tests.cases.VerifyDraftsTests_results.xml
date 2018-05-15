@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestYandexMail"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="15.714">
+  <properties />
+  
+  
+            <testcase name="verifyDraft" time="8.398" classname="mail.pom.tests.cases.VerifyDraftsTests" />
+                <testcase name="verifyDraft" time="7.316" classname="mail.pom.tests.cases.VerifyDraftsTests" />
+      
+</testsuite>
