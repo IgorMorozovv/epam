@@ -16,7 +16,7 @@ import mail.pom.pages.LoginPage;
 import mail.pom.pages.main.DraftPage;
 import mail.pom.pages.main.InboxPage;
 import mail.pom.pages.write.WriteLetterPage;
-import mail.utility.driver.Driver;
+import mail.utility.driver.ConcreteDriver;
 
 @Listeners({ HTMLReporter.class })
 public class BasicTestClass {
@@ -30,7 +30,7 @@ public class BasicTestClass {
     protected WriteLetterPage writeLetterPage;
     protected LoginPage loginPage;
     protected Logger logger = Logger.getLogger(getClass());
-    private Driver getDriver = new Driver();
+    private ConcreteDriver getDriver = new ConcreteDriver();
 
     @BeforeClass
 

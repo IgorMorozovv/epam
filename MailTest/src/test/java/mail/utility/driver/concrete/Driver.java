@@ -1,8 +1,8 @@
-package mail.utility.driver;
+package mail.utility.driver.concrete;
 
 import org.openqa.selenium.WebDriver;
 
-public interface GetDriver {
+public interface Driver {
 
     abstract WebDriver getDriver();
 }
