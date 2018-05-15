@@ -1,4 +1,4 @@
-package mail.pom.tests.driver;
+package mail.utility.driver;
 
 import java.net.MalformedURLException;
 import java.net.URL;

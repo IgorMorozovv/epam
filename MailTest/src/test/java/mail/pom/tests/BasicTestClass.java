@@ -16,9 +16,7 @@ import mail.pom.pages.LoginPage;
 import mail.pom.pages.main.DraftPage;
 import mail.pom.pages.main.InboxPage;
 import mail.pom.pages.write.WriteLetterPage;
-import mail.pom.tests.driver.Driver;
-import mail.utility.Read;
-import mail.utility.ReadFromCsv;
+import mail.utility.driver.Driver;
 
 @Listeners({ HTMLReporter.class })
 public class BasicTestClass {
@@ -31,11 +29,7 @@ public class BasicTestClass {
     protected DraftPage draftPage;
     protected WriteLetterPage writeLetterPage;
     protected LoginPage loginPage;
-
     protected Logger logger = Logger.getLogger(getClass());
-
-    protected Read dataReader = new ReadFromCsv();
-
     private Driver getDriver = new Driver();
 
     @BeforeClass

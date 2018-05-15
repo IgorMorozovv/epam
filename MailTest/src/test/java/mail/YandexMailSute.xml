@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="YandexMail">
+<suite name="YandexMailSute">
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />

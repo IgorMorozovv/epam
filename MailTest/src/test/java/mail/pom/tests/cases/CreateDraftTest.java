@@ -5,11 +5,11 @@ import static org.testng.Assert.assertTrue;
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import mail.logging.LoggingMessages;
 import mail.pom.tests.common.GeneralActions;
+import mail.utility.EmailDataProvider;
 
 public class CreateDraftTest extends GeneralActions {
 
@@ -18,7 +18,7 @@ public class CreateDraftTest extends GeneralActions {
 	logger = Logger.getLogger(CreateDraftTest.class);
     }
 
-    @Test(groups = "basic-functions", dataProvider = "letterData", priority = 1)
+    @Test(groups = "basic-functions", dataProvider = "data", dataProviderClass = EmailDataProvider.class, priority = 1)
     public void createMessage(String receiver, String subject, String message) {
 	fillFields(receiver, subject, message);
 	saveLetterAsDraft();
@@ -34,11 +34,6 @@ public class CreateDraftTest extends GeneralActions {
     @AfterClass
     private void deleteDrafts() {
 	deleteAllDrafts();
-    }
-
-    @DataProvider
-    private Object[][] letterData() {
-	return dataReader.getData();
     }
 
 }

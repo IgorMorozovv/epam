@@ -1,4 +1,4 @@
-package mail.pom.tests.driver;
+package mail.utility.driver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

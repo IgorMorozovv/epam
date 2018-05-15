@@ -3,16 +3,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - TestYandexMail</title>
+  <title>Test Results Report - Default test</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>TestYandexMail</h1>
+<h1>Default test</h1>
 <p>
-  Test duration: 153.024s
+  Test duration: 13.637s
 </p>
 
 
@@ -22,86 +22,6 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">mail.pom.tests.cases.CreateDraftTest</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  createMessage
-      </td>
-  <td class="duration">
-    4.420s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"gadwil@yandex.ru", "test message №1", "Some message №1"</span><br />
-    
-            <div class="testOutput">
-                        <br>2018-05-14 13:19:35,727 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
-
-                                <br>2018-05-14 13:19:38,408 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
-
-                                <br>2018-05-14 13:19:39,018 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Проверка сохранения письма - появление текста "Сохранено"
-
-                                <br>2018-05-14 13:19:39,081 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
-
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  createMessage
-      </td>
-  <td class="duration">
-    4.084s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"gadwil@yandex.ru", "test message №2", "Some message №2"</span><br />
-    
-            <div class="testOutput">
-                        <br>2018-05-14 13:19:40,150 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
-
-                                <br>2018-05-14 13:19:42,269 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
-
-                                <br>2018-05-14 13:19:43,113 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Проверка сохранения письма - появление текста "Сохранено"
-
-                                <br>2018-05-14 13:19:43,182 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
-
-                  </div>
-    
-
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">mail.pom.tests.cases.LogOutTest</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  logOut
-      </td>
-  <td class="duration">
-    1.571s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        <br>2018-05-14 13:21:38,538 [main] INFO  mail.pom.tests.cases.LogOutTest - Нажатие на иконку пользователя
-
-                                <br>2018-05-14 13:21:38,729 [main] INFO  mail.pom.tests.cases.LogOutTest - Выход из почты
-
-                                <br>2018-05-14 13:21:39,075 [main] INFO  mail.pom.tests.cases.LogOutTest - Проверка выхода - переход на главную страницу яндекса
-
-                  </div>
-    
-
-      </td>
-</tr>
-          <tr>
         <td colspan="3" class="group">mail.pom.tests.cases.LoginTest</td>
       </tr>
             
@@ -110,175 +30,13 @@
                   login
       </td>
   <td class="duration">
-    0.014s
+    0.015s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        <br>2018-05-14 13:19:21,537 [main] INFO  mail.pom.tests.cases.LoginTest - Проверка отображения страницы Входящие после входа в почту
-
-                  </div>
-    
-
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">mail.pom.tests.cases.SendLetterTest</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  sendLetter
-      </td>
-  <td class="duration">
-    4.542s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"gadwil@yandex.ru", "test message №1", "Some message №1"</span><br />
-    
-            <div class="testOutput">
-                        <br>2018-05-14 13:20:38,197 [main] INFO  mail.pom.tests.cases.SendLetterTest - Заполнение полей: получатель, тема, сообщение 
-
-                                <br>2018-05-14 13:20:41,620 [main] INFO  mail.pom.tests.cases.SendLetterTest - Отправка сообщения
-
-                                <br>2018-05-14 13:20:41,807 [main] INFO  mail.pom.tests.cases.SendLetterTest - Проверка отправления сообщения - всплывающее окно с текстом "Сообщение тправлено"
-
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  sendLetter
-      </td>
-  <td class="duration">
-    3.702s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"gadwil@yandex.ru", "test message №2", "Some message №2"</span><br />
-    
-            <div class="testOutput">
-                        <br>2018-05-14 13:20:44,487 [main] INFO  mail.pom.tests.cases.SendLetterTest - Заполнение полей: получатель, тема, сообщение 
-
-                                <br>2018-05-14 13:20:46,932 [main] INFO  mail.pom.tests.cases.SendLetterTest - Отправка сообщения
-
-                                <br>2018-05-14 13:20:47,108 [main] INFO  mail.pom.tests.cases.SendLetterTest - Проверка отправления сообщения - всплывающее окно с текстом "Сообщение тправлено"
-
-                  </div>
-    
-
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">mail.pom.tests.cases.TransferDraft</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  trancferDrafts
-      </td>
-  <td class="duration">
-    8.721s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"gadwil@yandex.ru", "test message №1", "Some message №1"</span><br />
-    
-            <div class="testOutput">
-                        <br>2018-05-14 13:21:05,541 [main] INFO  mail.pom.tests.cases.TransferDraft - Заполнение полей: получатель, тема, сообщение 
-
-                                <br>2018-05-14 13:21:08,549 [main] INFO  mail.pom.tests.cases.TransferDraft - Сохранение черновика 
-
-                                <br>2018-05-14 13:21:09,339 [main] INFO  mail.pom.tests.cases.TransferDraft - Обновление почты 
-
-                                <br>2018-05-14 13:21:12,536 [main] INFO  mail.pom.tests.cases.TransferDraft - Проверка переноса черновика в папку Удалённые
-
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  trancferDrafts
-      </td>
-  <td class="duration">
-    7.626s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"gadwil@yandex.ru", "test message №2", "Some message №2"</span><br />
-    
-            <div class="testOutput">
-                        <br>2018-05-14 13:21:17,146 [main] INFO  mail.pom.tests.cases.TransferDraft - Заполнение полей: получатель, тема, сообщение 
-
-                                <br>2018-05-14 13:21:19,266 [main] INFO  mail.pom.tests.cases.TransferDraft - Сохранение черновика 
-
-                                <br>2018-05-14 13:21:19,945 [main] INFO  mail.pom.tests.cases.TransferDraft - Обновление почты 
-
-                                <br>2018-05-14 13:21:23,153 [main] INFO  mail.pom.tests.cases.TransferDraft - Проверка переноса черновика в папку Удалённые
-
-                  </div>
-    
-
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">mail.pom.tests.cases.VerifyDraftsTests</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  verifyDraft
-      </td>
-  <td class="duration">
-    8.129s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"gadwil@yandex.ru", "test message №1", "Some message №1"</span><br />
-    
-            <div class="testOutput">
-                        <br>2018-05-14 13:20:06,007 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
-
-                                <br>2018-05-14 13:20:08,666 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
-
-                                <br>2018-05-14 13:20:09,306 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
-
-                                <br>2018-05-14 13:20:11,631 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
-
-                                <br>2018-05-14 13:20:12,469 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
-
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  verifyDraft
-      </td>
-  <td class="duration">
-    7.509s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"gadwil@yandex.ru", "test message №2", "Some message №2"</span><br />
-    
-            <div class="testOutput">
-                        <br>2018-05-14 13:20:14,134 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
-
-                                <br>2018-05-14 13:20:16,074 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
-
-                                <br>2018-05-14 13:20:16,805 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
-
-                                <br>2018-05-14 13:20:19,108 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
-
-                                <br>2018-05-14 13:20:19,914 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
+                        <br>2018-05-15 15:43:39,165 [main] INFO  mail.pom.tests.cases.LoginTest - Проверка отображения страницы Входящие после входа в почту
 
                   </div>
     

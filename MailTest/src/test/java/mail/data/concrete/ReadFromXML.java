@@ -1,4 +1,4 @@
-package mail.utility;
+package mail.data.concrete;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,7 +16,7 @@ import org.xml.sax.SAXException;
 
 import mail.configuration.ReadConfiguration;
 
-public class ReadFromXML implements Read {
+public class ReadFromXML {
 
     private static Object[][] data;
     private static String MAIN_NODE = "draft";
@@ -25,9 +25,7 @@ public class ReadFromXML implements Read {
     private static String MESSAGE_NODE = "message";
     private static int NUMBER_LETTER_FIELD = 3;
 
-    @Override
-    public Object[][] getData() {
-
+    public static Object[][] getData() {
 	try {
 	    File xmlFile = new File(ReadConfiguration.getPathToData());
 	    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -45,7 +43,7 @@ public class ReadFromXML implements Read {
 	return data;
     }
 
-    private void readNode(NodeList nList) {
+    private static void readNode(NodeList nList) {
 	for (int temp = 0; temp < nList.getLength(); temp++) {
 	    Node nNode = nList.item(temp);
 	    Element eElement = (Element) nNode;

@@ -1,4 +1,4 @@
-package mail.utility;
+package mail.data;
 
 public class LoginPageData {
 

@@ -3,11 +3,11 @@ package mail.pom.tests.cases;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import mail.logging.LoggingMessages;
 import mail.pom.tests.common.GeneralActions;
+import mail.utility.EmailDataProvider;
 
 public class TransferDraft extends GeneralActions {
 
@@ -16,7 +16,8 @@ public class TransferDraft extends GeneralActions {
 	deleteAllDrafts();
     }
 
-    @Test(groups = { "other-functions" }, dataProvider = "letterData", priority = 4)
+    @Test(groups = {
+	    "other-functions" }, dataProvider = "data", dataProviderClass = EmailDataProvider.class, priority = 4)
     public void trancferDrafts(String receiver, String subject, String message) {
 	fillFields(receiver, subject, message);
 	saveLetterAsDraft();
@@ -28,14 +29,7 @@ public class TransferDraft extends GeneralActions {
 	draftPage.dropLetter();
 	assertTrue(draftPage.isDisplayLackLettersText(), LoggingMessages.FAILURE_VERIFY_TRANSFER_DRAFT_MESSAGE);
 
-	draftPage.linksToMainPages.clickInboxLink();
-	inboxPage.waitTitle();
-    }
-
-    @DataProvider
-    private Object[][] letterData() {
-
-	return dataReader.getData();
+	draftPage.linksToMainPages.clickInboxLink().waitTitle();
     }
 
 }

@@ -4,12 +4,13 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import mail.logging.LoggingMessages;
+import mail.pom.pages.main.DraftPage;
 import mail.pom.pages.write.LetterFieldsAssert;
 import mail.pom.tests.common.GeneralActions;
+import mail.utility.EmailDataProvider;
 
 public class VerifyDraftsTests extends GeneralActions {
 
@@ -20,15 +21,15 @@ public class VerifyDraftsTests extends GeneralActions {
 	deleteAllDrafts();
     }
 
-    @Test(groups = { "other-functions" }, dataProvider = "FillLetter", priority = 2)
+    @Test(groups = {
+	    "other-functions" }, dataProvider = "data", dataProviderClass = EmailDataProvider.class, priority = 2)
     private void verifyDraft(String receiver, String subject, String message) {
 	fillFields(receiver, subject, message);
 	saveLetterAsDraft();
 	refresh();
 
 	logger.info(LoggingMessages.TO_FIRST_DRAFT_MESSAGE);
-	draftPage = inboxPage.linksToMainPages.clickDraftLink();
-	draftPage.waitTitle();
+	draftPage = (DraftPage) inboxPage.linksToMainPages.clickDraftLink().waitTitle();
 	letterFieldsAssert = draftPage.clickFirstDraft();
 
 	logger.info(LoggingMessages.ASSERT_FILL_FIELDS_MESSAGE);
@@ -42,11 +43,6 @@ public class VerifyDraftsTests extends GeneralActions {
     @AfterClass
     public void deleteDrafts() {
 	deleteAllDrafts();
-    }
-
-    @DataProvider(name = "FillLetter")
-    private Object[][] dataToFillLetter() {
-	return dataReader.getData();
     }
 
 }

@@ -3,18 +3,19 @@ package mail.pom.tests.cases;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import mail.logging.LoggingMessages;
 import mail.pom.pages.main.SentMessagesPage;
 import mail.pom.tests.common.GeneralActions;
+import mail.utility.EmailDataProvider;
 
 public class SendLetterTest extends GeneralActions {
 
     private SentMessagesPage sentMessagesPage;
 
-    @Test(groups = { "other-functions" }, dataProvider = "FillLetter", priority = 3)
+    @Test(groups = {
+	    "other-functions" }, dataProvider = "data", dataProviderClass = EmailDataProvider.class, priority = 3)
     public void sendLetter(String receiver, String subject, String message) {
 	fillFields(receiver, subject, message);
 
@@ -36,11 +37,4 @@ public class SendLetterTest extends GeneralActions {
 	sentMessagesPage.overallButtonsOnPages.clickDeleteButton();
 
     }
-
-    @DataProvider(name = "FillLetter")
-    private Object[][] dataToFillLetter() {
-	logger.info(LoggingMessages.GET_DATA_MESSAGE);
-	return dataReader.getData();
-    }
-
 }

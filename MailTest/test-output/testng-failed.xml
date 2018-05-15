@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="mail.pom.tests.cases.LogOutTest">
+      <class name="mail.pom.tests.cases.CreateDraftTest">
         <methods>
-          <include name="logOut"/>
+          <include name="createMessage"/>
+          <include name="setUp"/>
           <include name="afterClass"/>
+          <include name="deleteDrafts"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- mail.pom.tests.cases.LogOutTest -->
+      </class> <!-- mail.pom.tests.cases.CreateDraftTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

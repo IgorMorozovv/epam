@@ -7,8 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import mail.data.LoginPageData;
 import mail.pom.pages.main.InboxPage;
-import mail.utility.LoginPageData;
 
 public class LoginPage extends BasicPage {
 
