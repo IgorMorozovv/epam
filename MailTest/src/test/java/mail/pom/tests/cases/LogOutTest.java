@@ -2,6 +2,7 @@ package mail.pom.tests.cases;
 
 import static org.testng.Assert.assertTrue;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import mail.logging.LoggingMessages;
@@ -22,5 +23,11 @@ public class LogOutTest extends BasicTestClass {
 
 	logger.info(LoggingMessages.ASSERT_LOGOUT_MESSAGE);
 	assertTrue(yandexMainPage.IsDisplayedEnterButton(), LoggingMessages.FAILURE_VERIFY_LOOUT_MESSAGE);
+    }
+
+    @AfterClass(alwaysRun = true)
+    public void afterClass() {
+	logger.info(LoggingMessages.END_TEST_MESSAGE + getClass().getName());
+	driver.close();
     }
 }

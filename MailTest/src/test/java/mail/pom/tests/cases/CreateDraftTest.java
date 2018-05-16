@@ -31,9 +31,11 @@ public class CreateDraftTest extends GeneralActions {
 	inboxPage.linksToMainPages.clickInboxLink().waitTitle();
     }
 
-    @AfterClass
-    private void deleteDrafts() {
+    @AfterClass(alwaysRun = true)
+    public void afterClass() {
 	deleteAllDrafts();
+	logger.info(LoggingMessages.END_TEST_MESSAGE + getClass().getName());
+	driver.close();
     }
 
 }

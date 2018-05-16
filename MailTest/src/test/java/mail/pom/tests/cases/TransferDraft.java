@@ -2,6 +2,7 @@ package mail.pom.tests.cases;
 
 import static org.testng.Assert.assertTrue;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -30,6 +31,12 @@ public class TransferDraft extends GeneralActions {
 	assertTrue(draftPage.isDisplayLackLettersText(), LoggingMessages.FAILURE_VERIFY_TRANSFER_DRAFT_MESSAGE);
 
 	draftPage.linksToMainPages.clickInboxLink().waitTitle();
+    }
+
+    @AfterClass(alwaysRun = true)
+    public void afterClass() {
+	logger.info(LoggingMessages.END_TEST_MESSAGE + getClass().getName());
+	driver.close();
     }
 
 }

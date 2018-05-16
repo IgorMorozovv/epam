@@ -2,7 +2,7 @@ package mail.pom.tests.cases;
 
 import static org.testng.Assert.assertTrue;
 
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import mail.logging.LoggingMessages;
@@ -28,13 +28,18 @@ public class SendLetterTest extends GeneralActions {
 	sentMessagesPage.closeInformWindow();
     }
 
-    @AfterMethod
     public void deleteSendedMessage() {
 	logger.info(LoggingMessages.DELETE_SENT_LETTERS_MESSAGE);
 	sentMessagesPage.linksToMainPages.clickSentLink();
 	sentMessagesPage.waitTitle();
 	sentMessagesPage.selectAllDrafts();
 	sentMessagesPage.overallButtonsOnPages.clickDeleteButton();
+    }
 
+    @AfterClass(alwaysRun = true)
+    public void afterClass() {
+	deleteSendedMessage();
+	logger.info(LoggingMessages.END_TEST_MESSAGE + getClass().getName());
+	driver.close();
     }
 }

@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.uncommons.reportng.HTMLReporter;
@@ -30,14 +29,19 @@ public class BasicTestClass {
     protected WriteLetterPage writeLetterPage;
     protected LoginPage loginPage;
     protected Logger logger = Logger.getLogger(getClass());
-    private ConcreteDriver getDriver = new ConcreteDriver();
+    private ConcreteDriver concreteDriver = new ConcreteDriver();
 
     @BeforeClass
-
-    public void beforeClass() throws MalformedURLException {
-	driver = getDriver.getDriver();
+    public void basicTestClass() throws MalformedURLException {
+	setDriver();
 	driver.manage().timeouts().implicitlyWait(WAIT_TIME, TimeUnit.SECONDS);
 	logIn();
+    }
+
+    private void setDriver() throws MalformedURLException {
+	if (driver == null) {
+	    driver = concreteDriver.getDriver();
+	}
     }
 
     private void logIn() {
@@ -49,13 +53,5 @@ public class BasicTestClass {
 	logger.info(LoggingMessages.ENTER_BUTTON_CLICK_MESSAGE);
 	inboxPage = loginPage.clickEnter();
 	inboxPage.waitTitle();
-    }
-
-    @AfterClass(alwaysRun = true)
-    public void afterClass() {
-	logger.info(LoggingMessages.END_TEST_MESSAGE + getClass().getName());
-	if (driver != null) {
-	    driver.quit();
-	}
     }
 }

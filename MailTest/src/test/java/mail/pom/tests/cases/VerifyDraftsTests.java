@@ -40,9 +40,11 @@ public class VerifyDraftsTests extends GeneralActions {
 	draftPage.linksToMainPages.clickInboxLink().waitTitle();
     }
 
-    @AfterClass
-    public void deleteDrafts() {
+    @AfterClass(alwaysRun = true)
+    public void afterClass() {
 	deleteAllDrafts();
+	logger.info(LoggingMessages.END_TEST_MESSAGE + getClass().getName());
+	driver.close();
     }
 
 }
