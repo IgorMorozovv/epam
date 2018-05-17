@@ -1,8 +1,8 @@
-package mail.utility;
+package mail.data;
 
 import org.testng.annotations.DataProvider;
 
-import mail.data.ReadDataToEmail;
+import mail.utility.read.ReadDataToEmail;
 
 /**
  * dataProvider для заполенния полей сообщения получатель тема сообщение

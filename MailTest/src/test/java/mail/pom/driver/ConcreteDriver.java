@@ -1,13 +1,13 @@
-package mail.utility.driver;
+package mail.pom.driver;
 
 import java.net.MalformedURLException;
 
 import org.openqa.selenium.WebDriver;
 
 import mail.configuration.ReadConfiguration;
-import mail.utility.driver.concrete.Driver;
-import mail.utility.driver.concrete.FirefoxDriverInitialization;
-import mail.utility.driver.concrete.RemoteDriverInitialization;
+import mail.pom.driver.concrete.Driver;
+import mail.pom.driver.concrete.FirefoxDriverInitialization;
+import mail.pom.driver.concrete.RemoteDriverInitialization;
 
 public class ConcreteDriver {
 

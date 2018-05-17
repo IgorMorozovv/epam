@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="15.714">
+           time="16.340">
   <properties />
   
   
-            <testcase name="verifyDraft" time="8.398" classname="mail.pom.tests.cases.VerifyDraftsTests" />
-                <testcase name="verifyDraft" time="7.316" classname="mail.pom.tests.cases.VerifyDraftsTests" />
+            <testcase name="verifyDraft" time="8.972" classname="mail.pom.tests.cases.VerifyDraftsTests" />
+                <testcase name="verifyDraft" time="7.368" classname="mail.pom.tests.cases.VerifyDraftsTests" />
       
 </testsuite>

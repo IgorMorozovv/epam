@@ -1,7 +1,7 @@
-package mail.data;
+package mail.utility.read;
 
-import mail.data.concrete.ReadFromCsv;
-import mail.data.concrete.ReadFromXML;
+import mail.utility.read.concrete.ReadFromCsv;
+import mail.utility.read.concrete.ReadFromXML;
 
 public class ReadDataToEmail {
 

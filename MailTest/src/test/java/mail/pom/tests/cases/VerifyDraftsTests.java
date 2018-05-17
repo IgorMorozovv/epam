@@ -6,11 +6,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import mail.buisnes.GeneralActions;
+import mail.data.EmailDataProvider;
 import mail.logging.LoggingMessages;
 import mail.pom.pages.main.DraftPage;
 import mail.pom.pages.write.LetterFieldsAssert;
-import mail.pom.tests.common.GeneralActions;
-import mail.utility.EmailDataProvider;
 
 public class VerifyDraftsTests extends GeneralActions {
 

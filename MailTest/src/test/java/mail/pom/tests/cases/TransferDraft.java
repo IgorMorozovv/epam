@@ -6,9 +6,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import mail.buisnes.GeneralActions;
+import mail.data.EmailDataProvider;
 import mail.logging.LoggingMessages;
-import mail.pom.tests.common.GeneralActions;
-import mail.utility.EmailDataProvider;
 
 public class TransferDraft extends GeneralActions {
 

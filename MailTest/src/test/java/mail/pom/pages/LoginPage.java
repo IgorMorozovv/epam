@@ -7,14 +7,14 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import mail.data.LoginPageData;
+import mail.configuration.LoginConfiguration;
 import mail.pom.pages.main.InboxPage;
 
 public class LoginPage extends BasicPage {
 
-    private String login = LoginPageData.LOGIN;
-    private String password = LoginPageData.PASSWORD;
-    private String loginPageURL = LoginPageData.LOGIN_URL;
+    private String login = LoginConfiguration.LOGIN;
+    private String password = LoginConfiguration.PASSWORD;
+    private String loginPageURL = LoginConfiguration.LOGIN_URL;
     private final static String SCRIPT = "var elements = document.getElementsByClassName('passport-Button-Text');"
 	    + "elements[0].click();";
 
@@ -50,7 +50,11 @@ public class LoginPage extends BasicPage {
 
     public void fillAccountData() {
 	driver.get(loginPageURL);
-	inputLogin(login);
+	try {
+	    inputLogin(login);
+	} catch (Exception e) {
+	    // TODO: handle exception
+	}
 	inputPassword(password);
     }
 

@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="10.616">
+           time="10.857">
   <properties />
   
   
-            <testcase name="createMessage" time="5.089" classname="mail.pom.tests.cases.CreateDraftTest" />
-                <testcase name="createMessage" time="5.527" classname="mail.pom.tests.cases.CreateDraftTest" />
+            <testcase name="createMessage" time="3.569" classname="mail.pom.tests.cases.CreateDraftTest" />
+                <testcase name="createMessage" time="7.288" classname="mail.pom.tests.cases.CreateDraftTest" />
       
 </testsuite>

@@ -12,8 +12,11 @@ public class LoginTest extends BasicTestClass {
 
     @Test(groups = "basic-functions", priority = 0)
     public void login() {
+	inboxPage = loginLogout.logIn();
 	logger.info(LoggingMessages.ASSERT_LOGGING_MESSAGE);
 	assertTrue(inboxPage.isTitleLoad(), LoggingMessages.FAILURE_VERIFY_LOGIN_MESSAGE);
+	loginLogout.logout();
+
     }
 
     @AfterClass(alwaysRun = true)
@@ -21,5 +24,4 @@ public class LoginTest extends BasicTestClass {
 	logger.info(LoggingMessages.END_TEST_MESSAGE + getClass().getName());
 	driver.close();
     }
-
 }

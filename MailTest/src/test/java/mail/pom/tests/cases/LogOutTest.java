@@ -15,14 +15,12 @@ public class LogOutTest extends BasicTestClass {
 
     @Test(groups = { "other-functions" }, priority = 10)
     public void logOut() {
-	logger.info(LoggingMessages.CKICK_USER_ICON_MESSAGE);
-	inboxPage.overallButtonsOnPages.clickUserNameIcon();
-
-	logger.info(LoggingMessages.LOGOUT_MESSAGE);
-	yandexMainPage = inboxPage.overallButtonsOnPages.logout();
+	loginLogout.logIn();
 
 	logger.info(LoggingMessages.ASSERT_LOGOUT_MESSAGE);
+	yandexMainPage = loginLogout.logout();
 	assertTrue(yandexMainPage.IsDisplayedEnterButton(), LoggingMessages.FAILURE_VERIFY_LOOUT_MESSAGE);
+
     }
 
     @AfterClass(alwaysRun = true)

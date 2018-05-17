@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="8.823">
+           time="7.979">
   <properties />
   
   
-            <testcase name="sendLetter" time="5.349" classname="mail.pom.tests.cases.SendLetterTest" />
-                <testcase name="sendLetter" time="3.474" classname="mail.pom.tests.cases.SendLetterTest" />
+            <testcase name="sendLetter" time="4.107" classname="mail.pom.tests.cases.SendLetterTest" />
+                <testcase name="sendLetter" time="3.872" classname="mail.pom.tests.cases.SendLetterTest" />
       
 </testsuite>

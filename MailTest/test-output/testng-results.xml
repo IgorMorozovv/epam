@@ -1,60 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="0" skipped="1">
   <reporter-output>
     <line>
-      <![CDATA[<br>2018-05-15 15:43:32,987 [main] INFO  mail.pom.tests.cases.LoginTest - Страница входа, заполнение полей
+      <![CDATA[<br>2018-05-17 15:55:08,450 [main] INFO  mail.buisnes.LoginLogout - Страница входа, заполнение полей
 ]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-15 15:43:35,919 [main] INFO  mail.pom.tests.cases.LoginTest - Нажатие кнопки вход
+      <![CDATA[<br>2018-05-17 15:55:11,721 [main] INFO  mail.buisnes.LoginLogout - Нажатие кнопки вход
 ]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-15 15:43:39,165 [main] INFO  mail.pom.tests.cases.LoginTest - Проверка отображения страницы Входящие после входа в почту
+      <![CDATA[<br>2018-05-17 15:55:15,346 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
 ]]>
     </line>
     <line>
-      <![CDATA[<br>2018-05-15 15:43:39,177 [main] INFO  mail.pom.tests.cases.LoginTest - Конец выполнения теста mail.pom.tests.cases.LoginTest
+      <![CDATA[<br>2018-05-17 15:55:18,573 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+]]>
+    </line>
+    <line>
+      <![CDATA[<br>2018-05-17 15:55:20,223 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Проверка сохранения письма - появление текста "Сохранено"
+]]>
+    </line>
+    <line>
+      <![CDATA[<br>2018-05-17 15:55:20,274 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+]]>
+    </line>
+    <line>
+      <![CDATA[<br>2018-05-17 15:55:21,623 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Обновление почты 
+]]>
+    </line>
+    <line>
+      <![CDATA[<br>2018-05-17 15:55:23,548 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Удаление всех сообщений 
+]]>
+    </line>
+    <line>
+      <![CDATA[<br>2018-05-17 15:55:24,518 [main] INFO  mail.buisnes.LoginLogout - Нажатие на иконку пользователя
+]]>
+    </line>
+    <line>
+      <![CDATA[<br>2018-05-17 15:55:24,734 [main] INFO  mail.buisnes.LoginLogout - Выход из почты
+]]>
+    </line>
+    <line>
+      <![CDATA[<br>2018-05-17 15:55:25,651 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Конец выполнения теста mail.pom.tests.cases.CreateDraftTest
 ]]>
     </line>
   </reporter-output>
-  <suite started-at="2018-05-15T12:43:27Z" name="Default suite" finished-at="2018-05-15T12:43:41Z" duration-ms="13654">
+  <suite started-at="2018-05-17T12:55:01Z" name="Default suite" finished-at="2018-05-17T12:55:37Z" duration-ms="36342">
     <groups>
       <group name="basic-functions">
-        <method signature="LoginTest.login()[pri:0, instance:mail.pom.tests.cases.LoginTest@659499f1]" name="login" class="mail.pom.tests.cases.LoginTest"/>
+        <method signature="CreateDraftTest.createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.pom.tests.cases.CreateDraftTest@29215f06]" name="createMessage" class="mail.pom.tests.cases.CreateDraftTest"/>
       </group> <!-- basic-functions -->
     </groups>
-    <test started-at="2018-05-15T12:43:27Z" name="Default test" finished-at="2018-05-15T12:43:41Z" duration-ms="13654">
-      <class name="mail.pom.tests.cases.LoginTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:mail.pom.tests.cases.LoginTest@659499f1]" started-at="2018-05-15T15:43:27Z" name="beforeClass" finished-at="2018-05-15T15:43:39Z" duration-ms="11522" status="PASS">
+    <test started-at="2018-05-17T12:55:01Z" name="Default test" finished-at="2018-05-17T12:55:37Z" duration-ms="36342">
+      <class name="mail.pom.tests.cases.CreateDraftTest">
+        <test-method is-config="true" signature="basicTestClass()[pri:0, instance:mail.pom.tests.cases.CreateDraftTest@29215f06]" started-at="2018-05-17T15:55:01Z" name="basicTestClass" finished-at="2018-05-17T15:55:01Z" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basicTestClass -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.pom.tests.cases.CreateDraftTest@29215f06]" started-at="2018-05-17T15:55:01Z" name="setUp" finished-at="2018-05-17T15:55:08Z" duration-ms="7260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.pom.tests.cases.CreateDraftTest@29215f06]" started-at="2018-05-17T15:55:08Z" name="createMessage" data-provider="data" finished-at="2018-05-17T15:55:25Z" duration-ms="17201" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gadwil@yandex.ru]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test message №1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Some message №1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
-              <![CDATA[<br>2018-05-15 15:43:32,987 [main] INFO  mail.pom.tests.cases.LoginTest - Страница входа, заполнение полей
+              <![CDATA[<br>2018-05-17 15:55:08,450 [main] INFO  mail.buisnes.LoginLogout - Страница входа, заполнение полей
 ]]>
             </line>
             <line>
-              <![CDATA[<br>2018-05-15 15:43:35,919 [main] INFO  mail.pom.tests.cases.LoginTest - Нажатие кнопки вход
+              <![CDATA[<br>2018-05-17 15:55:11,721 [main] INFO  mail.buisnes.LoginLogout - Нажатие кнопки вход
+]]>
+            </line>
+            <line>
+              <![CDATA[<br>2018-05-17 15:55:15,346 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
+]]>
+            </line>
+            <line>
+              <![CDATA[<br>2018-05-17 15:55:18,573 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+]]>
+            </line>
+            <line>
+              <![CDATA[<br>2018-05-17 15:55:20,223 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Проверка сохранения письма - появление текста "Сохранено"
+]]>
+            </line>
+            <line>
+              <![CDATA[<br>2018-05-17 15:55:20,274 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+]]>
+            </line>
+            <line>
+              <![CDATA[<br>2018-05-17 15:55:21,623 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Обновление почты 
+]]>
+            </line>
+            <line>
+              <![CDATA[<br>2018-05-17 15:55:23,548 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Удаление всех сообщений 
+]]>
+            </line>
+            <line>
+              <![CDATA[<br>2018-05-17 15:55:24,518 [main] INFO  mail.buisnes.LoginLogout - Нажатие на иконку пользователя
+]]>
+            </line>
+            <line>
+              <![CDATA[<br>2018-05-17 15:55:24,734 [main] INFO  mail.buisnes.LoginLogout - Выход из почты
 ]]>
             </line>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="login()[pri:0, instance:mail.pom.tests.cases.LoginTest@659499f1]" started-at="2018-05-15T15:43:39Z" name="login" finished-at="2018-05-15T15:43:39Z" duration-ms="15" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[<br>2018-05-15 15:43:39,165 [main] INFO  mail.pom.tests.cases.LoginTest - Проверка отображения страницы Входящие после входа в почту
+        </test-method> <!-- createMessage -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.pom.tests.cases.CreateDraftTest@29215f06]" started-at="2018-05-17T15:55:25Z" name="afterClass" finished-at="2018-05-17T15:55:37Z" duration-ms="11843" status="FAIL">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'EPRURYAW0060', ip: '10.19.10.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14288, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: cd9e33ce-841f-4cd5-a2c8-24c02579f354]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'EPRURYAW0060', ip: '10.19.10.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14288, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: cd9e33ce-841f-4cd5-a2c8-24c02579f354
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:445)
+	at mail.pom.tests.cases.CreateDraftTest.afterClass(CreateDraftTest.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:723)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:mail.pom.tests.cases.LoginTest@659499f1]" started-at="2018-05-15T15:43:39Z" name="afterClass" finished-at="2018-05-15T15:43:41Z" duration-ms="2100" status="PASS">
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
             <line>
-              <![CDATA[<br>2018-05-15 15:43:39,177 [main] INFO  mail.pom.tests.cases.LoginTest - Конец выполнения теста mail.pom.tests.cases.LoginTest
+              <![CDATA[<br>2018-05-17 15:55:25,651 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Конец выполнения теста mail.pom.tests.cases.CreateDraftTest
 ]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- mail.pom.tests.cases.LoginTest -->
+        <test-method signature="createMessage(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mail.pom.tests.cases.CreateDraftTest@29215f06]" started-at="2018-05-17T15:55:37Z" name="createMessage" data-provider="data" finished-at="2018-05-17T15:55:37Z" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'EPRURYAW0060', ip: '10.19.10.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14288, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: cd9e33ce-841f-4cd5-a2c8-24c02579f354]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'EPRURYAW0060', ip: '10.19.10.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14288, moz:profile: C:\Users\Igor_Morozov\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: cd9e33ce-841f-4cd5-a2c8-24c02579f354
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:445)
+	at mail.pom.tests.cases.CreateDraftTest.afterClass(CreateDraftTest.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:723)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createMessage -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:mail.pom.tests.cases.CreateDraftTest@29215f06]" started-at="2018-05-17T15:55:37Z" name="setUp" finished-at="2018-05-17T15:55:37Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- mail.pom.tests.cases.CreateDraftTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

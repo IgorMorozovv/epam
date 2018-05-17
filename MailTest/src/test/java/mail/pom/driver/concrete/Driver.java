@@ -1,4 +1,4 @@
-package mail.utility.driver.concrete;
+package mail.pom.driver.concrete;
 
 import org.openqa.selenium.WebDriver;
 

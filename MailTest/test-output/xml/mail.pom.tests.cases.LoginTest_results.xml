@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.027">
+           time="0.086">
   <properties />
   
   
-            <testcase name="login" time="0.027" classname="mail.pom.tests.cases.LoginTest" />
+            <testcase name="login" time="0.086" classname="mail.pom.tests.cases.LoginTest" />
       
 </testsuite>

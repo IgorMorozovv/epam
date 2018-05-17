@@ -1,4 +1,4 @@
-package mail.data.concrete;
+package mail.utility.read.concrete;
 
 import java.io.File;
 import java.io.FileNotFoundException;

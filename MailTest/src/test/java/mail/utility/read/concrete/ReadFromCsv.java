@@ -1,4 +1,4 @@
-package mail.data.concrete;
+package mail.utility.read.concrete;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -28,9 +28,9 @@ public class ReadFromCsv {
 			CSVFormat.DEFAULT.withHeader(RECEIVER_MESSAGE, SUBJECT_MESSAGE, MESSAGE_MESSAGE)
 				.withIgnoreHeaderCase().withTrim());) {
 
-	    List<CSVRecord> kist = csvParser.getRecords();
-	    data = new Object[kist.size() - 1][3];
-	    record(kist);
+	    List<CSVRecord> records = csvParser.getRecords();
+	    data = new Object[records.size() - 1][3];
+	    record(records);
 	} catch (IOException e) {
 	    e.printStackTrace();
 	    return null;
@@ -38,9 +38,9 @@ public class ReadFromCsv {
 	return data;
     }
 
-    public static void record(List<CSVRecord> kist) {
+    public static void record(List<CSVRecord> records) {
 	for (int i = 1; i <= 2; i++) {
-	    CSVRecord csvRecord = kist.get(i);
+	    CSVRecord csvRecord = records.get(i);
 	    data[i - 1][0] = csvRecord.get(RECEIVER_MESSAGE);
 	    data[i - 1][1] = csvRecord.get(SUBJECT_MESSAGE);
 	    data[i - 1][2] = csvRecord.get(MESSAGE_MESSAGE);

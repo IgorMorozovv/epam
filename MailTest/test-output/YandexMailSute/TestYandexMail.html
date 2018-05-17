@@ -1,0 +1,261 @@
+<html>
+<head>
+<title>TestNG:  TestYandexMail</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>TestYandexMail</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed May 16 13:07:29 MSK 2018</td>
+</tr>
+<tr><td>Total time:</td><td>86 seconds (86366 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='mail.pom.tests.cases.CreateDraftTest.createMessage()'><b>createMessage</b><br>Test class: mail.pom.tests.cases.CreateDraftTest<br>Parameters: gadwil@yandex.ru, test message №1, Some message №1<br/>
+<a href="#Output-1502079282" onClick='toggleBox("Output-1502079282", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1502079282" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1502079282">
+<br>2018-05-16 13:07:35,651 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
+<br/>
+<br>2018-05-16 13:07:40,095 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+<br/>
+<br>2018-05-16 13:07:41,517 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Проверка сохранения письма - появление текста "Сохранено"
+<br/>
+<br>2018-05-16 13:07:41,596 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>mail.pom.tests.cases.CreateDraftTest@82c57b3</td></tr>
+<tr>
+<td title='mail.pom.tests.cases.CreateDraftTest.createMessage()'><b>createMessage</b><br>Test class: mail.pom.tests.cases.CreateDraftTest<br>Parameters: gadwil@yandex.ru, test message №2, Some message №2<br/>
+<a href="#Output-1911168986" onClick='toggleBox("Output-1911168986", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1911168986" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1911168986">
+<br>2018-05-16 13:07:42,938 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Заполнение полей: получатель, тема, сообщение 
+<br/>
+<br>2018-05-16 13:07:44,671 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Сохранение черновика 
+<br/>
+<br>2018-05-16 13:07:45,407 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Проверка сохранения письма - появление текста "Сохранено"
+<br/>
+<br>2018-05-16 13:07:45,462 [main] INFO  mail.pom.tests.cases.CreateDraftTest - Переход на Входящие 
+<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>mail.pom.tests.cases.CreateDraftTest@82c57b3</td></tr>
+<tr>
+<td title='mail.pom.tests.cases.LogOutTest.logOut()'><b>logOut</b><br>Test class: mail.pom.tests.cases.LogOutTest<br/>
+<a href="#Output-738111983" onClick='toggleBox("Output-738111983", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-738111983" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-738111983">
+<br>2018-05-16 13:08:52,435 [main] INFO  mail.pom.tests.cases.LogOutTest - Нажатие на иконку пользователя
+<br/>
+<br>2018-05-16 13:08:52,612 [main] INFO  mail.pom.tests.cases.LogOutTest - Выход из почты
+<br/>
+<br>2018-05-16 13:08:52,936 [main] INFO  mail.pom.tests.cases.LogOutTest - Проверка выхода - переход на главную страницу яндекса
+<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>mail.pom.tests.cases.LogOutTest@1734f68</td></tr>
+<tr>
+<td title='mail.pom.tests.cases.LoginTest.login()'><b>login</b><br>Test class: mail.pom.tests.cases.LoginTest<br/>
+<a href="#Output-2123269713" onClick='toggleBox("Output-2123269713", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2123269713" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2123269713">
+<br>2018-05-16 13:07:29,740 [main] INFO  mail.pom.tests.cases.LoginTest - Проверка отображения страницы Входящие после входа в почту
+<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>mail.pom.tests.cases.LoginTest@4fdfa676</td></tr>
+<tr>
+<td title='mail.pom.tests.cases.SendLetterTest.sendLetter()'><b>sendLetter</b><br>Test class: mail.pom.tests.cases.SendLetterTest<br>Parameters: gadwil@yandex.ru, test message №1, Some message №1<br/>
+<a href="#Output-1921553024" onClick='toggleBox("Output-1921553024", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1921553024" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1921553024">
+<br>2018-05-16 13:08:17,486 [main] INFO  mail.pom.tests.cases.SendLetterTest - Заполнение полей: получатель, тема, сообщение 
+<br/>
+<br>2018-05-16 13:08:20,192 [main] INFO  mail.pom.tests.cases.SendLetterTest - Отправка сообщения
+<br/>
+<br>2018-05-16 13:08:20,371 [main] INFO  mail.pom.tests.cases.SendLetterTest - Проверка отправления сообщения - всплывающее окно с текстом "Сообщение тправлено"
+<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>mail.pom.tests.cases.SendLetterTest@443dbe42</td></tr>
+<tr>
+<td title='mail.pom.tests.cases.SendLetterTest.sendLetter()'><b>sendLetter</b><br>Test class: mail.pom.tests.cases.SendLetterTest<br>Parameters: gadwil@yandex.ru, test message №2, Some message №2<br/>
+<a href="#Output-1475759966" onClick='toggleBox("Output-1475759966", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1475759966" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1475759966">
+<br>2018-05-16 13:08:21,589 [main] INFO  mail.pom.tests.cases.SendLetterTest - Заполнение полей: получатель, тема, сообщение 
+<br/>
+<br>2018-05-16 13:08:24,241 [main] INFO  mail.pom.tests.cases.SendLetterTest - Отправка сообщения
+<br/>
+<br>2018-05-16 13:08:24,390 [main] INFO  mail.pom.tests.cases.SendLetterTest - Проверка отправления сообщения - всплывающее окно с текстом "Сообщение тправлено"
+<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>mail.pom.tests.cases.SendLetterTest@443dbe42</td></tr>
+<tr>
+<td title='mail.pom.tests.cases.TransferDraft.trancferDrafts()'><b>trancferDrafts</b><br>Test class: mail.pom.tests.cases.TransferDraft<br>Parameters: gadwil@yandex.ru, test message №1, Some message №1<br/>
+<a href="#Output-1837533591" onClick='toggleBox("Output-1837533591", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1837533591" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1837533591">
+<br>2018-05-16 13:08:32,209 [main] INFO  mail.pom.tests.cases.TransferDraft - Заполнение полей: получатель, тема, сообщение 
+<br/>
+<br>2018-05-16 13:08:35,587 [main] INFO  mail.pom.tests.cases.TransferDraft - Сохранение черновика 
+<br/>
+<br>2018-05-16 13:08:36,436 [main] INFO  mail.pom.tests.cases.TransferDraft - Обновление почты 
+<br/>
+<br>2018-05-16 13:08:39,569 [main] INFO  mail.pom.tests.cases.TransferDraft - Проверка переноса черновика в папку Удалённые
+<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>mail.pom.tests.cases.TransferDraft@473b3b7a</td></tr>
+<tr>
+<td title='mail.pom.tests.cases.TransferDraft.trancferDrafts()'><b>trancferDrafts</b><br>Test class: mail.pom.tests.cases.TransferDraft<br>Parameters: gadwil@yandex.ru, test message №2, Some message №2<br/>
+<a href="#Output-1625901537" onClick='toggleBox("Output-1625901537", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1625901537" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1625901537">
+<br>2018-05-16 13:08:43,932 [main] INFO  mail.pom.tests.cases.TransferDraft - Заполнение полей: получатель, тема, сообщение 
+<br/>
+<br>2018-05-16 13:08:45,700 [main] INFO  mail.pom.tests.cases.TransferDraft - Сохранение черновика 
+<br/>
+<br>2018-05-16 13:08:46,306 [main] INFO  mail.pom.tests.cases.TransferDraft - Обновление почты 
+<br/>
+<br>2018-05-16 13:08:49,364 [main] INFO  mail.pom.tests.cases.TransferDraft - Проверка переноса черновика в папку Удалённые
+<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>mail.pom.tests.cases.TransferDraft@473b3b7a</td></tr>
+<tr>
+<td title='mail.pom.tests.cases.VerifyDraftsTests.verifyDraft()'><b>verifyDraft</b><br>Test class: mail.pom.tests.cases.VerifyDraftsTests<br>Parameters: gadwil@yandex.ru, test message №1, Some message №1<br/>
+<a href="#Output-670283478" onClick='toggleBox("Output-670283478", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-670283478" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-670283478">
+<br>2018-05-16 13:07:56,551 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
+<br/>
+<br>2018-05-16 13:07:59,435 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
+<br/>
+<br>2018-05-16 13:08:00,283 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
+<br/>
+<br>2018-05-16 13:08:02,696 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
+<br/>
+<br>2018-05-16 13:08:03,521 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
+<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>mail.pom.tests.cases.VerifyDraftsTests@5be82d43</td></tr>
+<tr>
+<td title='mail.pom.tests.cases.VerifyDraftsTests.verifyDraft()'><b>verifyDraft</b><br>Test class: mail.pom.tests.cases.VerifyDraftsTests<br>Parameters: gadwil@yandex.ru, test message №2, Some message №2<br/>
+<a href="#Output-1536728519" onClick='toggleBox("Output-1536728519", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1536728519" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1536728519">
+<br>2018-05-16 13:08:05,523 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Заполнение полей: получатель, тема, сообщение 
+<br/>
+<br>2018-05-16 13:08:07,404 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Сохранение черновика 
+<br/>
+<br>2018-05-16 13:08:08,149 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Обновление почты 
+<br/>
+<br>2018-05-16 13:08:10,469 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Открытие первого письма в папке Черновики
+<br/>
+<br>2018-05-16 13:08:11,297 [main] INFO  mail.pom.tests.cases.VerifyDraftsTests - Проверка корректности заполненных полей
+<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>mail.pom.tests.cases.VerifyDraftsTests@5be82d43</td></tr>
+</table><p>
+</body>
+</html>

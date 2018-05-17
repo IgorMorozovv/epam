@@ -1,4 +1,4 @@
-package mail.pom.tests.common;
+package mail.buisnes;
 
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;

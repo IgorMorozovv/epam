@@ -6,10 +6,9 @@
       <class name="mail.pom.tests.cases.CreateDraftTest">
         <methods>
           <include name="createMessage"/>
-          <include name="setUp"/>
           <include name="afterClass"/>
-          <include name="deleteDrafts"/>
-          <include name="beforeClass"/>
+          <include name="setUp"/>
+          <include name="basicTestClass"/>
         </methods>
       </class> <!-- mail.pom.tests.cases.CreateDraftTest -->
     </classes>

@@ -5,10 +5,10 @@ import static org.testng.Assert.assertTrue;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
+import mail.buisnes.GeneralActions;
+import mail.data.EmailDataProvider;
 import mail.logging.LoggingMessages;
 import mail.pom.pages.main.SentMessagesPage;
-import mail.pom.tests.common.GeneralActions;
-import mail.utility.EmailDataProvider;
 
 public class SendLetterTest extends GeneralActions {
 
@@ -17,6 +17,7 @@ public class SendLetterTest extends GeneralActions {
     @Test(groups = {
 	    "other-functions" }, dataProvider = "data", dataProviderClass = EmailDataProvider.class, priority = 3)
     public void sendLetter(String receiver, String subject, String message) {
+	inboxPage = loginLogout.logIn();
 	fillFields(receiver, subject, message);
 
 	logger.info(LoggingMessages.SENDING_MESSAGE);
@@ -26,6 +27,7 @@ public class SendLetterTest extends GeneralActions {
 	assertTrue(sentMessagesPage.isSentMessageDisplay(), LoggingMessages.FAILURE_VERIFY_SEND_LETTER_MESSAGE);
 
 	sentMessagesPage.closeInformWindow();
+	loginLogout.logout();
     }
 
     public void deleteSendedMessage() {
